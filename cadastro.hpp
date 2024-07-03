@@ -13,7 +13,7 @@ class Jogador {
         int vitoriasLig4;
         int derrotasLig4;
 
-        Jogador() : vitoriasReversi(0), derrotasReversi(0), vitoriasLig4(0), derrotasLig4(0);
+        Jogador();
 };
 
 class Cadastro {
