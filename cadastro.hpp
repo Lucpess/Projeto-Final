@@ -1,10 +1,7 @@
 #ifndef CADASTRO_H
 #define CADASTRO_H
 #include <string>
-#include<algorithm>
 #include<iostream>
-#include<fstream>
-#include<vector>
 #include<map>
 
 class Jogador {
