@@ -14,18 +14,19 @@ class Jogador {
         int derrotasLig4;
 
         Jogador();
-};
-
+}; 
 class Cadastro {
     private:
         std::map<std::string, Jogador> jogadores;
+        void salvarCadastro();
+        void carregarCadastro();
 
     public:
+        void cadastraJogador(const std::string& apelido, const std::string& nome);
         void verificaJogador();
-        void cadastraJogador();
-        void escolheJogador();
         void listaJogadores();
-        void removeJogador();
+        void removeJogador(std::string& apelido);
+        void executarPartida();
 
 };
 
