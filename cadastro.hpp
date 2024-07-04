@@ -1,5 +1,6 @@
-#ifndef CADASTRO_H
-#define CADASTRO_H
+#ifndef CADASTRO_HPP
+#define CADASTRO_HPP
+
 #include <string>
 #include<iostream>
 #include<map>
@@ -14,6 +15,7 @@ class Jogador {
         int derrotasLig4;
 
         Jogador();
+        
 };
 
 class Cadastro {
@@ -23,7 +25,7 @@ class Cadastro {
     public:
         void verificaJogador();
         void cadastraJogador();
-        void escolheJogador();
+        //void escolheJogador();
         void listaJogadores();
         void removeJogador();
 

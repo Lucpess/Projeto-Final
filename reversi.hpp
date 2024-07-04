@@ -1,12 +1,28 @@
-#ifndef REVERSI_H
-#define REVERSI_H
+#ifndef REVERSI_HPP
+#define REVERSI_HPP
 
-class Reversi {
+#include "Jogada.hpp"
+#include "tabuleiro.hpp"
 
-   void verificaJogada();
-   void executaJogada();
-   void verificaVitoria();
-   void passaTurno();
+class Reversi : public Jogada {
+public:
+   Reversi();
 
+   void start() override;
+   bool escolheJogada (int linha, int col, ) override;
+   bool fimDeJogo () const override;
+   void printTabuleiro () const override;
+   //jogada()
+   //void verificaJogada();
+   //void executaJogada();
+   //void verificaVitoria();
+   //void passaTurno();
+   //void imprime();
+
+private:
+   Tabuleiro tabuleiro;
+   bool jogadaPermitida(int linha, int col, )
+   void Joga(int linha, int col, )
 };
+
 #endif 
