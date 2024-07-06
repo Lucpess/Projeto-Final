@@ -5,10 +5,10 @@
 
 class Jogada {
 public:
-    virtual void start()
-    virtual bool escolheJogada ()
-    virtual bool fimDeJogo ()
-    virtual void printTabuleiro ()
+    virtual void start();
+    virtual bool escolheJogada ();
+    virtual bool fimDeJogo ();
+    virtual void printTabuleiro ();
 };
 
 #endif 
