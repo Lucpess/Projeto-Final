@@ -19,7 +19,7 @@ class Tabuleiro {
         Tabuleiro();
         
         void inicializaTabuleiro(char jogo);
-        void imprimeTabuleiro();
+        void imprimeTabuleiro() const;
         //void modificaTabuleiro();
         //^^^^^^^^^^^^^^^^^^^^^^^^
         // talvez precise para modificar o tabuleiro se nao tiver herança

@@ -3,7 +3,9 @@
 #include<algorithm>
 #include<vector>
 
-Jogador::Jogador(): vitoriasReversi(0), derrotasReversi(0), vitoriasLig4(0), derrotasLig4(0){}
+Jogador::Jogador(const std::string& nome, const std::string& apelido)
+: vitoriasReversi(0), derrotasReversi(0), vitoriasLig4(0), derrotasLig4(0), nome(nome), apelido(apelido) {}
+
 
 Cadastro::Cadastro(){
     carregarCadastro();

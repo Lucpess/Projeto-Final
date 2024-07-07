@@ -17,7 +17,7 @@ void Tabuleiro::inicializaTabuleiro(char jogo){
         tabuleiro[4 - 1][5 - 1].estado = "PRETO";
         tabuleiro[5 - 1][4 - 1].estado = "PRETO";
         tabuleiro[5 - 1][5 - 1].estado = "BRANCO";
-    } else 
+    } else  
     if (jogo == 'L'){
         tabuleiro.resize(6, std::vector<Casa>(7));
         for (int i = 0; i< 8; i++) {
@@ -28,7 +28,7 @@ void Tabuleiro::inicializaTabuleiro(char jogo){
     }
 }
 
-void Tabuleiro::imprimeTabuleiro() {
+void Tabuleiro::imprimeTabuleiro() const {
     for (int i=0; i < tabuleiro.size(); i++) {
         for (int j=0; j < tabuleiro[i].size(); j++) {
             std::cout << "|";

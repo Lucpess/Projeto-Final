@@ -1,25 +1,24 @@
 #ifndef LIG4_H
 #define LIG4_H
 
-#include "Jogada.hpp"
 #include "tabuleiro.hpp"
 
-class Lig4 : public Jogada {
+class Lig4 {
 public: 
     Lig4();
-    void start() override;
-    bool escolheJogada ();
-    bool fimDeJogo () const override;
-    void printTabuleiro () const override;
+    void start();
+    bool escolheJogada (int col);
+    bool fimDeJogo () const;
+    void printTabuleiro () const;
     //void verificaJogada();
     //void executaJogada();
     //void verificaVitoria();
-    //void turno();
+    //void turno();  
 
 private: 
         Tabuleiro tabuleiro;
-        bool jogadaPermitida(int linha, int col, )
-        void Joga(int linha, int col, )
+        bool jogadaPermitida(int col) const;
+        void novaJogada(int col) const;
 };
 
 #endif 
