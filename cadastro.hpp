@@ -34,8 +34,6 @@ class Cadastro {
         void carregarCadastro();
         
     public:
-        Cadastro();
-        ~Cadastro();
         void cadastraJogador(const std::string& apelido, const std::string& nome);
         void verificaJogador();
         void listaJogadores();
