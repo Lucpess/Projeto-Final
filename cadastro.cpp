@@ -3,10 +3,6 @@
 #include<algorithm>
 #include<vector>
 
-Jogador::Jogador(const std::string& nome, const std::string& apelido)
-: vitoriasReversi(0), derrotasReversi(0), vitoriasLig4(0), derrotasLig4(0), nome(nome), apelido(apelido) {}
-
-
 Cadastro::Cadastro(){
     carregarCadastro();
 }
@@ -22,10 +18,11 @@ void Cadastro::salvarCadastro(){
         return;
     }
 
-     for (const auto& jogador : jogadores) {
-        arquivo << jogador.getVitoriasReversi() << " " << jogador.getDerrotasReversi() << " "
-                << jogador.getVitoriasLig4() << " " << jogador.getDerrotasLig4() << " "
-                << jogador.getNome() << " " << jogador.getApelido() << std::endl;
+     for (const auto& par : jogadores) {
+        const Jogador& jogador = par.second;
+        arquivo << jogador.getApelido() << " " << jogador.getNome() << " "
+                << jogador.getVitoriasReversi() << " " << jogador.getDerrotasReversi() << " "
+                << jogador.getVitoriasLig4() << " " << jogador.getDerrotasLig4() << std::endl;
     }
 }
 
