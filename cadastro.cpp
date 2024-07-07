@@ -4,7 +4,7 @@
 #include<vector>
 
 Cadastro::Cadastro(){
-    carregarCadastro();
+    atualizarCadastro();
 }
 
 Cadastro::~Cadastro(){
@@ -13,7 +13,7 @@ Cadastro::~Cadastro(){
 
 void Cadastro::salvarCadastro(){
     std::ofstream arquivo("cadastro_jogadores.txt");
-    if (!arquivo) {
+    if (!arquivo.is_open()) {
         std::cerr << "Erro ao abrir arquivo." << std::endl;
         return;
     }
@@ -23,6 +23,24 @@ void Cadastro::salvarCadastro(){
         arquivo << jogador.getApelido() << " " << jogador.getNome() << " "
                 << jogador.getVitoriasReversi() << " " << jogador.getDerrotasReversi() << " "
                 << jogador.getVitoriasLig4() << " " << jogador.getDerrotasLig4() << std::endl;
+    }
+}
+
+void Cadastro::atualizarCadastro(){
+    std::ifstream arquivo("cadastro_jogadores.txt");
+    if(!arquivo.is_open()) {
+        std::cerr << "Erro ao abrir o arquivo." << std::endl;
+        return;
+    }
+
+    jogadores.clear();
+
+    std::string nome, apelido;
+    int vitoriasReversi, derrotasReversi, vitoriasLig4, derrotasLig4;
+
+    while(arquivo >> apelido >> nome >> vitoriasReversi >> derrotasReversi >> vitoriasLig4 >> derrotasLig4) {
+        Jogador jogador(apelido, nome, vitoriasReversi, derrotasReversi, vitoriasLig4, derrotasLig4);
+        jogadores.emplace(apelido, jogador);
     }
 }
 

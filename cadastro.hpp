@@ -12,7 +12,7 @@ class Cadastro {
         std::map<std::string, Jogador> jogadores;
         int numJogadores = 0;
         void salvarCadastro();
-        void carregarCadastro();
+        void atualizarCadastro();
         
     public:
         void cadastraJogador(const std::string& apelido, const std::string& nome);
