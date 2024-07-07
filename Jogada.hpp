@@ -5,7 +5,7 @@
 
 class Jogada {
 public:
-    virtual void start() = 0;
+virtual void start() = 0;
     virtual bool escolheJogada (int linha, int col) = 0;
     virtual bool fimDeJogo () const = 0;
     virtual void printTabuleiro () const = 0;

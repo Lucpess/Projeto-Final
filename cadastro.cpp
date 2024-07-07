@@ -16,5 +16,13 @@ Cadastro::~Cadastro(){
 }
 
 void Cadastro::carregarCadastro(){
+    std::ifstream arquivo("cadastro_jogadores.txt");
+
+}
+void Cadastro::salvarCadastro(){
     std::ofstream arquivo("cadastro_jogadores.txt");
+
+    for(int &i : jogadores) {
+        arquivo << 
+    }
 }

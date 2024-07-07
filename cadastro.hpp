@@ -2,8 +2,9 @@
 #define CADASTRO_HPP
 
 #include <string>
-#include <iostream>
-#include <map>
+#include<iostream>
+#include<map>
+#include<vector>
 
 class Jogador {
     private:
@@ -20,14 +21,15 @@ class Jogador {
         std::string getNome();
         void novaVitoria();
         void novaDerrota();
-        void printResultados(); 
+        void printResultados();  
 
         Jogador();
 }; 
 
 class Cadastro {
     private:
-        std::map<std::string, Jogador> jogadores;
+        std::vector<Jogador> jogadores;
+        int numJogadores = 0;
         void salvarCadastro();
         void carregarCadastro();
         
