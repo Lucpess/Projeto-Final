@@ -22,7 +22,7 @@ void Cadastro::carregarCadastro(){
 void Cadastro::salvarCadastro(){
     std::ofstream arquivo("cadastro_jogadores.txt");
 
-    for(int &i : jogadores) {
-        arquivo << 
+    for(const auto& jogador : jogadores) {
+        arquivo << jogador.apelido
     }
 }
