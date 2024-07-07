@@ -20,10 +20,8 @@ class Tabuleiro {
         
         void inicializaTabuleiro(char jogo);
         void imprimeTabuleiro() const;
-        //void modificaTabuleiro();
-        //^^^^^^^^^^^^^^^^^^^^^^^^
-        // talvez precise para modificar o tabuleiro se nao tiver herança
-        // de classes para o proprio tad de cada jogo modoficar o tabuleiro
+        bool verificaCasa(int linha, int coluna, std::string _estado);
+        void modificaTabuleiro(int linha, int coluna, std::string _estado);
 };  
 
 

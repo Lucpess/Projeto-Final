@@ -10,12 +10,6 @@
       bool escolheJogada (int linha, int col);
       bool fimDeJogo () const;
       void printTabuleiro () const;
-      //jogada()
-      //void verificaJogada();
-      //void executaJogada();
-      //void verificaVitoria();
-      //void passaTurno();
-      //void imprime();
 
    private:
       Tabuleiro tabuleiro;

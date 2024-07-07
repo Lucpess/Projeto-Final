@@ -6,19 +6,19 @@
 class Lig4 {
 public: 
     Lig4();
-    void start();
-    bool escolheJogada (int col);
-    bool fimDeJogo () const;
+    void start(std::string jogador1, std::string jogador2);
+    bool verifica4(int linha, int coluna);
+    int verificaFimDeJogo (int coluna, std::string jogador1, std::string jogador2);
     void printTabuleiro () const;
-    //void verificaJogada();
-    //void executaJogada();
-    //void verificaVitoria();
-    //void turno();  
 
 private: 
+        bool fimDeJogo;
         Tabuleiro tabuleiro;
-        bool jogadaPermitida(int col) const;
-        void novaJogada(int col) const;
+        std::string turno;
+        bool jogadaPermitida(int col);
+        void novaJogada(int col);
+        void mudaTurno();
+        void anunciaTurno(std::string jogador1, std::string jogador2);
 };
 
 #endif 

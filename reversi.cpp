@@ -21,15 +21,15 @@ bool Reversi::fimDeJogo() const {
     return false;
 }
 
- void Reversi::printTabuleiro() const {
+void Reversi::printTabuleiro() const {
     tabuleiro.imprimeTabuleiro();
- }
+}
 
- bool Reversi::jogadaPermitida(int linha, int col) const {
+bool Reversi::jogadaPermitida(int linha, int col) const {
     //
-    return true
- }
+    return true;
+}
 
- void Reversi::viraPeca(int linha, int col){
+void Reversi::viraPeca(int linha, int col){
     //
- }
+}
