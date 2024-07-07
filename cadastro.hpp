@@ -32,7 +32,7 @@ class Jogador {
 
 class Cadastro {
     private:
-        std::vector<Jogador> jogadores;
+        std::map<std::string, Jogador> jogadores;
         int numJogadores = 0;
         void salvarCadastro();
         void carregarCadastro();
