@@ -19,10 +19,6 @@ class Jogador {
         Jogador(const std::string& nome, const std::string& apelido);
         std::string getApelido();
         std::string getNome();
-        void getVitoriasReversi();
-        void getDerrotasReversi();
-        void getVitoriasLig4();
-        void getDerrotasLig4();
         void novaVitoria();
         void novaDerrota();
         void printResultados();  
