@@ -17,15 +17,15 @@ class Jogador {
     
     public:
         Jogador(const std::string& nome, const std::string& apelido);
-        std::string getApelido();
-        std::string getNome();
-        void getVitoriasReversi();
-        void getDerrotasReversi();
-        void getVitoriasLig4();
-        void getDerrotasLig4();
-        void novaVitoria();
-        void novaDerrota();
-        void printResultados();  
+        std::string getApelido() const;
+        std::string getNome() const;
+        int getVitoriasReversi() const;
+        int getDerrotasReversi() const;
+        int getVitoriasLig4() const;
+        int getDerrotasLig4() const;
+        void novaVitoria() const;
+        void novaDerrota() const;
+        void printResultados() const;  
 
         Jogador();
 }; 
