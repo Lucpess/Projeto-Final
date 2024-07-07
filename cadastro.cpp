@@ -45,11 +45,23 @@ void Cadastro::atualizarCadastro(){
 }
 
 void Cadastro::cadastraJogador(const std::string& apelido, const std::string& nome) {
-    if (jogadores.find(apelido) != jogadores.end()) {
-        std::cerr << "ERRO: dados incorretos" << std::endl;
+    if(apelido.empty() || nome.empty()) {
+        std::cout << "ERRO: dados incorretos" << std::endl;
         return;
     }
-    jogadores[apelido] = Jogador(apelido, nome);
+    //if (jogadores.find(apelido) != jogadores.end()) {
+       // std::cerr << "ERRO: dados incorretos" << std::endl;
+      //  return;
+   // }
+
+    for(const auto& par : jogadores) {
+        if(par.first == apelido) {
+            std::cerr << "ERRO: jogador repetido" <<std:: endl;
+        }
+        return;
+    }
+
+    jogadores.emplace(apelido, Jogador(apelido, nome));
     std::cout << "Jogador" << apelido << "cadastrado com sucesso" << std::endl;
 }
 
