@@ -1,37 +1,18 @@
 #ifndef CADASTRO_HPP
 #define CADASTRO_HPP
 
+#include"jogador.hpp"
 #include <string>
 #include<iostream>
 #include<map>
 #include<vector>
 
-class Jogador {
-    private:
-        std::string apelido;
-        std::string nome;
-        int vitoriasReversi;
-        int derrotasReversi;
-        int vitoriasLig4;
-        int derrotasLig4;
-    
-    public:
-        Jogador(const std::string& nome, const std::string& apelido);
-        std::string getApelido();
-        std::string getNome();
-        void novaVitoria();
-        void novaDerrota();
-        void printResultados();  
-
-        Jogador();
-}; 
-
 class Cadastro {
     private:
-        std::vector<Jogador> jogadores;
+        std::map<std::string, Jogador> jogadores;
         int numJogadores = 0;
         void salvarCadastro();
-        void carregarCadastro();
+        void atualizarCadastro();
         
     public:
         void cadastraJogador(const std::string& apelido, const std::string& nome);
@@ -39,6 +20,9 @@ class Cadastro {
         void listaJogadores();
         void removeJogador(std::string& apelido);
         void executarPartida();
+
+        Cadastro();
+        ~Cadastro();
 
 };
 
