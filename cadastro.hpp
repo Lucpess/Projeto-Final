@@ -10,14 +10,14 @@
 class Cadastro {
     private:
         std::map<std::string, Jogador> jogadores;
+
         int numJogadores = 0;
         void salvarCadastro();
         void atualizarCadastro();
         
     public:
         void cadastraJogador(const std::string& apelido, const std::string& nome);
-        void verificaJogador();
-        void listaJogadores();
+        void listaJogadores() const;
         void removeJogador(std::string& apelido);
         void executarPartida();
 

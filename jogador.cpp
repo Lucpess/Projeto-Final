@@ -32,3 +32,9 @@ int Jogador::getVitoriasLig4() const {
 int Jogador::getDerrotasLig4() const {
     return derrotasLig4;
 }
+
+void Jogador::printResultados() const {
+    std::cout << apelido << " " << nome << std::endl;
+    std::cout << "REVERSI - V: " << vitoriasReversi << " D: " << derrotasReversi << std::endl;
+    std::cout << "LIG4    - V: " <<vitoriasLig4 << " D: " << derrotasLig4 <<std::endl;
+}

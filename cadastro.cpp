@@ -65,13 +65,20 @@ void Cadastro::cadastraJogador(const std::string& apelido, const std::string& no
     std::cout << "Jogador" << apelido << "cadastrado com sucesso" << std::endl;
 }
 
-void removeJogador(const std::string& apelido) {
-    if(jogadores.erase(apelido)){
+void Cadastro::removeJogador(std::string& apelido) {
+    auto it = jogadores.find(apelido);
+    if(it != jogadores.end()){
+        jogadores.erase(it);
         std::cout << "Jogador " << apelido << "removido com sucesso " << std::endl;
     } else {
         std::cerr << "ERRO: jogador inexistente" << std::endl;
     }
 }
 
-void Cadastro::listaJogadores(const std::string& ordem) const {
+void Cadastro::listaJogadores() const {
+    for(auto& par : jogadores) {
+        const Jogador& jogador = par.second;
+        jogador.printResultados();
+    }
+}
     

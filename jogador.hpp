@@ -14,7 +14,6 @@ class Jogador {
         int derrotasLig4;
     
     public:
-        Jogador(const std::string& nome, const std::string& apelido);
         std::string getApelido() const;
         std::string getNome() const;
         int getVitoriasReversi() const;
