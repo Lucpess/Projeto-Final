@@ -1,7 +1,7 @@
 #include "cadastro.hpp"
 #include<fstream>
 #include<algorithm>
-#include<vector>
+#include<vector>    
 
 Cadastro::Cadastro(){
     atualizarCadastro();
@@ -45,40 +45,43 @@ void Cadastro::atualizarCadastro(){
 }
 
 void Cadastro::cadastraJogador(const std::string& apelido, const std::string& nome) {
-    if(apelido.empty() || nome.empty()) {
-        std::cout << "ERRO: dados incorretos" << std::endl;
+    if (jogadores.find(apelido) != jogadores.end()) {
+        std::cerr << "ERRO: dados incorretos" << std::endl;
         return;
     }
-    //if (jogadores.find(apelido) != jogadores.end()) {
-       // std::cerr << "ERRO: dados incorretos" << std::endl;
-      //  return;
-   // }
-
-    for(const auto& par : jogadores) {
-        if(par.first == apelido) {
-            std::cerr << "ERRO: jogador repetido" <<std:: endl;
-        }
-        return;
-    }
-
-    jogadores.emplace(apelido, Jogador(apelido, nome));
-    std::cout << "Jogador" << apelido << "cadastrado com sucesso" << std::endl;
+    jogadores[apelido] = Jogador(apelido, nome);
+    std::cout << "Jogador " << apelido << " cadastrado com sucesso" << std::endl;
 }
 
-void Cadastro::removeJogador(std::string& apelido) {
-    auto it = jogadores.find(apelido);
-    if(it != jogadores.end()){
-        jogadores.erase(it);
-        std::cout << "Jogador " << apelido << "removido com sucesso " << std::endl;
+void Cadastro::removeJogador(const std::string& apelido) {
+    if(jogadores.erase(apelido)){
+        std::cout << "Jogador " << apelido << " removido com sucesso " << std::endl;
     } else {
         std::cerr << "ERRO: jogador inexistente" << std::endl;
     }
 }
 
-void Cadastro::listaJogadores() const {
-    for(auto& par : jogadores) {
+void Cadastro::listaJogadores(const std::string& ordem) const {
+    std::vector<std::pair<std::string, Jogador>> lista(jogadores.begin(), jogadores.end());
+
+    if(ordem == "A") {
+        std::sort(lista.begin(), lista.end(), [] (const auto& a, const auto& b) {
+            return a.first < b.first; 
+        });
+    } else if (ordem == "N") {
+        std:: sort(lista.begin(), lista.end(), [] (const auto& a, const auto& b) {
+            return a.second.nome < b.second.nome;
+        });
+    }
+    for(const auto& par : lista) {
+        const std::string& apelido = par.first;
         const Jogador& jogador = par.second;
-        jogador.printResultados();
+        std::cout << apelido << " " << jogador.getNome() << std::endl;
+        std::cout << "REVERSI - V: " << jogador.getVitoriasReversi() << " D: " << jogador.getDerrotasReversi() << std::endl;
+        std::cout << "LIG4 - V: " << jogador.getVitoriasLig4() << " D: " << jogador.getDerrotasLig4() << std::endl; 
     }
 }
-    
+
+bool Cadastro::existeJogador(const std::string& apelido) const {
+        return jogadores.find(apelido) != jogadores.end();
+}
