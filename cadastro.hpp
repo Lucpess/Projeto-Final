@@ -17,8 +17,9 @@ class Cadastro {
         
     public:
         void cadastraJogador(const std::string& apelido, const std::string& nome);
-        void listaJogadores() const;
-        void removeJogador(std::string& apelido);
+        void listaJogadores(const std::string& ordem) const;
+        void removeJogador(const std::string& apelido);
+        bool existeJogador(const std::string& apelido) const;
         void executarPartida();
 
         Cadastro();
