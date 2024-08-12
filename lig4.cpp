@@ -28,7 +28,7 @@ bool Lig4::jogadaPermitida(int col){
 }
 
 void Lig4::novaJogada(int col){
-    int linhaPraMudar;
+    int linhaPraMudar = -1;
     for(int i = 5; i>=0; i--){
         if(tabuleiro.verificaCasa(i, col, "NULO")){
             linhaPraMudar = i;
