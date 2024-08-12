@@ -107,7 +107,7 @@ int Lig4::verificaFimDeJogo(int col, std::string jogador1, std::string jogador2)
     }
     
     if(verifica4(linhaColocada, col)){
-        fimDeJogo == true;
+        fimDeJogo = true;
         if(turno == "PRETO"){
             std::cout << "** " << jogador1 << " VENCEU **" << std::endl;
         } else{
@@ -126,13 +126,14 @@ int Lig4::verificaFimDeJogo(int col, std::string jogador1, std::string jogador2)
         fimDeJogo = true;
         std::cout << "EMPATE, TABULEIRO CHEIO" << std::endl;
     }
+    return 0;
 }
 
 void Lig4::mudaTurno(){
     if(turno == "PRETO"){
-        turno == "BRANCO";
+        turno = "BRANCO";
     } else{
-        turno == "PRETO";
+        turno = "PRETO";
     }
 }
 
