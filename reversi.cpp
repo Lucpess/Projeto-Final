@@ -1,3 +1,4 @@
+#include <iostream>
 #include "reversi.hpp"
 
 Reversi::Reversi() {

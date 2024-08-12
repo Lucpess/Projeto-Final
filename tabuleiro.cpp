@@ -46,7 +46,7 @@ void Tabuleiro::imprimeTabuleiro() const {
     }
 }
 
-bool Tabuleiro::verificaCasa(int linha, int coluna, std::string _estado){
+bool Tabuleiro::verificaCasa(int linha, int coluna, std::string _estado) const{
     if(tabuleiro[linha][coluna].estado == _estado){
         return true;
     } else{

@@ -20,7 +20,7 @@ class Tabuleiro {
         
         void inicializaTabuleiro(char jogo);
         void imprimeTabuleiro() const;
-        bool verificaCasa(int linha, int coluna, std::string _estado);
+        bool verificaCasa(int linha, int coluna, std::string _estado) const;
         void modificaTabuleiro(int linha, int coluna, std::string _estado);
         void contarPecas(int& pecasBrancas, int& pecasPretas) const;
 };  
