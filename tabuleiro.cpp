@@ -46,7 +46,7 @@ void Tabuleiro::imprimeTabuleiro() const {
     }
 }
 
-bool Tabuleiro::verificaCasa(int linha, int coluna, std::string _estado){
+bool Tabuleiro::verificaCasa(int linha, int coluna, std::string _estado) const{
     if(tabuleiro[linha][coluna].estado == _estado){
         return true;
     } else{
@@ -56,4 +56,18 @@ bool Tabuleiro::verificaCasa(int linha, int coluna, std::string _estado){
 
 void Tabuleiro::modificaTabuleiro(int linha, int coluna, std::string _estado){
     tabuleiro[linha][coluna].estado = _estado;
+}
+
+void Tabuleiro::contarPecas(int& pecasBrancas, int&pecasPretas) const {
+    pecasBrancas = 0;
+    pecasPretas = 0;
+    for(const auto& linha : tabuleiro) {
+        for(const auto& casa : linha) {
+            if (casa.estado == "BRANCO") {
+                pecasBrancas++;
+            } else if (casa.estado == "PRETO") {
+                pecasPretas++;
+            }
+        }
+    }
 }

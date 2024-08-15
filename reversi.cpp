@@ -1,3 +1,4 @@
+#include <iostream>
 #include "reversi.hpp"
 
 Reversi::Reversi() {
@@ -16,8 +17,32 @@ bool Reversi::escolheJogada(int linha, int col) {
     return false;
 }
 
-bool Reversi::fimDeJogo() const {
-    //
+bool Reversi::verificafimDeJogo() const {
+
+    bool tabuleiroCheio = true;
+    for(int i = 0; i<8; i++) {
+        for (int j = 0; j<8; j++) {
+        if(tabuleiro.verificaCasa(i, j, "NULO")){
+            tabuleiroCheio = false;
+            break;
+        }
+        } if (!tabuleiroCheio) break;
+    }
+
+    if(tabuleiroCheio) {
+        int pecasBrancas, pecasPretas;
+        tabuleiro.contarPecas(pecasBrancas, pecasPretas); 
+        if (pecasBrancas > pecasPretas) {
+            std::cout << "BRANCAS VENCERAM!" << std::endl;
+        }
+        else if (pecasPretas > pecasBrancas) {
+            std::cout << "PRETAS VENCERAM!" << std::endl;
+        }
+        else {
+            std::cout << "EMPATE. TABULEIRO CHEIO!" << std::endl;
+        }
+        return true;
+    }
     return false;
 }
 

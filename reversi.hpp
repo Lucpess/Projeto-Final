@@ -8,10 +8,11 @@
       Reversi();
       void start();
       bool escolheJogada (int linha, int col);
-      bool fimDeJogo () const;
+      bool verificafimDeJogo () const;
       void printTabuleiro () const;
 
    private:
+      bool fimDeJogo;
       Tabuleiro tabuleiro;
       bool jogadaPermitida(int linha, int col) const;
       void viraPeca(int linha, int col);
