@@ -14,17 +14,20 @@ class Jogador {
         int derrotasLig4;
     
     public:
-        std::string getApelido() const;
-        std::string getNome() const;
+        std::string getApelido() const; 
+        std::string getNome() const; 
         int getVitoriasReversi() const;
         int getDerrotasReversi() const;
         int getVitoriasLig4() const;
         int getDerrotasLig4() const;
-        void novaVitoria() const;
-        void novaDerrota() const;
-        void printResultados() const;  
 
-        //set?
+        void printResultados() const; 
+
+        void setApelido(const std::string& apelido);
+        void addVitoriaReversi();
+        void addDerrotaReversi();
+        void addVitoriaLig4();
+        void addDerrotaLig4();
 
         Jogador();
         Jogador(const std::string& apelido, const std::string& nome, 
