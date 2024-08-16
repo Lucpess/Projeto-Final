@@ -128,7 +128,7 @@ bool Reversi::confereDiagonal(int i, int j, std::string turno) {
         }
         if (i <=5 && j >= 2) { // confere diagonal p/ esquerda e p/ baixo
             if (tabuleiro.verificaCasa(i+1, j-1, corOposta())) {
-                for (int x = i+2, int y = j-2; x < 8 && y >=0; ++x, ++y) {
+                for (int x = i+2, y = j-2; x < 8 && y >=0; ++x, ++y) {
                     if (tabuleiro.verificaCasa(x, y, corOposta()))
                         continue;
 
@@ -142,7 +142,7 @@ bool Reversi::confereDiagonal(int i, int j, std::string turno) {
         }
         if (i >=2 && j <= 5) { // confere diagonal p/ direita e p/ cima
             if(tabuleiro.verificaCasa(i-1, j+1, corOposta())) {
-                for (int x = i-2, int y = j+2; x >= 0 && y < 8; --x, ++y) {
+                for (int x = i-2, y = j+2; x >= 0 && y < 8; --x, ++y) {
                     if(tabuleiro.verificaCasa(x, y, corOposta()))
                         continue;
 
@@ -156,7 +156,7 @@ bool Reversi::confereDiagonal(int i, int j, std::string turno) {
         }
         if(i <=5 && j <=5) {// confere diagonal p/ direita e p/ baixo
             if(tabuleiro.verificaCasa(i+1, j+1, "NULO")) {
-                for(int x = i+2, int y = j+2; x < 8 && y < 8; ++x, ++y) {
+                for(int x = i+2, y = j+2; x < 8 && y < 8; ++x, ++y) {
                     if (tabuleiro.verificaCasa(x, y, corOposta()))
                         continue;
 
@@ -337,7 +337,7 @@ bool Reversi::verificaFimDeJogo() const {
 
     bool tabuleiroCheio = true;
     int pecasBrancas, pecasPretas;
-    tabuleiro.contarPecas(pecasBrancas, pecasPretas);
+    contarPecas(pecasBrancas, pecasPretas);
     int totalPecas = pecasBrancas + pecasPretas;
 
     while(tabuleiroCheio) {
@@ -387,7 +387,7 @@ void Reversi::mudaTurno(){
     }
 }
 
-void Reversi::contarPecas(int& brancas, int& pretas) {
+void Reversi::contarPecas(int& brancas, int& pretas) const{
     brancas = 0;
     pretas = 0;
     for(int i = 0; i < 8; i++) {
