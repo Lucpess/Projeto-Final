@@ -7,6 +7,8 @@
 
 int main() {
     Cadastro cadastro;
+    Lig4 lig4;
+    Reversi reversi;
     std::string comando;
     
     std::cout << "--BEM VINDO AOS JOGOS--"<< std::endl;
@@ -32,7 +34,7 @@ int main() {
             std::string apelido;
             std::string nome;
             if(iss >> apelido >> nome){
-                //implementar método para cadastrar jogador
+                cadastro.cadastraJogador(apelido, nome);
             } else{
                 std::cout << "Comando inválido para cadastrar jogador!" << std::endl;
             }
@@ -40,7 +42,7 @@ int main() {
         } else if(acao == "RJ"){
             std::string apelido;
             if(iss>>apelido){
-                //implementar método para registrar jogador
+                cadastro.removeJogador(apelido);
             }else{
                 std::cout << "Comando inválido para registrar jogador!" << std::endl;
             }
@@ -48,7 +50,7 @@ int main() {
         } else if(acao == "LJ"){
             std::string ordem;
             if(iss>>ordem){
-                //implementar método para listar jogadores
+                cadastro.listaJogadores(ordem);
             }else{
                 std::cout << "Comando inválido para listar jogadores!" << std::endl;
             }
@@ -58,10 +60,25 @@ int main() {
             std::string jogador1;
             std::string jogador2;
             if(iss >> jogo >> jogador1 >> jogador2){
-                //implementar método para executar partida
+                if(jogo != "R" && jogo != "L") {
+                    std::cout << "ERRO: dados incorretos" << std:: endl;
+                    continue;
+                }
+
+                if(!cadastro.existeJogador(jogador1) || !cadastro.existeJogador(jogador2)) {
+                    std::cout << "ERRO: jogador inexistente" << std::endl;
+                    continue;
+                }
+
+                if(jogo == "R") {
+                    reversi.start(jogador1, jogador2);
+                    
+                } else if (jogo == "L") {
+                        lig4.start(jogador1, jogador2, cadastro);
+                    }
             } else{
                 std::cout << "Comando inválido para executar partida!" << std::endl;
-            }
+                }
         } else{
             std::cout<< "Comando inválido. Por favor, digite um comando válido!" << std::endl;
         }
