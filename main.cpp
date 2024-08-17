@@ -10,7 +10,7 @@ int main() {
     Lig4 lig4;
     Reversi reversi;
     std::string comando;
-    
+
     std::cout << "--BEM VINDO AOS JOGOS--"<< std::endl;
 
     while(1){

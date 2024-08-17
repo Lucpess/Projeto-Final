@@ -1,31 +1,29 @@
+CXX = g++
+CXXFLAGS = -Wall -std=c++11
 TARGET = jogo
-CC = g++
-CFLAGS = -Wall -std=c++11
-
-HEADERS = cadastro.hpp jogador.hpp lig4.hpp reversi.hpp tabuleiro.hpp
 
 OBJECTS = tabuleiro.o jogador.o cadastro.o lig4.o reversi.o main.o
 
 $(TARGET): $(OBJECTS)
-	$(CC) $(CFLAGS) -o $(TARGET) $(OBJECTS)
+	$(CXX) $(CXXFLAGS) -o $(TARGET) $(OBJECTS)
 
 tabuleiro.o: tabuleiro.cpp tabuleiro.hpp
-	$(CC) $(CFLAGS) -c tabuleiro.cpp
+	$(CXX) $(CXXFLAGS) -c tabuleiro.cpp
 
 jogador.o: jogador.cpp jogador.hpp
-	$(CC) $(CFLAGS) -c jogador.cpp
+	$(CXX) $(CXXFLAGS) -c jogador.cpp
 
 cadastro.o: cadastro.cpp cadastro.hpp jogador.hpp
-	$(CC) $(CFLAGS) -c cadastro.cpp
+	$(CXX) $(CXXFLAGS) -c cadastro.cpp
 
-lig4.o: lig4.cpp lig4.hpp tabuleiro.hpp cadastro.hpp jogador.hpp
-	$(CC) $(CFLAGS) -c lig4.cpp
+lig4.o: lig4.cpp lig4.hpp tabuleiro.hpp
+	$(CXX) $(CXXFLAGS) -c lig4.cpp
 
-reversi.o: reversi.cpp reversi.hpp tabuleiro.hpp cadastro.hpp jogador.hpp
-	$(CC) $(CFLAGS) -c reversi.cpp
+reversi.o: reversi.cpp reversi.hpp tabuleiro.hpp
+	$(CXX) $(CXXFLAGS) -c reversi.cpp
 
-main.o: main.cpp $(HEADERS)
-	$(CC) $(CFLAGS) -c main.cpp
+main.o: main.cpp cadastro.hpp lig4.hpp reversi.hpp
+	$(CXX) $(CXXFLAGS) -c main.cpp
 
 clean:
-	rm -f $(OBJECTS) $(TARGET)
+	del /q $(OBJECTS) $(TARGET)

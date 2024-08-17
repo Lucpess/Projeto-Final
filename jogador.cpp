@@ -4,7 +4,7 @@
 //Talvez seja preciso trocar Jogador ()  
 
 Jogador::Jogador()
-    : vitoriasReversi(0), derrotasReversi(0), vitoriasLig4(0), derrotasLig4(0), nome(nome), apelido(apelido) {}
+    : apelido(""), nome(""), vitoriasReversi(0), derrotasReversi(0), vitoriasLig4(0), derrotasLig4(0)  {}
 
 Jogador::Jogador(const std::string& apelido, const std::string& nome, const int vitoriasReversi, 
                  const int derrotasReversi, const int vitoriasLig4, const int derrotasLig4)

@@ -20,8 +20,8 @@ void Tabuleiro::inicializaTabuleiro(char jogo){
     } else  
     if (jogo == 'L'){
         tabuleiro.resize(6, std::vector<Casa>(7));
-        for (int i = 0; i< 8; i++) {
-            for (int j = 0; j < 8; j++){
+        for (int i = 0; i< 6; i++) {
+            for (int j = 0; j < 7; j++){
                 tabuleiro[i][j].estado = "NULO";
             }
         }
@@ -29,8 +29,8 @@ void Tabuleiro::inicializaTabuleiro(char jogo){
 }
 
 void Tabuleiro::imprimeTabuleiro() const {
-    for (int i=0; i < tabuleiro.size(); i++) {
-        for (int j=0; j < tabuleiro[i].size(); j++) {
+    for (std::size_t i=0; i < tabuleiro.size(); i++) {
+        for (std::size_t j=0; j < tabuleiro[i].size(); j++) {
             std::cout << "|";
             if(tabuleiro[i][j].estado == "NULO"){
                 std::cout << " ";
