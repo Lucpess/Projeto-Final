@@ -78,7 +78,7 @@ int main() {
 
                 if(jogo == "R") {
                     Reversi* jogo = new Reversi();
-                    jogo->start(jogador1, jogador2);
+                    jogo->start(jogador1, jogador2, cadastro);
                     delete jogo;
                     std::cin.ignore();    
                 } else if (jogo == "L") {
