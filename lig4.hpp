@@ -2,13 +2,14 @@
 #define LIG4_H
 
 #include "tabuleiro.hpp"
+#include "cadastro.hpp"
 
 class Lig4 {
 public: 
     Lig4();
-    void start(std::string jogador1, std::string jogador2);
+    void start(std::string jogador1, std::string jogador2, Cadastro& cadastro);
     bool verifica4(int linha, int coluna);
-    int verificaFimDeJogo (int coluna, std::string jogador1, std::string jogador2);
+    int verificaFimDeJogo (int coluna, std::string jogador1, std::string jogador2, Cadastro& cadastro);
     void printTabuleiro () const;
 
 private: 

@@ -98,7 +98,7 @@ bool Lig4::verifica4(int linha, int col){
     return false;
 }
 
-int Lig4::verificaFimDeJogo(int col, std::string jogador1, std::string jogador2) {
+int Lig4::verificaFimDeJogo(int col, std::string jogador1, std::string jogador2, Cadastro& cadastro) {
     int linhaColocada;
     for(int i = 0; i<6; i++){
         if(!tabuleiro.verificaCasa(i, col, "NULO")){
@@ -110,8 +110,10 @@ int Lig4::verificaFimDeJogo(int col, std::string jogador1, std::string jogador2)
         fimDeJogo = true;
         if(turno == "PRETO"){
             std::cout << "** " << jogador1 << " VENCEU **" << std::endl;
+            cadastro.registrarResultado(jogador1, jogador2, 'L');
         } else{
             std::cout << "** " << jogador2 << " VENCEU **" << std::endl;
+            cadastro.registrarResultado(jogador1, jogador2, 'L');
         }
         return 0;
     }
@@ -137,7 +139,7 @@ void Lig4::mudaTurno(){
     }
 }
 
-void Lig4::start(std::string jogador1, std::string jogador2) {
+void Lig4::start(std::string jogador1, std::string jogador2, Cadastro& cadastro) {
     turno = "PRETO";
     printTabuleiro();
     std::cout << jogador1 << " == X | " << jogador2 << " == O" << std::endl;
@@ -152,12 +154,12 @@ void Lig4::start(std::string jogador1, std::string jogador2) {
                 } else if (coluna < 1 || coluna > 7 || !jogadaPermitida(coluna - 1)) {
                     std::cout << "Coluna inválida. Por favor, escolha uma coluna válida." << std::endl;
                 } else {
-                    break;  // Sai do loop se a entrada for válida
+                    break;
                 }
         }
         novaJogada(coluna - 1);
         printTabuleiro();
-        verificaFimDeJogo(coluna - 1, jogador1, jogador2);
+        verificaFimDeJogo(coluna - 1, jogador1, jogador2, cadastro);
         mudaTurno();
     }
     
