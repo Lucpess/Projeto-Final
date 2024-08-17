@@ -37,4 +37,4 @@
       std::vector<int> jogadasColuna;
    };
 
-   #endif 
+   #endif teste
