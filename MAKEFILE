@@ -1,0 +1,31 @@
+TARGET = jogo
+CC = g++
+CFLAGS = -Wall -std=c++11
+
+HEADERS = cadastro.hpp jogador.hpp lig4.hpp reversi.hpp tabuleiro.hpp
+
+OBJECTS = tabuleiro.o jogador.o cadastro.o lig4.o reversi.o main.o
+
+$(TARGET): $(OBJECTS)
+	$(CC) $(CFLAGS) -o $(TARGET) $(OBJECTS)
+
+tabuleiro.o: tabuleiro.cpp tabuleiro.hpp
+	$(CC) $(CFLAGS) -c tabuleiro.cpp
+
+jogador.o: jogador.cpp jogador.hpp
+	$(CC) $(CFLAGS) -c jogador.cpp
+
+cadastro.o: cadastro.cpp cadastro.hpp jogador.hpp
+	$(CC) $(CFLAGS) -c cadastro.cpp
+
+lig4.o: lig4.cpp lig4.hpp tabuleiro.hpp cadastro.hpp jogador.hpp
+	$(CC) $(CFLAGS) -c lig4.cpp
+
+reversi.o: reversi.cpp reversi.hpp tabuleiro.hpp cadastro.hpp jogador.hpp
+	$(CC) $(CFLAGS) -c reversi.cpp
+
+main.o: main.cpp $(HEADERS)
+	$(CC) $(CFLAGS) -c main.cpp
+
+clean:
+	rm -f $(OBJECTS) $(TARGET)
