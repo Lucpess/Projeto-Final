@@ -13,9 +13,9 @@ void Lig4::printTabuleiro() const {
 
 void Lig4::anunciaTurno(std::string jogador1, std::string jogador2){
     if(turno == "PRETO"){
-        std::cout << "TURNO DE " << jogador1 << std::endl << "-DIGITE O NÚMERO DA COLUNA PARA JOGAR-";
+        std::cout << "TURNO DE " << jogador1 << std::endl << "-DIGITE O NUMERO DA COLUNA PARA JOGAR-";
     } else{
-        std::cout << "TURNO DE " << jogador2 << std::endl << "-DIGITE O NÚMERO DA COLUNA PARA JOGAR-";
+        std::cout << "TURNO DE " << jogador2 << std::endl << "-DIGITE O NUMERO DA COLUNA PARA JOGAR-";
     }
 }
 
@@ -149,11 +149,11 @@ void Lig4::start(std::string jogador1, std::string jogador2, Cadastro& cadastro)
         while (true) {
                 anunciaTurno(jogador1, jogador2);
                 if (!(std::cin >> coluna)) {
-                    std::cout << "Entrada inválida. Por favor, insira um número válido." << std::endl;
+                    std::cout << "Entrada invalida. Por favor, insira um numero valido." << std::endl;
                     std::cin.clear();  // Limpa o estado de erro
                     std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');  // Descarta entrada inválida
                 } else if (coluna < 1 || coluna > 7 || !jogadaPermitida(coluna - 1)) {
-                    std::cout << "Coluna inválida. Por favor, escolha uma coluna válida." << std::endl;
+                    std::cout << "Coluna invalida. Por favor, escolha uma coluna valida." << std::endl;
                 } else {
                     break;
                 }

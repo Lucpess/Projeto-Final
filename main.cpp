@@ -12,12 +12,15 @@ int main() {
     std::cout << "--BEM VINDO AOS JOGOS--"<< std::endl;
 
     while(1){
-        std::cout<< "O QUE VOCÊ DESEJA FAZER? PARA:" << std::endl;
+        std::cout<< "--------------------------------------------------------------------" <<std::endl;
+        std::cout<< "O QUE VOCE DESEJA FAZER? PARA:" << std::endl;
         std::cout<< ".CADASTRAR JOGADOR: DIGITE ''CJ <Apelido> <Nome>''" << std::endl;
         std::cout<< ".REMOVER JOGADOR: DIGITE ''RJ <APELIDO>''" << std::endl;
         std::cout<< ".LISTAR JOGADORES: DIGITE ''LJ [A/N]''" <<std::endl;
         std::cout<< ".EXECUTAR PARTIDA: DIGITE ''EP <JOGO: (R/L)> <Apelido1> <Apelido2>''" << std::endl;
         std::cout<< ".FINALIZAR SISTEMA: DIGITE ''FS''" << std::endl;
+        std::cout<< "--------------------------------------------------------------------" <<std::endl;
+        std::cout<< "-> ";
 
         std::getline(std::cin,comando);
         std::istringstream iss(comando);
@@ -34,7 +37,7 @@ int main() {
             if(iss >> apelido >> nome){
                 cadastro.cadastraJogador(apelido, nome);
             } else{
-                std::cout << "Comando inválido para cadastrar jogador!" << std::endl;
+                std::cout << "Comando invalido para cadastrar jogador!" << std::endl;
             }
 
         } else if(acao == "RJ"){
@@ -42,7 +45,7 @@ int main() {
             if(iss>>apelido){
                 cadastro.removeJogador(apelido);
             }else{
-                std::cout << "Comando inválido para registrar jogador!" << std::endl;
+                std::cout << "Comando invalido para registrar jogador!" << std::endl;
             }
 
         } else if(acao == "LJ"){
@@ -50,7 +53,7 @@ int main() {
             if(iss>>ordem){
                 cadastro.listaJogadores(ordem);
             }else{
-                std::cout << "Comando inválido para listar jogadores!" << std::endl;
+                std::cout << "Comando invalido para listar jogadores!" << std::endl;
             }
 
         } else if(acao == "EP"){
@@ -77,17 +80,18 @@ int main() {
                     Reversi* jogo = new Reversi();
                     jogo->start(jogador1, jogador2);
                     delete jogo;
-                    
+                    std::cin.ignore();    
                 } else if (jogo == "L") {
                         Lig4* jogo = new Lig4();
                         jogo->start(jogador1, jogador2, cadastro);
                         delete jogo;
+                        std::cin.ignore();
                     }
             } else{
-                std::cout << "Comando inválido para executar partida!" << std::endl;
+                std::cout << "Comando invalido para executar partida!" << std::endl;
                 }
         } else{
-            std::cout<< "Comando inválido. Por favor, digite um comando válido!" << std::endl;
+            std::cout<< "Comando invalido. Por favor, digite um comando valido!" << std::endl;
         }
 
     }
