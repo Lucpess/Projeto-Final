@@ -113,15 +113,16 @@ int Lig4::verificaFimDeJogo(int col, std::string jogador1, std::string jogador2,
             cadastro.registrarResultado(jogador1, jogador2, 'L');
         } else{
             std::cout << "** " << jogador2 << " VENCEU **" << std::endl;
-            cadastro.registrarResultado(jogador1, jogador2, 'L');
+            cadastro.registrarResultado(jogador2, jogador1, 'L');
         }
         return 0;
     }
 
     bool tabuleiroCheio = true;
     for(int i = 0; i<7; i++){
-        if(!tabuleiro.verificaCasa(0, i, "NULO")){
+        if(tabuleiro.verificaCasa(0, i, "NULO")){
             tabuleiroCheio = false;
+            break;
         }
     }
     if(tabuleiroCheio){

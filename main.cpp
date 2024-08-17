@@ -7,8 +7,6 @@
 
 int main() {
     Cadastro cadastro;
-    Lig4 lig4;
-    Reversi reversi;
     std::string comando;
 
     std::cout << "--BEM VINDO AOS JOGOS--"<< std::endl;
@@ -76,10 +74,14 @@ int main() {
                 }
 
                 if(jogo == "R") {
-                    reversi.start(jogador1, jogador2);
+                    Reversi* jogo = new Reversi();
+                    jogo->start(jogador1, jogador2);
+                    delete jogo;
                     
                 } else if (jogo == "L") {
-                        lig4.start(jogador1, jogador2, cadastro);
+                        Lig4* jogo = new Lig4();
+                        jogo->start(jogador1, jogador2, cadastro);
+                        delete jogo;
                     }
             } else{
                 std::cout << "Comando inválido para executar partida!" << std::endl;
