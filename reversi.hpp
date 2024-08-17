@@ -34,4 +34,4 @@
       std::string jogador;
    };
 
-   #endif teste
+   #endif 
