@@ -70,6 +70,11 @@ int main() {
                     continue;
                 }
 
+                if(jogador1 == jogador2){
+                    std::cout << "ERRO: jogadores iguais" << std::endl;
+                    continue;
+                }
+
                 if(jogo == "R") {
                     reversi.start(jogador1, jogador2);
                     

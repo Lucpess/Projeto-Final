@@ -22,4 +22,4 @@ private:
         void anunciaTurno(std::string jogador1, std::string jogador2);
 };
 
-#endif 
+#endif
