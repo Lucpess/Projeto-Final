@@ -364,9 +364,14 @@ void Reversi::jogadasValidas(std::string turno) {
 }
 
     bool Reversi::verificaFimDeJogo(std::string jogador1, std::string jogador2, Cadastro& cadastro) {
+    int totalPecas = 0;
     int pecasBrancas, pecasPretas;
     contarPecas(pecasBrancas, pecasPretas);
-    bool tabuleiroCheio = true;
+    bool tabuleiroCheio = false;
+    totalPecas = pecasBrancas + pecasPretas;
+    if (totalPecas == 64) { 
+        tabuleiroCheio = true;
+    }
 
     // Verifica se há espaço no tabuleiro para jogar
     for (int i = 0; i < 8; i++) {
