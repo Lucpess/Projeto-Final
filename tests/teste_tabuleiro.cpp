@@ -1,7 +1,7 @@
-#define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
 #include "doctest.h"
 #include "tabuleiro.hpp"
-#include <sstream>
+#include <sstream> // Necessário para std::stringstream
+#include <iostream>
 
 // Testa a inicialização do tabuleiro para o jogo Reversi
 TEST_CASE("Testa inicializaTabuleiro para o jogo Reversi") {
@@ -92,6 +92,7 @@ TEST_CASE("Testa imprimeTabuleiro para o jogo Lig4") {
     // Verifica se a saída gerada corresponde à esperada
     CHECK(buffer.str() == expectedOutput);
 }
+
 // Testa o método verificaCasa após a inicialização do tabuleiro para o jogo Reversi
 TEST_CASE("Testa verificaCasa para o jogo Reversi") {
     Tabuleiro tab;
@@ -125,6 +126,7 @@ TEST_CASE("Testa verificaCasa para o jogo Lig4") {
     CHECK_FALSE(tab.verificaCasa(6, 7, "NULO"));
     CHECK_FALSE(tab.verificaCasa(5, 6, "PRETO"));
 }
+
 // Testa o método modificaTabuleiro para o jogo Reversi
 TEST_CASE("Testa modificaTabuleiro para o jogo Reversi") {
     Tabuleiro tab;
@@ -175,4 +177,3 @@ TEST_CASE("Testa modificaTabuleiro para o jogo Lig4") {
     // Verifica que casas não modificadas ainda têm o estado correto
     CHECK(tab.verificaCasa(2, 2, "NULO"));
 }
-
