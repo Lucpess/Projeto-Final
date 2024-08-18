@@ -6,13 +6,11 @@
 
 using namespace std;
 
-Reversi::Reversi() {
-    tabuleiro.inicializaTabuleiro('R');
-    fimDeJogo = false;
+Reversi::Reversi() : Jogos('R'){
 }
 
-void Reversi::printTabuleiro() const {
-    tabuleiro.imprimeTabuleiro();
+Reversi::~Reversi(){
+    
 }
 
 void Reversi::anunciaTurno(std::string jogador1, std::string jogador2){
@@ -407,10 +405,6 @@ void Reversi::jogadasValidas(std::string turno) {
     }
 
     return false;
-}
-
-void Reversi::mudaTurno(){
-  turno = (turno == "PRETO") ? "BRANCO" : "PRETO";
 }
 
 void Reversi::contarPecas(int& pecasBrancas, int& pecasPretas) {
