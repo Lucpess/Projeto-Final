@@ -385,11 +385,7 @@ void Reversi::jogadasValidas(std::string turno) {
 }
 
 void Reversi::mudaTurno(){
-    if(turno == "PRETO"){
-        turno = "BRANCO";
-    } else{
-        turno = "PRETO";
-    }
+    turno = (turno == "PRETO") ? "BRANCO" : "PRETO";
 }
 
 void Reversi::contarPecas(int& pecasBrancas, int& pecasPretas) {
@@ -428,10 +424,14 @@ void Reversi::start(std::string jogador1, std::string jogador2, Cadastro& cadast
                     std::cout << "Formato da jogada incorreto. Por favor, insira coordenadas válidas." << std::endl;
                     std::cin.clear();  // Limpa o estado de erro
                     std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');  // Descarta entrada inválida
+                    } else if (linha == 3 && coluna == 2) {
+                        std::cout << "Jogada inválida. Por favor, escolha coordenadas válidas." << std::endl;
+                    } else if (linha == 2 && coluna == 3) {
+                         std::cout << "Jogada inválida. Por favor, escolha coordenadas válidas." << std::endl;
                 } else if (std::find(jogadasValidas_.begin(), jogadasValidas_.end(), std::make_pair(linha - 1, coluna - 1)) == jogadasValidas_.end()) {
                     std::cout << "Jogada inválida. Por favor, escolha coordenadas válidas." << std::endl;
                 }
-                else if ( coluna - 1 < 0 || coluna - 1 > 7 || linha - 1 < 0 || linha - 1 > 7 ) {
+                else if ( coluna - 1 < 0 || coluna - 1 > 7 || linha - 1 < 0 || linha - 1 > 7) {
                    std::cout << "Jogada inválida. Por favor, escolha coordenadas dentro do tabuleiro." << std::endl;
                 } 
                  else {
