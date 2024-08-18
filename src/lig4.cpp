@@ -2,13 +2,10 @@
 #include <iostream>
 #include <limits>
 
-Lig4::Lig4() {
-    tabuleiro.inicializaTabuleiro('L');
-    fimDeJogo = false;
+Lig4::Lig4() : Jogos('L'){
 }
 
-void Lig4::printTabuleiro() const {
-    tabuleiro.imprimeTabuleiro();
+Lig4::~Lig4(){
 }
 
 void Lig4::anunciaTurno(std::string jogador1, std::string jogador2){
@@ -132,14 +129,6 @@ int Lig4::verificaFimDeJogo(int col, std::string jogador1, std::string jogador2,
         std::cout << "EMPATE, TABULEIRO CHEIO" << std::endl;
     }
     return 0;
-}
-
-void Lig4::mudaTurno(){
-    if(turno == "PRETO"){
-        turno = "BRANCO";
-    } else{
-        turno = "PRETO";
-    }
 }
 
 void Lig4::start(std::string jogador1, std::string jogador2, Cadastro& cadastro) {
