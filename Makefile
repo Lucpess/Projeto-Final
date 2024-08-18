@@ -1,29 +1,32 @@
 CXX = g++
 CXXFLAGS = -Wall -std=c++11
-TARGET = jogo
+TARGET = bin/jogo
 
-OBJECTS = tabuleiro.o jogador.o cadastro.o lig4.o reversi.o main.o
+OBJECTS = obj/tabuleiro.o obj/jogador.o obj/cadastro.o obj/lig4.o obj/reversi.o obj/main.o
+
+all: $(TARGET)
 
 $(TARGET): $(OBJECTS)
 	$(CXX) $(CXXFLAGS) -o $(TARGET) $(OBJECTS)
 
-tabuleiro.o: tabuleiro.cpp tabuleiro.hpp
-	$(CXX) $(CXXFLAGS) -c tabuleiro.cpp
+obj/tabuleiro.o: src/tabuleiro.cpp include/tabuleiro.hpp
+	$(CXX) $(CXXFLAGS) -Iinclude -c src/tabuleiro.cpp -o obj/tabuleiro.o
 
-jogador.o: jogador.cpp jogador.hpp
-	$(CXX) $(CXXFLAGS) -c jogador.cpp
+obj/jogador.o: src/jogador.cpp include/jogador.hpp
+	$(CXX) $(CXXFLAGS) -Iinclude -c src/jogador.cpp -o obj/jogador.o
 
-cadastro.o: cadastro.cpp cadastro.hpp jogador.hpp
-	$(CXX) $(CXXFLAGS) -c cadastro.cpp
+obj/cadastro.o: src/cadastro.cpp include/cadastro.hpp include/jogador.hpp
+	$(CXX) $(CXXFLAGS) -Iinclude -c src/cadastro.cpp -o obj/cadastro.o
 
-lig4.o: lig4.cpp lig4.hpp tabuleiro.hpp
-	$(CXX) $(CXXFLAGS) -c lig4.cpp
+obj/lig4.o: src/lig4.cpp include/lig4.hpp include/tabuleiro.hpp
+	$(CXX) $(CXXFLAGS) -Iinclude -c src/lig4.cpp -o obj/lig4.o
 
-reversi.o: reversi.cpp reversi.hpp tabuleiro.hpp
-	$(CXX) $(CXXFLAGS) -c reversi.cpp
+obj/reversi.o: src/reversi.cpp include/reversi.hpp include/tabuleiro.hpp
+	$(CXX) $(CXXFLAGS) -Iinclude -c src/reversi.cpp -o obj/reversi.o
 
-main.o: main.cpp cadastro.hpp lig4.hpp reversi.hpp
-	$(CXX) $(CXXFLAGS) -c main.cpp
+obj/main.o: src/main.cpp include/cadastro.hpp include/lig4.hpp include/reversi.hpp
+	$(CXX) $(CXXFLAGS) -Iinclude -c src/main.cpp -o obj/main.o
 
 clean:
-	del /q $(OBJECTS) $(TARGET)
+	del /q obj\*.o
+	del /q bin\*.exe
