@@ -20,11 +20,7 @@ void Lig4::anunciaTurno(std::string jogador1, std::string jogador2){
 }
 
 bool Lig4::jogadaPermitida(int col){
-    if(tabuleiro.verificaCasa(0,col, "NULO")){
-        return true;
-    } else{
-        return false;
-    }
+    return tabuleiro.verificaCasa(0, col, "NULO");
 }
 
 void Lig4::novaJogada(int col){
@@ -38,71 +34,77 @@ void Lig4::novaJogada(int col){
     tabuleiro.modificaTabuleiro(linhaPraMudar, col, turno);
 }
 
-bool Lig4::verifica4(int linha, int col){
-    const int LINHAS = 6; 
-    const int COLUNAS = 7; 
-    std::string peca = turno; 
+bool Lig4::verifica4(int linha, int col) {
+  const int LINHAS = 6;
+  const int COLUNAS = 7;
+  std::string peca = turno;
 
-    //Verifica horizontal
-    int count = 0;
-    for (int j = 0; j < COLUNAS; j++) {
-        if (tabuleiro.verificaCasa(linha, j, peca)) {
-            count++;
-            if (count == 4) return true;
-        } else {
-            count = 0;
-        }
+  // Verifica horizontal
+  int count = 0;
+  for (int j = 0; j < COLUNAS; j++) {
+    if (tabuleiro.verificaCasa(linha, j, peca)) {
+      count++;
+      if (count == 4)
+        return true;
+    } else {
+      count = 0;
     }
+  }
 
-    //Verifica vertical
-    count = 0;
-    for (int i = 0; i < LINHAS; i++) {
-        if (tabuleiro.verificaCasa(i, col, peca)) {
-            count++;
-            if (count == 4) return true;
-        } else {
-            count = 0;
-        }
+  // Verifica vertical
+  count = 0;
+  for (int i = 0; i < LINHAS; i++) {
+    if (tabuleiro.verificaCasa(i, col, peca)) {
+      count++;
+      if (count == 4)
+        return true;
+    } else {
+      count = 0;
     }
+  }
 
-    //Verifica diagonal (\) 
-    count = 0;
-    for (int i = -3; i <= 3; i++) {
-        int l = linha + i;
-        int c = col + i;
-        if (l >= 0 && l < LINHAS && c >= 0 && c < COLUNAS) {
-            if (tabuleiro.verificaCasa(l, c, peca)) {
-                count++;
-                if (count == 4) return true;
-            } else {
-                count = 0;
-            }
-        }
+  // Verifica diagonal (\)
+  count = 0;
+  for (int i = -3; i <= 3; i++) {
+    int l = linha + i;
+    int c = col + i;
+    if (l >= 0 && l < LINHAS && c >= 0 && c < COLUNAS) {
+      if (tabuleiro.verificaCasa(l, c, peca)) {
+        count++;
+        if (count == 4)
+          return true;
+      } else {
+        count = 0;
+      }
     }
+  }
 
-    //Verifica diagonal (/)
-    count = 0;
-    for (int i = -3; i <= 3; i++) {
-        int l = linha - i;
-        int c = col + i;
-        if (l >= 0 && l < LINHAS && c >= 0 && c < COLUNAS) {
-            if (tabuleiro.verificaCasa(l, c, peca)) {
-                count++;
-                if (count == 4) return true;
-            } else {
-                count = 0;
-            }
-        }
+  // Verifica diagonal (/)
+  count = 0;
+  for (int i = -3; i <= 3; i++) {
+    int l = linha - i;
+    int c = col + i;
+    if (l >= 0 && l < LINHAS && c >= 0 && c < COLUNAS) {
+      if (tabuleiro.verificaCasa(l, c, peca)) {
+        count++;
+        if (count == 4)
+          return true;
+      } else {
+        count = 0;
+      }
     }
+  }
 
-    return false;
+  return false;
 }
 
 int Lig4::verificaFimDeJogo(int col, std::string jogador1, std::string jogador2, Cadastro& cadastro) {
-    int linhaColocada;
+    
+    int linhaColocada = -1;
     for(int i = 0; i<6; i++){
         if(!tabuleiro.verificaCasa(i, col, "NULO")){
             linhaColocada = i;
+            break;
         }
     }
     
