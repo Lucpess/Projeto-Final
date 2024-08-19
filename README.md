@@ -60,4 +60,4 @@ Além das funcionalidades básicas, foram implementados os seguintes extras:
 ## Instruções para Compilação e Execução
 
 1. *Compilação*: Execute make all para compilar o projeto completo (jogo.exe e testes.exe), ou apenas make para compilar apenas o jogo.exe.
-2. *Execução*: Execute o arquivo jogo.exe para iniciar o jogo (para tal digite .\bin\jogo.exe) ou testes.exe para rodar os testes unitários(para tal digite .\bin\testes.exe).
+2. *Execução*: Execute o arquivo jogo.exe para iniciar o jogo na pasta bin (se for pelo terminal, digite .\bin\jogo.exe) ou testes.exe para rodar os testes unitários(se for pelo terminal, digite .\bin\testes.exe).
