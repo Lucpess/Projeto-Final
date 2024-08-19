@@ -91,6 +91,9 @@ $(function(){ initResizable(false); });
 </div><!--header-->
 <div class="contents">
 
+<p>Classe que implementa o jogo de <a class="el" href="class_reversi.html" title="Classe que implementa o jogo de Reversi.">Reversi</a>.  
+ <a href="#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="reversi_8hpp_source.html">reversi.hpp</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for Reversi:</div>
@@ -98,58 +101,80 @@ Inheritance diagram for Reversi:</div>
  <div class="center">
   <img src="class_reversi.png" usemap="#Reversi_map" alt=""/>
   <map id="Reversi_map" name="Reversi_map">
-<area href="class_jogos.html" alt="Jogos" shape="rect" coords="0,0,55,24"/>
+<area href="class_jogos.html" title="Classe base para jogos que utilizam um tabuleiro." alt="Jogos" shape="rect" coords="0,0,55,24"/>
   </map>
 </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a73e3ca5c21b634f9c490b404d62f0e01" id="r_a73e3ca5c21b634f9c490b404d62f0e01"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a73e3ca5c21b634f9c490b404d62f0e01">Reversi</a> ()</td></tr>
+<tr class="memdesc:a73e3ca5c21b634f9c490b404d62f0e01"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construtor padrão da classe <a class="el" href="class_reversi.html" title="Classe que implementa o jogo de Reversi.">Reversi</a>.  <br /></td></tr>
 <tr class="separator:a73e3ca5c21b634f9c490b404d62f0e01"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afd006e4fdacdedc4a3bb34fe6f1d1940" id="r_afd006e4fdacdedc4a3bb34fe6f1d1940"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afd006e4fdacdedc4a3bb34fe6f1d1940">~Reversi</a> ()</td></tr>
+<tr class="memdesc:afd006e4fdacdedc4a3bb34fe6f1d1940"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destrutor da classe <a class="el" href="class_reversi.html" title="Classe que implementa o jogo de Reversi.">Reversi</a>.  <br /></td></tr>
 <tr class="separator:afd006e4fdacdedc4a3bb34fe6f1d1940"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2f5e5c50a1f68f8e61a77c733a6b5ad6" id="r_a2f5e5c50a1f68f8e61a77c733a6b5ad6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2f5e5c50a1f68f8e61a77c733a6b5ad6">start</a> (std::string jogador1, std::string jogador2, <a class="el" href="class_cadastro.html">Cadastro</a> &amp;cadastro) override</td></tr>
+<tr class="memdesc:a2f5e5c50a1f68f8e61a77c733a6b5ad6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inicia o jogo com os jogadores especificados.  <br /></td></tr>
 <tr class="separator:a2f5e5c50a1f68f8e61a77c733a6b5ad6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a08eb0f4733cf4f4111808ac738b946b6" id="r_a08eb0f4733cf4f4111808ac738b946b6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a08eb0f4733cf4f4111808ac738b946b6">verificaFimDeJogo</a> (std::string jogador1, std::string jogador2, <a class="el" href="class_cadastro.html">Cadastro</a> &amp;cadastro)</td></tr>
+<tr class="memdesc:a08eb0f4733cf4f4111808ac738b946b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verifica se o jogo chegou ao fim.  <br /></td></tr>
 <tr class="separator:a08eb0f4733cf4f4111808ac738b946b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae47e31bdcfd335c435b6a0438322df0e" id="r_ae47e31bdcfd335c435b6a0438322df0e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae47e31bdcfd335c435b6a0438322df0e">verificaLinha</a> (int, int, std::string estado)</td></tr>
+<tr class="memdesc:ae47e31bdcfd335c435b6a0438322df0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verifica se uma jogada é válida em uma linha específica.  <br /></td></tr>
 <tr class="separator:ae47e31bdcfd335c435b6a0438322df0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a671909797a8f896296dc7ef3876f4c48" id="r_a671909797a8f896296dc7ef3876f4c48"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a671909797a8f896296dc7ef3876f4c48">verificaColuna</a> (int, int, std::string estado)</td></tr>
+<tr class="memdesc:a671909797a8f896296dc7ef3876f4c48"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verifica se uma jogada é válida em uma coluna específica.  <br /></td></tr>
 <tr class="separator:a671909797a8f896296dc7ef3876f4c48"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4338723e062ab15e31a14e5c38067791" id="r_a4338723e062ab15e31a14e5c38067791"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4338723e062ab15e31a14e5c38067791">verificaDiagonal</a> (int, int, std::string estado)</td></tr>
+<tr class="memdesc:a4338723e062ab15e31a14e5c38067791"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verifica se uma jogada é válida em uma diagonal específica.  <br /></td></tr>
 <tr class="separator:a4338723e062ab15e31a14e5c38067791"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0d25dfa7c4fca829e5fd471fb00e5243" id="r_a0d25dfa7c4fca829e5fd471fb00e5243"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0d25dfa7c4fca829e5fd471fb00e5243">contarPecas</a> (int &amp;pecasBrancas, int &amp;pecasPretas)</td></tr>
+<tr class="memdesc:a0d25dfa7c4fca829e5fd471fb00e5243"><td class="mdescLeft">&#160;</td><td class="mdescRight">Conta o número de peças brancas e pretas no tabuleiro.  <br /></td></tr>
 <tr class="separator:a0d25dfa7c4fca829e5fd471fb00e5243"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0c015d7075f854589ec9bc435ccc6241" id="r_a0c015d7075f854589ec9bc435ccc6241"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0c015d7075f854589ec9bc435ccc6241">pecaAdversaria</a> ()</td></tr>
+<tr class="memdesc:a0c015d7075f854589ec9bc435ccc6241"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna a peça adversária (BRANCO se o turno é PRETO e vice-versa).  <br /></td></tr>
 <tr class="separator:a0c015d7075f854589ec9bc435ccc6241"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae260f3b4a8e2f0db0fa170ee9707c821" id="r_ae260f3b4a8e2f0db0fa170ee9707c821"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae260f3b4a8e2f0db0fa170ee9707c821">posicaoPermitida</a> (int i, int j, std::string <a class="el" href="class_jogos.html#af2e03fe462b5edd6c87d9a4d042bfdfd">turno</a>)</td></tr>
+<tr class="memdesc:ae260f3b4a8e2f0db0fa170ee9707c821"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verifica se uma posição é permitida para a jogada.  <br /></td></tr>
 <tr class="separator:ae260f3b4a8e2f0db0fa170ee9707c821"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab7f2baa7cb4bf083806ba3b7ea229f28" id="r_ab7f2baa7cb4bf083806ba3b7ea229f28"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab7f2baa7cb4bf083806ba3b7ea229f28">temJogadasValidas</a> (std::string jogador)</td></tr>
+<tr class="memdesc:ab7f2baa7cb4bf083806ba3b7ea229f28"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verifica se há jogadas válidas para um jogador.  <br /></td></tr>
 <tr class="separator:ab7f2baa7cb4bf083806ba3b7ea229f28"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a45886fc3420b9bb2489600344d099456" id="r_a45886fc3420b9bb2489600344d099456"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a45886fc3420b9bb2489600344d099456">jogadasValidas</a> (std::string <a class="el" href="class_jogos.html#af2e03fe462b5edd6c87d9a4d042bfdfd">turno</a>)</td></tr>
+<tr class="memdesc:a45886fc3420b9bb2489600344d099456"><td class="mdescLeft">&#160;</td><td class="mdescRight">Imprime as jogadas válidas para o jogador atual.  <br /></td></tr>
 <tr class="separator:a45886fc3420b9bb2489600344d099456"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_jogos"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_class_jogos')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_jogos.html">Jogos</a></td></tr>
 <tr class="memitem:a3b4fd105cd0c47d57898ffeb129b4457 inherit pub_methods_class_jogos" id="r_a3b4fd105cd0c47d57898ffeb129b4457"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_jogos.html#a3b4fd105cd0c47d57898ffeb129b4457">Jogos</a> (char jogo)</td></tr>
+<tr class="memdesc:a3b4fd105cd0c47d57898ffeb129b4457 inherit pub_methods_class_jogos"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construtor da classe <a class="el" href="class_jogos.html" title="Classe base para jogos que utilizam um tabuleiro.">Jogos</a>.  <br /></td></tr>
 <tr class="separator:a3b4fd105cd0c47d57898ffeb129b4457 inherit pub_methods_class_jogos"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a67bcdb76ed95071291667ff50447f86a inherit pub_methods_class_jogos" id="r_a67bcdb76ed95071291667ff50447f86a"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_jogos.html#a67bcdb76ed95071291667ff50447f86a">~Jogos</a> ()</td></tr>
+<tr class="memdesc:a67bcdb76ed95071291667ff50447f86a inherit pub_methods_class_jogos"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destrutor virtual da classe <a class="el" href="class_jogos.html" title="Classe base para jogos que utilizam um tabuleiro.">Jogos</a>.  <br /></td></tr>
 <tr class="separator:a67bcdb76ed95071291667ff50447f86a inherit pub_methods_class_jogos"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa1b6a1b33086146301e6cc53a298ed3e inherit pub_methods_class_jogos" id="r_aa1b6a1b33086146301e6cc53a298ed3e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_jogos.html#aa1b6a1b33086146301e6cc53a298ed3e">printTabuleiro</a> () const</td></tr>
+<tr class="memdesc:aa1b6a1b33086146301e6cc53a298ed3e inherit pub_methods_class_jogos"><td class="mdescLeft">&#160;</td><td class="mdescRight">Imprime o estado atual do tabuleiro no console.  <br /></td></tr>
 <tr class="separator:aa1b6a1b33086146301e6cc53a298ed3e inherit pub_methods_class_jogos"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pro_methods_class_jogos"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_methods_class_jogos')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="class_jogos.html">Jogos</a></td></tr>
 <tr class="memitem:a0ee362e105f71b733bf250776e201730 inherit pro_methods_class_jogos" id="r_a0ee362e105f71b733bf250776e201730"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_jogos.html#a0ee362e105f71b733bf250776e201730">mudaTurno</a> ()</td></tr>
+<tr class="memdesc:a0ee362e105f71b733bf250776e201730 inherit pro_methods_class_jogos"><td class="mdescLeft">&#160;</td><td class="mdescRight">Alterna o turno dos jogadores.  <br /></td></tr>
 <tr class="separator:a0ee362e105f71b733bf250776e201730 inherit pro_methods_class_jogos"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_class_jogos"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_attribs_class_jogos')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="class_jogos.html">Jogos</a></td></tr>
 <tr class="memitem:aecbbe002c4ed720469bc678fcef81872 inherit pro_attribs_class_jogos" id="r_aecbbe002c4ed720469bc678fcef81872"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_jogos.html#aecbbe002c4ed720469bc678fcef81872">fimDeJogo</a></td></tr>
+<tr class="memdesc:aecbbe002c4ed720469bc678fcef81872 inherit pro_attribs_class_jogos"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indica se o jogo terminou.  <br /></td></tr>
 <tr class="separator:aecbbe002c4ed720469bc678fcef81872 inherit pro_attribs_class_jogos"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a022fc7c967fd10dbb0b6997f3b2403f5 inherit pro_attribs_class_jogos" id="r_a022fc7c967fd10dbb0b6997f3b2403f5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_tabuleiro.html">Tabuleiro</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_jogos.html#a022fc7c967fd10dbb0b6997f3b2403f5">tabuleiro</a></td></tr>
+<tr class="memdesc:a022fc7c967fd10dbb0b6997f3b2403f5 inherit pro_attribs_class_jogos"><td class="mdescLeft">&#160;</td><td class="mdescRight">Objeto <code><a class="el" href="class_tabuleiro.html" title="Classe que representa o tabuleiro de um jogo e suas operações.">Tabuleiro</a></code> que representa o tabuleiro do jogo.  <br /></td></tr>
 <tr class="separator:a022fc7c967fd10dbb0b6997f3b2403f5 inherit pro_attribs_class_jogos"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af2e03fe462b5edd6c87d9a4d042bfdfd inherit pro_attribs_class_jogos" id="r_af2e03fe462b5edd6c87d9a4d042bfdfd"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_jogos.html#af2e03fe462b5edd6c87d9a4d042bfdfd">turno</a></td></tr>
+<tr class="memdesc:af2e03fe462b5edd6c87d9a4d042bfdfd inherit pro_attribs_class_jogos"><td class="mdescLeft">&#160;</td><td class="mdescRight">String que representa o turno atual do jogo.  <br /></td></tr>
 <tr class="separator:af2e03fe462b5edd6c87d9a4d042bfdfd inherit pro_attribs_class_jogos"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Classe que implementa o jogo de <a class="el" href="class_reversi.html" title="Classe que implementa o jogo de Reversi.">Reversi</a>. </p>
+<p>A classe <code><a class="el" href="class_reversi.html" title="Classe que implementa o jogo de Reversi.">Reversi</a></code> define os métodos e atributos necessários para gerenciar o estado do jogo, verificar jogadas válidas e atualizar o tabuleiro. Ela herda da classe <code><a class="el" href="class_jogos.html" title="Classe base para jogos que utilizam um tabuleiro.">Jogos</a></code> e sobrecarrega alguns dos seus métodos para adaptar à lógica do <a class="el" href="class_reversi.html" title="Classe que implementa o jogo de Reversi.">Reversi</a>. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a73e3ca5c21b634f9c490b404d62f0e01" name="a73e3ca5c21b634f9c490b404d62f0e01"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a73e3ca5c21b634f9c490b404d62f0e01">&#9670;&#160;</a></span>Reversi()</h2>
 
@@ -164,6 +189,8 @@ Additional Inherited Members</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Construtor padrão da classe <a class="el" href="class_reversi.html" title="Classe que implementa o jogo de Reversi.">Reversi</a>. </p>
 
 </div>
 </div>
@@ -181,6 +208,8 @@ Additional Inherited Members</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Destrutor da classe <a class="el" href="class_reversi.html" title="Classe que implementa o jogo de Reversi.">Reversi</a>. </p>
 
 </div>
 </div>
@@ -204,6 +233,15 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Conta o número de peças brancas e pretas no tabuleiro. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pecasBrancas</td><td>Referência para o número de peças brancas. </td></tr>
+    <tr><td class="paramname">pecasPretas</td><td>Referência para o número de peças pretas. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="a45886fc3420b9bb2489600344d099456" name="a45886fc3420b9bb2489600344d099456"></a>
@@ -221,6 +259,14 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Imprime as jogadas válidas para o jogador atual. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">turno</td><td>Estado da peça do jogador atual (PRETO ou BRANCO). </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="a0c015d7075f854589ec9bc435ccc6241" name="a0c015d7075f854589ec9bc435ccc6241"></a>
@@ -237,6 +283,9 @@ Additional Inherited Members</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Retorna a peça adversária (BRANCO se o turno é PRETO e vice-versa). </p>
+<dl class="section return"><dt>Returns</dt><dd>Estado da peça adversária. </dd></dl>
 
 </div>
 </div>
@@ -263,6 +312,17 @@ Additional Inherited Members</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Verifica se uma posição é permitida para a jogada. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">i</td><td>Linha onde a jogada será feita. </td></tr>
+    <tr><td class="paramname">j</td><td>Coluna onde a jogada será feita. </td></tr>
+    <tr><td class="paramname">turno</td><td>Estado da peça do jogador atual (PRETO ou BRANCO). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Verdadeiro se a posição é permitida, falso caso contrário. </dd></dl>
 
 </div>
 </div>
@@ -298,6 +358,16 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Inicia o jogo com os jogadores especificados. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">jogador1</td><td>Nome do primeiro jogador. </td></tr>
+    <tr><td class="paramname">jogador2</td><td>Nome do segundo jogador. </td></tr>
+    <tr><td class="paramname">cadastro</td><td>Referência ao objeto <a class="el" href="class_cadastro.html" title="Classe responsável pelo cadastro e gerenciamento de jogadores e seus resultados.">Cadastro</a> para registrar resultados. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 <p>Implements <a class="el" href="class_jogos.html#a79a41dfb55b1bdce83eb97955152df04">Jogos</a>.</p>
 
 </div>
@@ -316,6 +386,15 @@ Additional Inherited Members</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Verifica se há jogadas válidas para um jogador. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">jogador</td><td>Estado da peça do jogador (PRETO ou BRANCO). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Verdadeiro se há jogadas válidas, falso caso contrário. </dd></dl>
 
 </div>
 </div>
@@ -343,6 +422,17 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Verifica se uma jogada é válida em uma coluna específica. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">i</td><td>Linha onde a jogada será feita. </td></tr>
+    <tr><td class="paramname">j</td><td>Coluna onde a jogada será feita. </td></tr>
+    <tr><td class="paramname">estado</td><td>Estado da peça (PRETO ou BRANCO). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Verdadeiro se a jogada é válida na coluna, falso caso contrário. </dd></dl>
+
 </div>
 </div>
 <a id="a4338723e062ab15e31a14e5c38067791" name="a4338723e062ab15e31a14e5c38067791"></a>
@@ -368,6 +458,17 @@ Additional Inherited Members</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Verifica se uma jogada é válida em uma diagonal específica. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">i</td><td>Linha onde a jogada será feita. </td></tr>
+    <tr><td class="paramname">j</td><td>Coluna onde a jogada será feita. </td></tr>
+    <tr><td class="paramname">estado</td><td>Estado da peça (PRETO ou BRANCO). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Verdadeiro se a jogada é válida na diagonal, falso caso contrário. </dd></dl>
 
 </div>
 </div>
@@ -395,6 +496,17 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Verifica se o jogo chegou ao fim. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">jogador1</td><td>Nome do primeiro jogador. </td></tr>
+    <tr><td class="paramname">jogador2</td><td>Nome do segundo jogador. </td></tr>
+    <tr><td class="paramname">cadastro</td><td>Referência ao objeto <a class="el" href="class_cadastro.html" title="Classe responsável pelo cadastro e gerenciamento de jogadores e seus resultados.">Cadastro</a> para registrar resultados. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Verdadeiro se o jogo terminou, falso caso contrário. </dd></dl>
+
 </div>
 </div>
 <a id="ae47e31bdcfd335c435b6a0438322df0e" name="ae47e31bdcfd335c435b6a0438322df0e"></a>
@@ -420,6 +532,17 @@ Additional Inherited Members</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Verifica se uma jogada é válida em uma linha específica. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">i</td><td>Linha onde a jogada será feita. </td></tr>
+    <tr><td class="paramname">j</td><td>Coluna onde a jogada será feita. </td></tr>
+    <tr><td class="paramname">estado</td><td>Estado da peça (PRETO ou BRANCO). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Verdadeiro se a jogada é válida na linha, falso caso contrário. </dd></dl>
 
 </div>
 </div>

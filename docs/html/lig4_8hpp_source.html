@@ -91,37 +91,44 @@ $(function(){ initResizable(false); });
   <div class="headertitle"><div class="title">lig4.hpp</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="lig4_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef LIG4_H</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define LIG4_H</span></div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;<a class="code" href="jogos_8hpp.html">jogos.hpp</a>&quot;</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
-<div class="foldopen" id="foldopen00006" data-start="{" data-end="};">
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno"><a class="line" href="class_lig4.html">    6</a></span><span class="keyword">class </span><a class="code hl_class" href="class_lig4.html">Lig4</a> : <span class="keyword">public</span> <a class="code hl_class" href="class_jogos.html">Jogos</a> {</div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">public</span>: </div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>    <a class="code hl_function" href="class_lig4.html#adffdeddf3d20829f752913801554126d">Lig4</a>();</div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>    <a class="code hl_function" href="class_lig4.html#add1bf78f99caaf523113e7f4cf843744">~Lig4</a>();</div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_lig4.html#a2fe5667ca383cf813b1497f3abf09317">start</a>(std::string jogador1, std::string jogador2, <a class="code hl_class" href="class_cadastro.html">Cadastro</a>&amp; cadastro) <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_lig4.html#aae4580104c813a6015328a54f08f5381">verifica4</a>(<span class="keywordtype">int</span> linha, <span class="keywordtype">int</span> coluna);</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_lig4.html#aa69d47955ffc48d1347659fd4224a6a9">verificaFimDeJogo</a> (<span class="keywordtype">int</span> coluna, std::string jogador1, std::string jogador2, <a class="code hl_class" href="class_cadastro.html">Cadastro</a>&amp; cadastro);</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="keyword">private</span>: </div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>        <span class="keywordtype">bool</span> jogadaPermitida(<span class="keywordtype">int</span> col);</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>        <span class="keywordtype">void</span> novaJogada(<span class="keywordtype">int</span> col);</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>        <span class="keywordtype">void</span> anunciaTurno(std::string jogador1, std::string jogador2) <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>};</div>
+<a href="lig4_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#ifndef LIG4_H</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#define LIG4_H</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;<a class="code" href="jogos_8hpp.html">jogos.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="foldopen" id="foldopen00019" data-start="{" data-end="};">
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="class_lig4.html">   19</a></span><span class="keyword">class </span><a class="code hl_class" href="class_lig4.html">Lig4</a> : <span class="keyword">public</span> <a class="code hl_class" href="class_jogos.html">Jogos</a> {</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="keyword">public</span>: </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <a class="code hl_function" href="class_lig4.html#adffdeddf3d20829f752913801554126d">Lig4</a>();</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <a class="code hl_function" href="class_lig4.html#add1bf78f99caaf523113e7f4cf843744">~Lig4</a>();</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_lig4.html#a2fe5667ca383cf813b1497f3abf09317">start</a>(std::string jogador1, std::string jogador2, <a class="code hl_class" href="class_cadastro.html">Cadastro</a>&amp; cadastro) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_lig4.html#aae4580104c813a6015328a54f08f5381">verifica4</a>(<span class="keywordtype">int</span> linha, <span class="keywordtype">int</span> coluna);</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_lig4.html#aa69d47955ffc48d1347659fd4224a6a9">verificaFimDeJogo</a> (<span class="keywordtype">int</span> coluna, std::string jogador1, std::string jogador2, <a class="code hl_class" href="class_cadastro.html">Cadastro</a>&amp; cadastro);</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    <span class="keywordtype">bool</span> jogadaPermitida(<span class="keywordtype">int</span> col);</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    <span class="keywordtype">void</span> novaJogada(<span class="keywordtype">int</span> col);</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span> </div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    <span class="keywordtype">void</span> anunciaTurno(std::string jogador1, std::string jogador2) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>};</div>
 </div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#endif</span></div>
-<div class="ttc" id="aclass_cadastro_html"><div class="ttname"><a href="class_cadastro.html">Cadastro</a></div><div class="ttdef"><b>Definition</b> cadastro.hpp:10</div></div>
-<div class="ttc" id="aclass_jogos_html"><div class="ttname"><a href="class_jogos.html">Jogos</a></div><div class="ttdef"><b>Definition</b> jogos.hpp:7</div></div>
-<div class="ttc" id="aclass_lig4_html"><div class="ttname"><a href="class_lig4.html">Lig4</a></div><div class="ttdef"><b>Definition</b> lig4.hpp:6</div></div>
-<div class="ttc" id="aclass_lig4_html_a2fe5667ca383cf813b1497f3abf09317"><div class="ttname"><a href="class_lig4.html#a2fe5667ca383cf813b1497f3abf09317">Lig4::start</a></div><div class="ttdeci">void start(std::string jogador1, std::string jogador2, Cadastro &amp;cadastro) override</div><div class="ttdef"><b>Definition</b> lig4.cpp:135</div></div>
-<div class="ttc" id="aclass_lig4_html_aa69d47955ffc48d1347659fd4224a6a9"><div class="ttname"><a href="class_lig4.html#aa69d47955ffc48d1347659fd4224a6a9">Lig4::verificaFimDeJogo</a></div><div class="ttdeci">int verificaFimDeJogo(int coluna, std::string jogador1, std::string jogador2, Cadastro &amp;cadastro)</div><div class="ttdef"><b>Definition</b> lig4.cpp:99</div></div>
-<div class="ttc" id="aclass_lig4_html_aae4580104c813a6015328a54f08f5381"><div class="ttname"><a href="class_lig4.html#aae4580104c813a6015328a54f08f5381">Lig4::verifica4</a></div><div class="ttdeci">bool verifica4(int linha, int coluna)</div><div class="ttdef"><b>Definition</b> lig4.cpp:35</div></div>
-<div class="ttc" id="aclass_lig4_html_add1bf78f99caaf523113e7f4cf843744"><div class="ttname"><a href="class_lig4.html#add1bf78f99caaf523113e7f4cf843744">Lig4::~Lig4</a></div><div class="ttdeci">~Lig4()</div><div class="ttdef"><b>Definition</b> lig4.cpp:8</div></div>
-<div class="ttc" id="aclass_lig4_html_adffdeddf3d20829f752913801554126d"><div class="ttname"><a href="class_lig4.html#adffdeddf3d20829f752913801554126d">Lig4::Lig4</a></div><div class="ttdeci">Lig4()</div><div class="ttdef"><b>Definition</b> lig4.cpp:5</div></div>
-<div class="ttc" id="ajogos_8hpp_html"><div class="ttname"><a href="jogos_8hpp.html">jogos.hpp</a></div></div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span> </div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aclass_cadastro_html"><div class="ttname"><a href="class_cadastro.html">Cadastro</a></div><div class="ttdoc">Classe responsável pelo cadastro e gerenciamento de jogadores e seus resultados.</div><div class="ttdef"><b>Definition</b> cadastro.hpp:19</div></div>
+<div class="ttc" id="aclass_jogos_html"><div class="ttname"><a href="class_jogos.html">Jogos</a></div><div class="ttdoc">Classe base para jogos que utilizam um tabuleiro.</div><div class="ttdef"><b>Definition</b> jogos.hpp:19</div></div>
+<div class="ttc" id="aclass_lig4_html"><div class="ttname"><a href="class_lig4.html">Lig4</a></div><div class="ttdoc">Classe que implementa o jogo Lig4 (Conecte 4).</div><div class="ttdef"><b>Definition</b> lig4.hpp:19</div></div>
+<div class="ttc" id="aclass_lig4_html_a2fe5667ca383cf813b1497f3abf09317"><div class="ttname"><a href="class_lig4.html#a2fe5667ca383cf813b1497f3abf09317">Lig4::start</a></div><div class="ttdeci">void start(std::string jogador1, std::string jogador2, Cadastro &amp;cadastro) override</div><div class="ttdoc">Inicia uma nova partida de Lig4.</div><div class="ttdef"><b>Definition</b> lig4.cpp:135</div></div>
+<div class="ttc" id="aclass_lig4_html_aa69d47955ffc48d1347659fd4224a6a9"><div class="ttname"><a href="class_lig4.html#aa69d47955ffc48d1347659fd4224a6a9">Lig4::verificaFimDeJogo</a></div><div class="ttdeci">int verificaFimDeJogo(int coluna, std::string jogador1, std::string jogador2, Cadastro &amp;cadastro)</div><div class="ttdoc">Verifica se o jogo chegou ao fim após a última jogada.</div><div class="ttdef"><b>Definition</b> lig4.cpp:99</div></div>
+<div class="ttc" id="aclass_lig4_html_aae4580104c813a6015328a54f08f5381"><div class="ttname"><a href="class_lig4.html#aae4580104c813a6015328a54f08f5381">Lig4::verifica4</a></div><div class="ttdeci">bool verifica4(int linha, int coluna)</div><div class="ttdoc">Verifica se há uma sequência de 4 peças consecutivas.</div><div class="ttdef"><b>Definition</b> lig4.cpp:35</div></div>
+<div class="ttc" id="aclass_lig4_html_add1bf78f99caaf523113e7f4cf843744"><div class="ttname"><a href="class_lig4.html#add1bf78f99caaf523113e7f4cf843744">Lig4::~Lig4</a></div><div class="ttdeci">~Lig4()</div><div class="ttdoc">Destrutor da classe Lig4.</div><div class="ttdef"><b>Definition</b> lig4.cpp:8</div></div>
+<div class="ttc" id="aclass_lig4_html_adffdeddf3d20829f752913801554126d"><div class="ttname"><a href="class_lig4.html#adffdeddf3d20829f752913801554126d">Lig4::Lig4</a></div><div class="ttdeci">Lig4()</div><div class="ttdoc">Construtor padrão da classe Lig4.</div><div class="ttdef"><b>Definition</b> lig4.cpp:5</div></div>
+<div class="ttc" id="ajogos_8hpp_html"><div class="ttname"><a href="jogos_8hpp.html">jogos.hpp</a></div><div class="ttdoc">Declaração da classe base Jogos para gerenciamento de jogos e manipulação de tabuleiros.</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

@@ -2,6 +2,11 @@
 \hypertarget{class_reversi}{}\label{class_reversi}\index{Reversi@{Reversi}}
 
 
+Classe que implementa o jogo de \doxylink{class_reversi}{Reversi}.  
+
+
+
+
 {\ttfamily \#include $<$reversi.\+hpp$>$}
 
 Inheritance diagram for Reversi\+:\begin{figure}[H]
@@ -14,54 +19,59 @@ Inheritance diagram for Reversi\+:\begin{figure}[H]
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_reversi_a73e3ca5c21b634f9c490b404d62f0e01}{Reversi}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Construtor padrão da classe \doxylink{class_reversi}{Reversi}. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_reversi_afd006e4fdacdedc4a3bb34fe6f1d1940}{\texorpdfstring{$\sim$}{\string~}\+Reversi}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Destrutor da classe \doxylink{class_reversi}{Reversi}. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_reversi_a2f5e5c50a1f68f8e61a77c733a6b5ad6}{start}} (std\+::string jogador1, std\+::string jogador2, \mbox{\hyperlink{class_cadastro}{Cadastro}} \&cadastro) override
-\item 
+\begin{DoxyCompactList}\small\item\em Inicia o jogo com os jogadores especificados. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{class_reversi_a08eb0f4733cf4f4111808ac738b946b6}{verifica\+Fim\+De\+Jogo}} (std\+::string jogador1, std\+::string jogador2, \mbox{\hyperlink{class_cadastro}{Cadastro}} \&cadastro)
-\item 
+\begin{DoxyCompactList}\small\item\em Verifica se o jogo chegou ao fim. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{class_reversi_ae47e31bdcfd335c435b6a0438322df0e}{verifica\+Linha}} (int, int, std\+::string estado)
-\item 
+\begin{DoxyCompactList}\small\item\em Verifica se uma jogada é válida em uma linha específica. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{class_reversi_a671909797a8f896296dc7ef3876f4c48}{verifica\+Coluna}} (int, int, std\+::string estado)
-\item 
+\begin{DoxyCompactList}\small\item\em Verifica se uma jogada é válida em uma coluna específica. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{class_reversi_a4338723e062ab15e31a14e5c38067791}{verifica\+Diagonal}} (int, int, std\+::string estado)
-\item 
+\begin{DoxyCompactList}\small\item\em Verifica se uma jogada é válida em uma diagonal específica. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_reversi_a0d25dfa7c4fca829e5fd471fb00e5243}{contar\+Pecas}} (int \&pecas\+Brancas, int \&pecas\+Pretas)
-\item 
+\begin{DoxyCompactList}\small\item\em Conta o número de peças brancas e pretas no tabuleiro. \end{DoxyCompactList}\item 
 std\+::string \mbox{\hyperlink{class_reversi_a0c015d7075f854589ec9bc435ccc6241}{peca\+Adversaria}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Retorna a peça adversária (BRANCO se o turno é PRETO e vice-\/versa). \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{class_reversi_ae260f3b4a8e2f0db0fa170ee9707c821}{posicao\+Permitida}} (int i, int j, std\+::string \mbox{\hyperlink{class_jogos_af2e03fe462b5edd6c87d9a4d042bfdfd}{turno}})
-\item 
+\begin{DoxyCompactList}\small\item\em Verifica se uma posição é permitida para a jogada. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{class_reversi_ab7f2baa7cb4bf083806ba3b7ea229f28}{tem\+Jogadas\+Validas}} (std\+::string jogador)
-\item 
+\begin{DoxyCompactList}\small\item\em Verifica se há jogadas válidas para um jogador. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_reversi_a45886fc3420b9bb2489600344d099456}{jogadas\+Validas}} (std\+::string \mbox{\hyperlink{class_jogos_af2e03fe462b5edd6c87d9a4d042bfdfd}{turno}})
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Imprime as jogadas válidas para o jogador atual. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_jogos}{Jogos}}}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_jogos_a3b4fd105cd0c47d57898ffeb129b4457}{Jogos}} (char jogo)
-\item 
+\begin{DoxyCompactList}\small\item\em Construtor da classe \doxylink{class_jogos}{Jogos}. \end{DoxyCompactList}\item 
 virtual \mbox{\hyperlink{class_jogos_a67bcdb76ed95071291667ff50447f86a}{\texorpdfstring{$\sim$}{\string~}\+Jogos}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Destrutor virtual da classe \doxylink{class_jogos}{Jogos}. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_jogos_aa1b6a1b33086146301e6cc53a298ed3e}{print\+Tabuleiro}} () const
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Imprime o estado atual do tabuleiro no console. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Additional Inherited Members}
 \doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_jogos}{Jogos}}}
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{class_jogos_a0ee362e105f71b733bf250776e201730}{muda\+Turno}} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Alterna o turno dos jogadores. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_jogos}{Jogos}}}
 \begin{DoxyCompactItemize}
 \item 
 bool \mbox{\hyperlink{class_jogos_aecbbe002c4ed720469bc678fcef81872}{fim\+De\+Jogo}}
-\item 
+\begin{DoxyCompactList}\small\item\em Indica se o jogo terminou. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_tabuleiro}{Tabuleiro}} \mbox{\hyperlink{class_jogos_a022fc7c967fd10dbb0b6997f3b2403f5}{tabuleiro}}
-\item 
+\begin{DoxyCompactList}\small\item\em Objeto {\ttfamily \doxylink{class_tabuleiro}{Tabuleiro}} que representa o tabuleiro do jogo. \end{DoxyCompactList}\item 
 std\+::string \mbox{\hyperlink{class_jogos_af2e03fe462b5edd6c87d9a4d042bfdfd}{turno}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em String que representa o turno atual do jogo. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+Classe que implementa o jogo de \doxylink{class_reversi}{Reversi}. 
+
+A classe {\ttfamily \doxylink{class_reversi}{Reversi}} define os métodos e atributos necessários para gerenciar o estado do jogo, verificar jogadas válidas e atualizar o tabuleiro. Ela herda da classe {\ttfamily \doxylink{class_jogos}{Jogos}} e sobrecarrega alguns dos seus métodos para adaptar à lógica do \doxylink{class_reversi}{Reversi}. 
 
 \doxysubsection{Constructor \& Destructor Documentation}
 \Hypertarget{class_reversi_a73e3ca5c21b634f9c490b404d62f0e01}\index{Reversi@{Reversi}!Reversi@{Reversi}}
@@ -70,11 +80,19 @@ std\+::string \mbox{\hyperlink{class_jogos_af2e03fe462b5edd6c87d9a4d042bfdfd}{tu
 {\footnotesize\ttfamily \label{class_reversi_a73e3ca5c21b634f9c490b404d62f0e01} 
 Reversi\+::\+Reversi (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
+
+
+Construtor padrão da classe \doxylink{class_reversi}{Reversi}. 
+
 \Hypertarget{class_reversi_afd006e4fdacdedc4a3bb34fe6f1d1940}\index{Reversi@{Reversi}!````~Reversi@{\texorpdfstring{$\sim$}{\string~}Reversi}}
 \index{````~Reversi@{\texorpdfstring{$\sim$}{\string~}Reversi}!Reversi@{Reversi}}
 \doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Reversi()}{\string~Reversi()}}
 {\footnotesize\ttfamily \label{class_reversi_afd006e4fdacdedc4a3bb34fe6f1d1940} 
 Reversi\+::\texorpdfstring{$\sim$}{\string~}\+Reversi (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Destrutor da classe \doxylink{class_reversi}{Reversi}. 
 
 
 
@@ -85,30 +103,86 @@ Reversi\+::\texorpdfstring{$\sim$}{\string~}\+Reversi (\begin{DoxyParamCaption}{
 {\footnotesize\ttfamily \label{class_reversi_a0d25dfa7c4fca829e5fd471fb00e5243} 
 void Reversi\+::contar\+Pecas (\begin{DoxyParamCaption}\item[{int \&}]{pecas\+Brancas}{, }\item[{int \&}]{pecas\+Pretas}{}\end{DoxyParamCaption})}
 
+
+
+Conta o número de peças brancas e pretas no tabuleiro. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pecas\+Brancas} & Referência para o número de peças brancas. \\
+\hline
+{\em pecas\+Pretas} & Referência para o número de peças pretas. \\
+\hline
+\end{DoxyParams}
 \Hypertarget{class_reversi_a45886fc3420b9bb2489600344d099456}\index{Reversi@{Reversi}!jogadasValidas@{jogadasValidas}}
 \index{jogadasValidas@{jogadasValidas}!Reversi@{Reversi}}
 \doxysubsubsection{\texorpdfstring{jogadasValidas()}{jogadasValidas()}}
 {\footnotesize\ttfamily \label{class_reversi_a45886fc3420b9bb2489600344d099456} 
 void Reversi\+::jogadas\+Validas (\begin{DoxyParamCaption}\item[{std\+::string}]{turno}{}\end{DoxyParamCaption})}
 
+
+
+Imprime as jogadas válidas para o jogador atual. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em turno} & Estado da peça do jogador atual (PRETO ou BRANCO). \\
+\hline
+\end{DoxyParams}
 \Hypertarget{class_reversi_a0c015d7075f854589ec9bc435ccc6241}\index{Reversi@{Reversi}!pecaAdversaria@{pecaAdversaria}}
 \index{pecaAdversaria@{pecaAdversaria}!Reversi@{Reversi}}
 \doxysubsubsection{\texorpdfstring{pecaAdversaria()}{pecaAdversaria()}}
 {\footnotesize\ttfamily \label{class_reversi_a0c015d7075f854589ec9bc435ccc6241} 
 std\+::string Reversi\+::peca\+Adversaria (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
+
+
+Retorna a peça adversária (BRANCO se o turno é PRETO e vice-\/versa). 
+
+\begin{DoxyReturn}{Returns}
+Estado da peça adversária. 
+\end{DoxyReturn}
 \Hypertarget{class_reversi_ae260f3b4a8e2f0db0fa170ee9707c821}\index{Reversi@{Reversi}!posicaoPermitida@{posicaoPermitida}}
 \index{posicaoPermitida@{posicaoPermitida}!Reversi@{Reversi}}
 \doxysubsubsection{\texorpdfstring{posicaoPermitida()}{posicaoPermitida()}}
 {\footnotesize\ttfamily \label{class_reversi_ae260f3b4a8e2f0db0fa170ee9707c821} 
 bool Reversi\+::posicao\+Permitida (\begin{DoxyParamCaption}\item[{int}]{i}{, }\item[{int}]{j}{, }\item[{std\+::string}]{turno}{}\end{DoxyParamCaption})}
 
+
+
+Verifica se uma posição é permitida para a jogada. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em i} & Linha onde a jogada será feita. \\
+\hline
+{\em j} & Coluna onde a jogada será feita. \\
+\hline
+{\em turno} & Estado da peça do jogador atual (PRETO ou BRANCO). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Verdadeiro se a posição é permitida, falso caso contrário. 
+\end{DoxyReturn}
 \Hypertarget{class_reversi_a2f5e5c50a1f68f8e61a77c733a6b5ad6}\index{Reversi@{Reversi}!start@{start}}
 \index{start@{start}!Reversi@{Reversi}}
 \doxysubsubsection{\texorpdfstring{start()}{start()}}
 {\footnotesize\ttfamily \label{class_reversi_a2f5e5c50a1f68f8e61a77c733a6b5ad6} 
 void Reversi\+::start (\begin{DoxyParamCaption}\item[{std\+::string}]{jogador1}{, }\item[{std\+::string}]{jogador2}{, }\item[{\mbox{\hyperlink{class_cadastro}{Cadastro}} \&}]{cadastro}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
+
+
+Inicia o jogo com os jogadores especificados. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em jogador1} & Nome do primeiro jogador. \\
+\hline
+{\em jogador2} & Nome do segundo jogador. \\
+\hline
+{\em cadastro} & Referência ao objeto \doxylink{class_cadastro}{Cadastro} para registrar resultados. \\
+\hline
+\end{DoxyParams}
 
 
 Implements \mbox{\hyperlink{class_jogos_a79a41dfb55b1bdce83eb97955152df04}{Jogos}}.
@@ -119,30 +193,106 @@ Implements \mbox{\hyperlink{class_jogos_a79a41dfb55b1bdce83eb97955152df04}{Jogos
 {\footnotesize\ttfamily \label{class_reversi_ab7f2baa7cb4bf083806ba3b7ea229f28} 
 bool Reversi\+::tem\+Jogadas\+Validas (\begin{DoxyParamCaption}\item[{std\+::string}]{jogador}{}\end{DoxyParamCaption})}
 
+
+
+Verifica se há jogadas válidas para um jogador. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em jogador} & Estado da peça do jogador (PRETO ou BRANCO). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Verdadeiro se há jogadas válidas, falso caso contrário. 
+\end{DoxyReturn}
 \Hypertarget{class_reversi_a671909797a8f896296dc7ef3876f4c48}\index{Reversi@{Reversi}!verificaColuna@{verificaColuna}}
 \index{verificaColuna@{verificaColuna}!Reversi@{Reversi}}
 \doxysubsubsection{\texorpdfstring{verificaColuna()}{verificaColuna()}}
 {\footnotesize\ttfamily \label{class_reversi_a671909797a8f896296dc7ef3876f4c48} 
 bool Reversi\+::verifica\+Coluna (\begin{DoxyParamCaption}\item[{int}]{i}{, }\item[{int}]{j}{, }\item[{std\+::string}]{estado}{}\end{DoxyParamCaption})}
 
+
+
+Verifica se uma jogada é válida em uma coluna específica. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em i} & Linha onde a jogada será feita. \\
+\hline
+{\em j} & Coluna onde a jogada será feita. \\
+\hline
+{\em estado} & Estado da peça (PRETO ou BRANCO). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Verdadeiro se a jogada é válida na coluna, falso caso contrário. 
+\end{DoxyReturn}
 \Hypertarget{class_reversi_a4338723e062ab15e31a14e5c38067791}\index{Reversi@{Reversi}!verificaDiagonal@{verificaDiagonal}}
 \index{verificaDiagonal@{verificaDiagonal}!Reversi@{Reversi}}
 \doxysubsubsection{\texorpdfstring{verificaDiagonal()}{verificaDiagonal()}}
 {\footnotesize\ttfamily \label{class_reversi_a4338723e062ab15e31a14e5c38067791} 
 bool Reversi\+::verifica\+Diagonal (\begin{DoxyParamCaption}\item[{int}]{i}{, }\item[{int}]{j}{, }\item[{std\+::string}]{estado}{}\end{DoxyParamCaption})}
 
+
+
+Verifica se uma jogada é válida em uma diagonal específica. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em i} & Linha onde a jogada será feita. \\
+\hline
+{\em j} & Coluna onde a jogada será feita. \\
+\hline
+{\em estado} & Estado da peça (PRETO ou BRANCO). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Verdadeiro se a jogada é válida na diagonal, falso caso contrário. 
+\end{DoxyReturn}
 \Hypertarget{class_reversi_a08eb0f4733cf4f4111808ac738b946b6}\index{Reversi@{Reversi}!verificaFimDeJogo@{verificaFimDeJogo}}
 \index{verificaFimDeJogo@{verificaFimDeJogo}!Reversi@{Reversi}}
 \doxysubsubsection{\texorpdfstring{verificaFimDeJogo()}{verificaFimDeJogo()}}
 {\footnotesize\ttfamily \label{class_reversi_a08eb0f4733cf4f4111808ac738b946b6} 
 bool Reversi\+::verifica\+Fim\+De\+Jogo (\begin{DoxyParamCaption}\item[{std\+::string}]{jogador1}{, }\item[{std\+::string}]{jogador2}{, }\item[{\mbox{\hyperlink{class_cadastro}{Cadastro}} \&}]{cadastro}{}\end{DoxyParamCaption})}
 
+
+
+Verifica se o jogo chegou ao fim. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em jogador1} & Nome do primeiro jogador. \\
+\hline
+{\em jogador2} & Nome do segundo jogador. \\
+\hline
+{\em cadastro} & Referência ao objeto \doxylink{class_cadastro}{Cadastro} para registrar resultados. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Verdadeiro se o jogo terminou, falso caso contrário. 
+\end{DoxyReturn}
 \Hypertarget{class_reversi_ae47e31bdcfd335c435b6a0438322df0e}\index{Reversi@{Reversi}!verificaLinha@{verificaLinha}}
 \index{verificaLinha@{verificaLinha}!Reversi@{Reversi}}
 \doxysubsubsection{\texorpdfstring{verificaLinha()}{verificaLinha()}}
 {\footnotesize\ttfamily \label{class_reversi_ae47e31bdcfd335c435b6a0438322df0e} 
 bool Reversi\+::verifica\+Linha (\begin{DoxyParamCaption}\item[{int}]{i}{, }\item[{int}]{j}{, }\item[{std\+::string}]{estado}{}\end{DoxyParamCaption})}
 
+
+
+Verifica se uma jogada é válida em uma linha específica. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em i} & Linha onde a jogada será feita. \\
+\hline
+{\em j} & Coluna onde a jogada será feita. \\
+\hline
+{\em estado} & Estado da peça (PRETO ou BRANCO). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Verdadeiro se a jogada é válida na linha, falso caso contrário. 
+\end{DoxyReturn}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

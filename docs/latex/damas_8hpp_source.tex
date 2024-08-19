@@ -1,0 +1,39 @@
+\doxysection{damas.\+hpp}
+\hypertarget{damas_8hpp_source}{}\label{damas_8hpp_source}\index{include/damas.hpp@{include/damas.hpp}}
+\mbox{\hyperlink{damas_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#ifndef\ DAMAS\_HPP}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#define\ DAMAS\_HPP}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{jogos_8hpp}{jogos.hpp}}"{}}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00023\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_damas}{Damas}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_jogos}{Jogos}}\ \{}
+\DoxyCodeLine{00024\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00031\ \ \ \ \ \mbox{\hyperlink{class_damas_a0b219f8b8c9c89e827944ed7755a0fde}{Damas}}();}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00038\ \ \ \ \ \mbox{\hyperlink{class_damas_af88efb6746bf066acf47a4101df414e2}{\string~Damas}}();}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_damas_a2172cb8afed35e9528b6532e114fe6a0}{start}}(std::string\ jogador1,\ std::string\ jogador2,\ \mbox{\hyperlink{class_cadastro}{Cadastro}}\&\ cadastro)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keywordtype}{void}\ anunciaTurno(std::string\ jogador1,\ std::string\ jogador2)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{keywordtype}{bool}\ movimentaPeca(\textcolor{keywordtype}{int}\ linhaOrigem,\ \textcolor{keywordtype}{int}\ colunaOrigem,\ \textcolor{keywordtype}{int}\ linhaDestino,\ \textcolor{keywordtype}{int}\ colunaDestino);}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00093\ \ \ \ \ \textcolor{keywordtype}{bool}\ verificaJogada(\textcolor{keywordtype}{int}\ linhaOrigem,\ \textcolor{keywordtype}{int}\ colunaOrigem,\ \textcolor{keywordtype}{int}\ linhaDestino,\ \textcolor{keywordtype}{int}\ colunaDestino);}
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00104\ \ \ \ \ \textcolor{keywordtype}{bool}\ verificaVitoria();}
+\DoxyCodeLine{00105\ }
+\DoxyCodeLine{00115\ \ \ \ \ \textcolor{keywordtype}{bool}\ temCapturaDisponivel();}
+\DoxyCodeLine{00116\ }
+\DoxyCodeLine{00129\ \ \ \ \ \textcolor{keywordtype}{bool}\ podeCapturar(\textcolor{keywordtype}{int}\ linhaOrigem,\ \textcolor{keywordtype}{int}\ colunaOrigem,\ std::string\ pecaAdversario);}
+\DoxyCodeLine{00130\ }
+\DoxyCodeLine{00138\ \ \ \ \ \textcolor{keywordtype}{void}\ realizaCapturaObrigatoria();}
+\DoxyCodeLine{00139\ }
+\DoxyCodeLine{00150\ \ \ \ \ \textcolor{keywordtype}{void}\ realizaCaptura(\textcolor{keywordtype}{int}\ linhaOrigem,\ \textcolor{keywordtype}{int}\ colunaOrigem,\ std::string\ pecaAdversario);}
+\DoxyCodeLine{00151\ \};}
+\DoxyCodeLine{00152\ }
+\DoxyCodeLine{00153\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ DAMAS\_HPP}}
+
+\end{DoxyCode}

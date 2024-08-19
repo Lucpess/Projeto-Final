@@ -91,22 +91,33 @@ $(function(){ initResizable(false); });
 </div><!--header-->
 <div class="contents">
 
+<p>Classe que representa o tabuleiro de um jogo e suas operações.  
+ <a href="#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="tabuleiro_8hpp_source.html">tabuleiro.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a9b76bfdd7176fd0b4fdee7296a6841e5" id="r_a9b76bfdd7176fd0b4fdee7296a6841e5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9b76bfdd7176fd0b4fdee7296a6841e5">Tabuleiro</a> ()</td></tr>
+<tr class="memdesc:a9b76bfdd7176fd0b4fdee7296a6841e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construtor padrão da classe <a class="el" href="class_tabuleiro.html" title="Classe que representa o tabuleiro de um jogo e suas operações.">Tabuleiro</a>.  <br /></td></tr>
 <tr class="separator:a9b76bfdd7176fd0b4fdee7296a6841e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8fd74e701547bfc43651b2c127f4a918" id="r_a8fd74e701547bfc43651b2c127f4a918"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8fd74e701547bfc43651b2c127f4a918">inicializaTabuleiro</a> (char jogo)</td></tr>
+<tr class="memdesc:a8fd74e701547bfc43651b2c127f4a918"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inicializa o tabuleiro com base no tipo de jogo.  <br /></td></tr>
 <tr class="separator:a8fd74e701547bfc43651b2c127f4a918"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afd32590d321f13edfdba8a26273f3f03" id="r_afd32590d321f13edfdba8a26273f3f03"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afd32590d321f13edfdba8a26273f3f03">imprimeTabuleiro</a> () const</td></tr>
+<tr class="memdesc:afd32590d321f13edfdba8a26273f3f03"><td class="mdescLeft">&#160;</td><td class="mdescRight">Imprime o estado atual do tabuleiro no console.  <br /></td></tr>
 <tr class="separator:afd32590d321f13edfdba8a26273f3f03"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a27d190ace363ac487980f1f137e36960" id="r_a27d190ace363ac487980f1f137e36960"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a27d190ace363ac487980f1f137e36960">verificaCasa</a> (int linha, int coluna, std::string _estado) const</td></tr>
+<tr class="memdesc:a27d190ace363ac487980f1f137e36960"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verifica o estado de uma célula específica no tabuleiro.  <br /></td></tr>
 <tr class="separator:a27d190ace363ac487980f1f137e36960"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a61ff1cc55aa56fdb7fe4feaf7f151794" id="r_a61ff1cc55aa56fdb7fe4feaf7f151794"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a61ff1cc55aa56fdb7fe4feaf7f151794">modificaTabuleiro</a> (int linha, int coluna, std::string _estado)</td></tr>
+<tr class="memdesc:a61ff1cc55aa56fdb7fe4feaf7f151794"><td class="mdescLeft">&#160;</td><td class="mdescRight">Modifica o estado de uma célula específica no tabuleiro.  <br /></td></tr>
 <tr class="separator:a61ff1cc55aa56fdb7fe4feaf7f151794"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Classe que representa o tabuleiro de um jogo e suas operações. </p>
+<p>A classe <code><a class="el" href="class_tabuleiro.html" title="Classe que representa o tabuleiro de um jogo e suas operações.">Tabuleiro</a></code> é usada para gerenciar o estado do tabuleiro, incluindo a inicialização, modificação e impressão do mesmo. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a9b76bfdd7176fd0b4fdee7296a6841e5" name="a9b76bfdd7176fd0b4fdee7296a6841e5"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9b76bfdd7176fd0b4fdee7296a6841e5">&#9670;&#160;</a></span>Tabuleiro()</h2>
 
@@ -121,6 +132,8 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Construtor padrão da classe <a class="el" href="class_tabuleiro.html" title="Classe que representa o tabuleiro de um jogo e suas operações.">Tabuleiro</a>. </p>
 
 </div>
 </div>
@@ -140,6 +153,9 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Imprime o estado atual do tabuleiro no console. </p>
+<p>O tabuleiro é impresso com as células representadas por espaços em branco, "X" para peças pretas, e "O" para peças brancas. </p>
+
 </div>
 </div>
 <a id="a8fd74e701547bfc43651b2c127f4a918" name="a8fd74e701547bfc43651b2c127f4a918"></a>
@@ -156,6 +172,19 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Inicializa o tabuleiro com base no tipo de jogo. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">jogo</td><td>Caracter que indica o tipo de jogo:<ul>
+<li>'R': <a class="el" href="class_reversi.html" title="Classe que implementa o jogo de Reversi.">Reversi</a> (8x8)</li>
+<li>'L': <a class="el" href="class_lig4.html" title="Classe que implementa o jogo Lig4 (Conecte 4).">Lig4</a> (6x7)</li>
+<li>'D': Dama (8x8) </li>
+</ul>
+</td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -183,6 +212,16 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Modifica o estado de uma célula específica no tabuleiro. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">linha</td><td>Linha da célula a ser modificada. </td></tr>
+    <tr><td class="paramname">coluna</td><td>Coluna da célula a ser modificada. </td></tr>
+    <tr><td class="paramname">_estado</td><td>Novo estado a ser definido para a célula ("PRETO", "BRANCO", "NULO"). </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="a27d190ace363ac487980f1f137e36960" name="a27d190ace363ac487980f1f137e36960"></a>
@@ -208,6 +247,17 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Verifica o estado de uma célula específica no tabuleiro. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">linha</td><td>Linha da célula a ser verificada. </td></tr>
+    <tr><td class="paramname">coluna</td><td>Coluna da célula a ser verificada. </td></tr>
+    <tr><td class="paramname">_estado</td><td>Estado a ser comparado ("PRETO", "BRANCO", "NULO"). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Verdadeiro se o estado da célula corresponde ao estado fornecido, falso caso contrário. </dd></dl>
 
 </div>
 </div>

@@ -2,6 +2,11 @@
 \hypertarget{class_lig4}{}\label{class_lig4}\index{Lig4@{Lig4}}
 
 
+Classe que implementa o jogo \doxylink{class_lig4}{Lig4} (Conecte 4).  
+
+
+
+
 {\ttfamily \#include $<$lig4.\+hpp$>$}
 
 Inheritance diagram for Lig4\+:\begin{figure}[H]
@@ -14,40 +19,45 @@ Inheritance diagram for Lig4\+:\begin{figure}[H]
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_lig4_adffdeddf3d20829f752913801554126d}{Lig4}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Construtor padrão da classe \doxylink{class_lig4}{Lig4}. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_lig4_add1bf78f99caaf523113e7f4cf843744}{\texorpdfstring{$\sim$}{\string~}\+Lig4}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Destrutor da classe \doxylink{class_lig4}{Lig4}. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_lig4_a2fe5667ca383cf813b1497f3abf09317}{start}} (std\+::string jogador1, std\+::string jogador2, \mbox{\hyperlink{class_cadastro}{Cadastro}} \&cadastro) override
-\item 
+\begin{DoxyCompactList}\small\item\em Inicia uma nova partida de \doxylink{class_lig4}{Lig4}. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{class_lig4_aae4580104c813a6015328a54f08f5381}{verifica4}} (int linha, int coluna)
-\item 
+\begin{DoxyCompactList}\small\item\em Verifica se há uma sequência de 4 peças consecutivas. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{class_lig4_aa69d47955ffc48d1347659fd4224a6a9}{verifica\+Fim\+De\+Jogo}} (int coluna, std\+::string jogador1, std\+::string jogador2, \mbox{\hyperlink{class_cadastro}{Cadastro}} \&cadastro)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Verifica se o jogo chegou ao fim após a última jogada. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_jogos}{Jogos}}}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_jogos_a3b4fd105cd0c47d57898ffeb129b4457}{Jogos}} (char jogo)
-\item 
+\begin{DoxyCompactList}\small\item\em Construtor da classe \doxylink{class_jogos}{Jogos}. \end{DoxyCompactList}\item 
 virtual \mbox{\hyperlink{class_jogos_a67bcdb76ed95071291667ff50447f86a}{\texorpdfstring{$\sim$}{\string~}\+Jogos}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Destrutor virtual da classe \doxylink{class_jogos}{Jogos}. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_jogos_aa1b6a1b33086146301e6cc53a298ed3e}{print\+Tabuleiro}} () const
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Imprime o estado atual do tabuleiro no console. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Additional Inherited Members}
 \doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_jogos}{Jogos}}}
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{class_jogos_a0ee362e105f71b733bf250776e201730}{muda\+Turno}} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Alterna o turno dos jogadores. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_jogos}{Jogos}}}
 \begin{DoxyCompactItemize}
 \item 
 bool \mbox{\hyperlink{class_jogos_aecbbe002c4ed720469bc678fcef81872}{fim\+De\+Jogo}}
-\item 
+\begin{DoxyCompactList}\small\item\em Indica se o jogo terminou. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_tabuleiro}{Tabuleiro}} \mbox{\hyperlink{class_jogos_a022fc7c967fd10dbb0b6997f3b2403f5}{tabuleiro}}
-\item 
+\begin{DoxyCompactList}\small\item\em Objeto {\ttfamily \doxylink{class_tabuleiro}{Tabuleiro}} que representa o tabuleiro do jogo. \end{DoxyCompactList}\item 
 std\+::string \mbox{\hyperlink{class_jogos_af2e03fe462b5edd6c87d9a4d042bfdfd}{turno}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em String que representa o turno atual do jogo. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+Classe que implementa o jogo \doxylink{class_lig4}{Lig4} (Conecte 4). 
+
+A classe \doxylink{class_lig4}{Lig4} herda de \doxylink{class_jogos}{Jogos} e fornece toda a funcionalidade necessária para iniciar e gerenciar uma partida de \doxylink{class_lig4}{Lig4}, incluindo verificação de jogadas, controle de turnos e detecção de vitória ou empate. 
 
 \doxysubsection{Constructor \& Destructor Documentation}
 \Hypertarget{class_lig4_adffdeddf3d20829f752913801554126d}\index{Lig4@{Lig4}!Lig4@{Lig4}}
@@ -56,13 +66,21 @@ std\+::string \mbox{\hyperlink{class_jogos_af2e03fe462b5edd6c87d9a4d042bfdfd}{tu
 {\footnotesize\ttfamily \label{class_lig4_adffdeddf3d20829f752913801554126d} 
 Lig4\+::\+Lig4 (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
-\Hypertarget{class_lig4_add1bf78f99caaf523113e7f4cf843744}\index{Lig4@{Lig4}!````~Lig4@{\texorpdfstring{$\sim$}{\string~}Lig4}}
+
+
+Construtor padrão da classe \doxylink{class_lig4}{Lig4}. 
+
+Inicializa o estado do jogo, preparando o tabuleiro e outros elementos necessários para o início de uma partida. \Hypertarget{class_lig4_add1bf78f99caaf523113e7f4cf843744}\index{Lig4@{Lig4}!````~Lig4@{\texorpdfstring{$\sim$}{\string~}Lig4}}
 \index{````~Lig4@{\texorpdfstring{$\sim$}{\string~}Lig4}!Lig4@{Lig4}}
 \doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Lig4()}{\string~Lig4()}}
 {\footnotesize\ttfamily \label{class_lig4_add1bf78f99caaf523113e7f4cf843744} 
 Lig4\+::\texorpdfstring{$\sim$}{\string~}\+Lig4 (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
 
+
+Destrutor da classe \doxylink{class_lig4}{Lig4}. 
+
+Libera quaisquer recursos alocados durante o jogo, garantindo uma finalização limpa do objeto \doxylink{class_lig4}{Lig4}. 
 
 \doxysubsection{Member Function Documentation}
 \Hypertarget{class_lig4_a2fe5667ca383cf813b1497f3abf09317}\index{Lig4@{Lig4}!start@{start}}
@@ -73,6 +91,21 @@ void Lig4\+::start (\begin{DoxyParamCaption}\item[{std\+::string}]{jogador1}{, }
 
 
 
+Inicia uma nova partida de \doxylink{class_lig4}{Lig4}. 
+
+Configura os jogadores e inicia o loop principal do jogo, onde os jogadores alternam turnos até que haja um vencedor ou empate.
+
+
+\begin{DoxyParams}{Parameters}
+{\em jogador1} & Nome do primeiro jogador. \\
+\hline
+{\em jogador2} & Nome do segundo jogador. \\
+\hline
+{\em cadastro} & Referência para o objeto \doxylink{class_cadastro}{Cadastro}, utilizado para registrar informações dos jogadores. \\
+\hline
+\end{DoxyParams}
+
+
 Implements \mbox{\hyperlink{class_jogos_a79a41dfb55b1bdce83eb97955152df04}{Jogos}}.
 
 \Hypertarget{class_lig4_aae4580104c813a6015328a54f08f5381}\index{Lig4@{Lig4}!verifica4@{verifica4}}
@@ -81,12 +114,50 @@ Implements \mbox{\hyperlink{class_jogos_a79a41dfb55b1bdce83eb97955152df04}{Jogos
 {\footnotesize\ttfamily \label{class_lig4_aae4580104c813a6015328a54f08f5381} 
 bool Lig4\+::verifica4 (\begin{DoxyParamCaption}\item[{int}]{linha}{, }\item[{int}]{coluna}{}\end{DoxyParamCaption})}
 
+
+
+Verifica se há uma sequência de 4 peças consecutivas. 
+
+Analisa a posição especificada no tabuleiro para determinar se há uma sequência de 4 peças consecutivas em qualquer direção (horizontal, vertical ou diagonal), indicando uma vitória.
+
+
+\begin{DoxyParams}{Parameters}
+{\em linha} & Linha da última jogada. \\
+\hline
+{\em coluna} & Coluna da última jogada. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true Se há uma sequência de 4 peças consecutivas. 
+
+false Caso contrário. 
+\end{DoxyReturn}
 \Hypertarget{class_lig4_aa69d47955ffc48d1347659fd4224a6a9}\index{Lig4@{Lig4}!verificaFimDeJogo@{verificaFimDeJogo}}
 \index{verificaFimDeJogo@{verificaFimDeJogo}!Lig4@{Lig4}}
 \doxysubsubsection{\texorpdfstring{verificaFimDeJogo()}{verificaFimDeJogo()}}
 {\footnotesize\ttfamily \label{class_lig4_aa69d47955ffc48d1347659fd4224a6a9} 
 int Lig4\+::verifica\+Fim\+De\+Jogo (\begin{DoxyParamCaption}\item[{int}]{coluna}{, }\item[{std\+::string}]{jogador1}{, }\item[{std\+::string}]{jogador2}{, }\item[{\mbox{\hyperlink{class_cadastro}{Cadastro}} \&}]{cadastro}{}\end{DoxyParamCaption})}
 
+
+
+Verifica se o jogo chegou ao fim após a última jogada. 
+
+Esta função é chamada após cada jogada para determinar se a partida terminou. A função verifica se a última peça colocada resultou em uma sequência de 4 peças consecutivas, declarando vitória para o jogador correspondente. Além disso, verifica se o tabuleiro está cheio, indicando um empate caso nenhuma outra jogada possa ser feita.
+
+
+\begin{DoxyParams}{Parameters}
+{\em col} & Coluna onde a última peça foi jogada. \\
+\hline
+{\em jogador1} & Nome do primeiro jogador (associado às peças pretas). \\
+\hline
+{\em jogador2} & Nome do segundo jogador (associado às peças brancas). \\
+\hline
+{\em cadastro} & Referência para o objeto \doxylink{class_cadastro}{Cadastro}, utilizado para registrar o resultado do jogo. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int Retorna 0 para indicar o fim do jogo, seja por vitória ou empate. 
+\end{DoxyReturn}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

@@ -93,6 +93,9 @@ $(function(){ initResizable(false); });
 </div><!--header-->
 <div class="contents">
 
+<p>Classe base para jogos que utilizam um tabuleiro.  
+ <a href="#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="jogos_8hpp_source.html">jogos.hpp</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for Jogos:</div>
@@ -100,39 +103,52 @@ Inheritance diagram for Jogos:</div>
  <div class="center">
   <img src="class_jogos.png" usemap="#Jogos_map" alt=""/>
   <map id="Jogos_map" name="Jogos_map">
-<area href="class_lig4.html" alt="Lig4" shape="rect" coords="0,56,55,80"/>
-<area href="class_reversi.html" alt="Reversi" shape="rect" coords="65,56,120,80"/>
+<area href="class_damas.html" title="Representa o jogo de Damas." alt="Damas" shape="rect" coords="0,56,55,80"/>
+<area href="class_lig4.html" title="Classe que implementa o jogo Lig4 (Conecte 4)." alt="Lig4" shape="rect" coords="65,56,120,80"/>
+<area href="class_reversi.html" title="Classe que implementa o jogo de Reversi." alt="Reversi" shape="rect" coords="130,56,185,80"/>
   </map>
 </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a3b4fd105cd0c47d57898ffeb129b4457" id="r_a3b4fd105cd0c47d57898ffeb129b4457"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3b4fd105cd0c47d57898ffeb129b4457">Jogos</a> (char jogo)</td></tr>
+<tr class="memdesc:a3b4fd105cd0c47d57898ffeb129b4457"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construtor da classe <a class="el" href="class_jogos.html" title="Classe base para jogos que utilizam um tabuleiro.">Jogos</a>.  <br /></td></tr>
 <tr class="separator:a3b4fd105cd0c47d57898ffeb129b4457"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a67bcdb76ed95071291667ff50447f86a" id="r_a67bcdb76ed95071291667ff50447f86a"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a67bcdb76ed95071291667ff50447f86a">~Jogos</a> ()</td></tr>
+<tr class="memdesc:a67bcdb76ed95071291667ff50447f86a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destrutor virtual da classe <a class="el" href="class_jogos.html" title="Classe base para jogos que utilizam um tabuleiro.">Jogos</a>.  <br /></td></tr>
 <tr class="separator:a67bcdb76ed95071291667ff50447f86a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a79a41dfb55b1bdce83eb97955152df04" id="r_a79a41dfb55b1bdce83eb97955152df04"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a79a41dfb55b1bdce83eb97955152df04">start</a> (std::string jogador1, std::string jogador2, <a class="el" href="class_cadastro.html">Cadastro</a> &amp;cadastro)=0</td></tr>
+<tr class="memdesc:a79a41dfb55b1bdce83eb97955152df04"><td class="mdescLeft">&#160;</td><td class="mdescRight">Método virtual puro para iniciar o jogo.  <br /></td></tr>
 <tr class="separator:a79a41dfb55b1bdce83eb97955152df04"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa1b6a1b33086146301e6cc53a298ed3e" id="r_aa1b6a1b33086146301e6cc53a298ed3e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa1b6a1b33086146301e6cc53a298ed3e">printTabuleiro</a> () const</td></tr>
+<tr class="memdesc:aa1b6a1b33086146301e6cc53a298ed3e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Imprime o estado atual do tabuleiro no console.  <br /></td></tr>
 <tr class="separator:aa1b6a1b33086146301e6cc53a298ed3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr class="memitem:a0ee362e105f71b733bf250776e201730" id="r_a0ee362e105f71b733bf250776e201730"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0ee362e105f71b733bf250776e201730">mudaTurno</a> ()</td></tr>
+<tr class="memdesc:a0ee362e105f71b733bf250776e201730"><td class="mdescLeft">&#160;</td><td class="mdescRight">Alterna o turno dos jogadores.  <br /></td></tr>
 <tr class="separator:a0ee362e105f71b733bf250776e201730"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac7eed25a60f0a28ac7c902b90f209b50" id="r_ac7eed25a60f0a28ac7c902b90f209b50"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac7eed25a60f0a28ac7c902b90f209b50">anunciaTurno</a> (std::string jogador1, std::string jogador2)=0</td></tr>
+<tr class="memdesc:ac7eed25a60f0a28ac7c902b90f209b50"><td class="mdescLeft">&#160;</td><td class="mdescRight">Método virtual puro para anunciar o turno dos jogadores.  <br /></td></tr>
 <tr class="separator:ac7eed25a60f0a28ac7c902b90f209b50"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
 <tr class="memitem:aecbbe002c4ed720469bc678fcef81872" id="r_aecbbe002c4ed720469bc678fcef81872"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aecbbe002c4ed720469bc678fcef81872">fimDeJogo</a></td></tr>
+<tr class="memdesc:aecbbe002c4ed720469bc678fcef81872"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indica se o jogo terminou.  <br /></td></tr>
 <tr class="separator:aecbbe002c4ed720469bc678fcef81872"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a022fc7c967fd10dbb0b6997f3b2403f5" id="r_a022fc7c967fd10dbb0b6997f3b2403f5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_tabuleiro.html">Tabuleiro</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a022fc7c967fd10dbb0b6997f3b2403f5">tabuleiro</a></td></tr>
+<tr class="memdesc:a022fc7c967fd10dbb0b6997f3b2403f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Objeto <code><a class="el" href="class_tabuleiro.html" title="Classe que representa o tabuleiro de um jogo e suas operações.">Tabuleiro</a></code> que representa o tabuleiro do jogo.  <br /></td></tr>
 <tr class="separator:a022fc7c967fd10dbb0b6997f3b2403f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af2e03fe462b5edd6c87d9a4d042bfdfd" id="r_af2e03fe462b5edd6c87d9a4d042bfdfd"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af2e03fe462b5edd6c87d9a4d042bfdfd">turno</a></td></tr>
+<tr class="memdesc:af2e03fe462b5edd6c87d9a4d042bfdfd"><td class="mdescLeft">&#160;</td><td class="mdescRight">String que representa o turno atual do jogo.  <br /></td></tr>
 <tr class="separator:af2e03fe462b5edd6c87d9a4d042bfdfd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Classe base para jogos que utilizam um tabuleiro. </p>
+<p>A classe <code><a class="el" href="class_jogos.html" title="Classe base para jogos que utilizam um tabuleiro.">Jogos</a></code> fornece a interface e funcionalidades comuns para todos os jogos que utilizam um tabuleiro. Inclui métodos para iniciar o jogo, imprimir o tabuleiro, e gerenciar o turno dos jogadores. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a3b4fd105cd0c47d57898ffeb129b4457" name="a3b4fd105cd0c47d57898ffeb129b4457"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3b4fd105cd0c47d57898ffeb129b4457">&#9670;&#160;</a></span>Jogos()</h2>
 
@@ -147,6 +163,14 @@ Protected Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Construtor da classe <a class="el" href="class_jogos.html" title="Classe base para jogos que utilizam um tabuleiro.">Jogos</a>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">jogo</td><td>Caracter que indica o tipo de jogo a ser inicializado. O tabuleiro será configurado de acordo com este tipo. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -172,6 +196,8 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Destrutor virtual da classe <a class="el" href="class_jogos.html" title="Classe base para jogos que utilizam um tabuleiro.">Jogos</a>. </p>
 
 </div>
 </div>
@@ -203,6 +229,16 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Método virtual puro para anunciar o turno dos jogadores. </p>
+<p>Este método deve ser implementado pelas classes derivadas para anunciar o turno do jogador.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">jogador1</td><td>Nome do primeiro jogador. </td></tr>
+    <tr><td class="paramname">jogador2</td><td>Nome do segundo jogador. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="a0ee362e105f71b733bf250776e201730" name="a0ee362e105f71b733bf250776e201730"></a>
@@ -228,6 +264,9 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Alterna o turno dos jogadores. </p>
+<p>Se o turno atual for "PRETO", muda para "BRANCO" e vice-versa. </p>
+
 </div>
 </div>
 <a id="aa1b6a1b33086146301e6cc53a298ed3e" name="aa1b6a1b33086146301e6cc53a298ed3e"></a>
@@ -244,6 +283,9 @@ Protected Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Imprime o estado atual do tabuleiro no console. </p>
+<p>Utiliza o método <code>imprimeTabuleiro</code> da classe <code><a class="el" href="class_tabuleiro.html" title="Classe que representa o tabuleiro de um jogo e suas operações.">Tabuleiro</a></code> para exibir o tabuleiro no console. </p>
 
 </div>
 </div>
@@ -279,7 +321,18 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="class_lig4.html#a2fe5667ca383cf813b1497f3abf09317">Lig4</a>, and <a class="el" href="class_reversi.html#a2f5e5c50a1f68f8e61a77c733a6b5ad6">Reversi</a>.</p>
+<p>Método virtual puro para iniciar o jogo. </p>
+<p>Este método deve ser implementado pelas classes derivadas para iniciar o jogo específico.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">jogador1</td><td>Nome do primeiro jogador. </td></tr>
+    <tr><td class="paramname">jogador2</td><td>Nome do segundo jogador. </td></tr>
+    <tr><td class="paramname">cadastro</td><td>Referência para um objeto <code><a class="el" href="class_cadastro.html" title="Classe responsável pelo cadastro e gerenciamento de jogadores e seus resultados.">Cadastro</a></code> que pode ser utilizado para registrar o jogo. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implemented in <a class="el" href="class_damas.html#a2172cb8afed35e9528b6532e114fe6a0">Damas</a>, <a class="el" href="class_lig4.html#a2fe5667ca383cf813b1497f3abf09317">Lig4</a>, and <a class="el" href="class_reversi.html#a2f5e5c50a1f68f8e61a77c733a6b5ad6">Reversi</a>.</p>
 
 </div>
 </div>
@@ -304,6 +357,9 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Indica se o jogo terminou. </p>
+<p>É um flag que é atualizado durante a execução do jogo para indicar seu status. </p>
+
 </div>
 </div>
 <a id="a022fc7c967fd10dbb0b6997f3b2403f5" name="a022fc7c967fd10dbb0b6997f3b2403f5"></a>
@@ -326,6 +382,8 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Objeto <code><a class="el" href="class_tabuleiro.html" title="Classe que representa o tabuleiro de um jogo e suas operações.">Tabuleiro</a></code> que representa o tabuleiro do jogo. </p>
+
 </div>
 </div>
 <a id="af2e03fe462b5edd6c87d9a4d042bfdfd" name="af2e03fe462b5edd6c87d9a4d042bfdfd"></a>
@@ -347,6 +405,9 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>String que representa o turno atual do jogo. </p>
+<p>Pode ser "PRETO" ou "BRANCO". </p>
 
 </div>
 </div>

@@ -2,29 +2,35 @@
 \hypertarget{jogos_8hpp_source}{}\label{jogos_8hpp_source}\index{include/jogos.hpp@{include/jogos.hpp}}
 \mbox{\hyperlink{jogos_8hpp}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ JOGOS\_HPP}}
-\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ JOGOS\_HPP}}
-\DoxyCodeLine{00003\ }
-\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{tabuleiro_8hpp}{tabuleiro.hpp}}"{}}}
-\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{cadastro_8hpp}{cadastro.hpp}}"{}}}
-\DoxyCodeLine{00006\ }
-\DoxyCodeLine{00007\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_jogos}{Jogos}}\ \{}
-\DoxyCodeLine{00008\ \ \ \ \ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00009\ \ \ \ \ \mbox{\hyperlink{class_jogos_a3b4fd105cd0c47d57898ffeb129b4457}{Jogos}}(\textcolor{keywordtype}{char}\ jogo);}
-\DoxyCodeLine{00010\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_jogos_a67bcdb76ed95071291667ff50447f86a}{\string~Jogos}}();}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#ifndef\ JOGOS\_HPP}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#define\ JOGOS\_HPP}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{tabuleiro_8hpp}{tabuleiro.hpp}}"{}}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{cadastro_8hpp}{cadastro.hpp}}"{}}}
 \DoxyCodeLine{00011\ }
-\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_jogos_a79a41dfb55b1bdce83eb97955152df04}{start}}(std::string\ jogador1,\ std::string\ jogador2,\ \mbox{\hyperlink{class_cadastro}{Cadastro}}\&\ cadastro)\ =\ 0;}
-\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_jogos_aa1b6a1b33086146301e6cc53a298ed3e}{printTabuleiro}}()\ \textcolor{keyword}{const};}
-\DoxyCodeLine{00014\ }
-\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keyword}{protected}:}
-\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_jogos_aecbbe002c4ed720469bc678fcef81872}{fimDeJogo}};}
-\DoxyCodeLine{00017\ \ \ \ \ \mbox{\hyperlink{class_tabuleiro}{Tabuleiro}}\ \mbox{\hyperlink{class_jogos_a022fc7c967fd10dbb0b6997f3b2403f5}{tabuleiro}};}
-\DoxyCodeLine{00018\ \ \ \ \ std::string\ \mbox{\hyperlink{class_jogos_af2e03fe462b5edd6c87d9a4d042bfdfd}{turno}};}
-\DoxyCodeLine{00019\ }
-\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_jogos_a0ee362e105f71b733bf250776e201730}{mudaTurno}}();}
-\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_jogos_ac7eed25a60f0a28ac7c902b90f209b50}{anunciaTurno}}(std::string\ jogador1,\ std::string\ jogador2)\ =\ 0;}
-\DoxyCodeLine{00022\ \};}
-\DoxyCodeLine{00023\ }
-\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00019\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_jogos}{Jogos}}\ \{}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_jogos_a3b4fd105cd0c47d57898ffeb129b4457}{Jogos}}(\textcolor{keywordtype}{char}\ jogo);}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_jogos_a67bcdb76ed95071291667ff50447f86a}{\string~Jogos}}();}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_jogos_a79a41dfb55b1bdce83eb97955152df04}{start}}(std::string\ jogador1,\ std::string\ jogador2,\ \mbox{\hyperlink{class_cadastro}{Cadastro}}\&\ cadastro)\ =\ 0;}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_jogos_aa1b6a1b33086146301e6cc53a298ed3e}{printTabuleiro}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_jogos_aecbbe002c4ed720469bc678fcef81872}{fimDeJogo}};}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_tabuleiro}{Tabuleiro}}\ \mbox{\hyperlink{class_jogos_a022fc7c967fd10dbb0b6997f3b2403f5}{tabuleiro}};}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{class_jogos_af2e03fe462b5edd6c87d9a4d042bfdfd}{turno}};}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_jogos_a0ee362e105f71b733bf250776e201730}{mudaTurno}}();}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_jogos_ac7eed25a60f0a28ac7c902b90f209b50}{anunciaTurno}}(std::string\ jogador1,\ std::string\ jogador2)\ =\ 0;}
+\DoxyCodeLine{00088\ \};}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00090\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ JOGOS\_HPP}}
 
 \end{DoxyCode}

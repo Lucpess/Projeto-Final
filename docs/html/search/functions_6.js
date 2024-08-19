@@ -7,9 +7,11 @@ var searchData=
   ['getapelido_4',['getApelido',['../class_jogador.html#aab1dd73438da8f07e1b9b8b9df0a5eb4',1,'Jogador']]],
   ['getcontextoptions_5',['getContextOptions',['../namespacedoctest.html#a13c02a469cfc2264d547fc0fc3a55569',1,'doctest']]],
   ['getcurrenttestsuite_6',['getCurrentTestSuite',['../namespacedoctest__detail__test__suite__ns.html#a63d04c2e0ba35dff1e33cf0a24ec66c8',1,'doctest_detail_test_suite_ns']]],
-  ['getderrotaslig4_7',['getDerrotasLig4',['../class_jogador.html#aab3317ad34e3a92ccb6d0b4cecccc04e',1,'Jogador']]],
-  ['getderrotasreversi_8',['getDerrotasReversi',['../class_jogador.html#a9fb4c016cdd1f431592498e424abb949',1,'Jogador']]],
-  ['getnome_9',['getNome',['../class_jogador.html#a56f68b57e7fb229f932ef60d2116833c',1,'Jogador']]],
-  ['getvitoriaslig4_10',['getVitoriasLig4',['../class_jogador.html#ab73305554133ef6b1f4c6e74052989ea',1,'Jogador']]],
-  ['getvitoriasreversi_11',['getVitoriasReversi',['../class_jogador.html#a68f9478b7320d8fc9755a179494b9540',1,'Jogador']]]
+  ['getderrotasdama_7',['getDerrotasDama',['../class_jogador.html#a1b8eadc8d91de13a7d885d4741857dd5',1,'Jogador']]],
+  ['getderrotaslig4_8',['getDerrotasLig4',['../class_jogador.html#aab3317ad34e3a92ccb6d0b4cecccc04e',1,'Jogador']]],
+  ['getderrotasreversi_9',['getDerrotasReversi',['../class_jogador.html#a9fb4c016cdd1f431592498e424abb949',1,'Jogador']]],
+  ['getnome_10',['getNome',['../class_jogador.html#a56f68b57e7fb229f932ef60d2116833c',1,'Jogador']]],
+  ['getvitoriasdama_11',['getVitoriasDama',['../class_jogador.html#a921b69add1fbe8e9b25b67d8d19c6a88',1,'Jogador']]],
+  ['getvitoriaslig4_12',['getVitoriasLig4',['../class_jogador.html#ab73305554133ef6b1f4c6e74052989ea',1,'Jogador']]],
+  ['getvitoriasreversi_13',['getVitoriasReversi',['../class_jogador.html#a68f9478b7320d8fc9755a179494b9540',1,'Jogador']]]
 ];

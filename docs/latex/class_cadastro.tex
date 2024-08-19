@@ -2,26 +2,34 @@
 \hypertarget{class_cadastro}{}\label{class_cadastro}\index{Cadastro@{Cadastro}}
 
 
+Classe responsável pelo cadastro e gerenciamento de jogadores e seus resultados.  
+
+
+
+
 {\ttfamily \#include $<$cadastro.\+hpp$>$}
 
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \mbox{\hyperlink{class_cadastro_a85ac50d02ef963bed26bb543baafd065}{cadastra\+Jogador}} (const std\+::string \&apelido, const std\+::string \&nome)
-\item 
-void \mbox{\hyperlink{class_cadastro_aa498351ac52ddf342be614d943971b98}{lista\+Jogadores}} (const std\+::string \&ordem) const
-\item 
-void \mbox{\hyperlink{class_cadastro_a2bee46f0c4a23f71f51e2fdf6abff9e8}{remove\+Jogador}} (const std\+::string \&apelido)
-\item 
-void \mbox{\hyperlink{class_cadastro_aa96211fefded33a0897ec4e358e7dc44}{registrar\+Resultado}} (const std\+::string \&vencedor, const std\+::string \&perdedor, char jogo)
-\item 
-bool \mbox{\hyperlink{class_cadastro_a003e5ec58ba5062790034289919690c9}{existe\+Jogador}} (const std\+::string \&apelido) const
-\item 
 \mbox{\hyperlink{class_cadastro_ad30b60ee39476cd4216807b0d0ba40f6}{Cadastro}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Construtor da classe \doxylink{class_cadastro}{Cadastro}. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_cadastro_a6a3a70840193b4bef174cba0a75f7501}{\texorpdfstring{$\sim$}{\string~}\+Cadastro}} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Destrutor da classe \doxylink{class_cadastro}{Cadastro}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cadastro_a85ac50d02ef963bed26bb543baafd065}{cadastra\+Jogador}} (const std\+::string \&apelido, const std\+::string \&nome)
+\begin{DoxyCompactList}\small\item\em Cadastra um novo jogador. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cadastro_aa498351ac52ddf342be614d943971b98}{lista\+Jogadores}} (const std\+::string \&ordem) const
+\begin{DoxyCompactList}\small\item\em Lista todos os jogadores cadastrados. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cadastro_a2bee46f0c4a23f71f51e2fdf6abff9e8}{remove\+Jogador}} (const std\+::string \&apelido)
+\begin{DoxyCompactList}\small\item\em Remove um jogador do cadastro. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cadastro_aa96211fefded33a0897ec4e358e7dc44}{registrar\+Resultado}} (const std\+::string \&vencedor, const std\+::string \&perdedor, char jogo)
+\begin{DoxyCompactList}\small\item\em Registra o resultado de uma partida entre dois jogadores. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_cadastro_a003e5ec58ba5062790034289919690c9}{existe\+Jogador}} (const std\+::string \&apelido) const
+\begin{DoxyCompactList}\small\item\em Verifica se um jogador com determinado apelido está cadastrado. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+Classe responsável pelo cadastro e gerenciamento de jogadores e seus resultados. 
 
 \doxysubsection{Constructor \& Destructor Documentation}
 \Hypertarget{class_cadastro_ad30b60ee39476cd4216807b0d0ba40f6}\index{Cadastro@{Cadastro}!Cadastro@{Cadastro}}
@@ -30,11 +38,19 @@ bool \mbox{\hyperlink{class_cadastro_a003e5ec58ba5062790034289919690c9}{existe\+
 {\footnotesize\ttfamily \label{class_cadastro_ad30b60ee39476cd4216807b0d0ba40f6} 
 Cadastro\+::\+Cadastro (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
+
+
+Construtor da classe \doxylink{class_cadastro}{Cadastro}. 
+
 \Hypertarget{class_cadastro_a6a3a70840193b4bef174cba0a75f7501}\index{Cadastro@{Cadastro}!````~Cadastro@{\texorpdfstring{$\sim$}{\string~}Cadastro}}
 \index{````~Cadastro@{\texorpdfstring{$\sim$}{\string~}Cadastro}!Cadastro@{Cadastro}}
 \doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Cadastro()}{\string~Cadastro()}}
 {\footnotesize\ttfamily \label{class_cadastro_a6a3a70840193b4bef174cba0a75f7501} 
 Cadastro\+::\texorpdfstring{$\sim$}{\string~}\+Cadastro (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Destrutor da classe \doxylink{class_cadastro}{Cadastro}. 
 
 
 
@@ -45,30 +61,84 @@ Cadastro\+::\texorpdfstring{$\sim$}{\string~}\+Cadastro (\begin{DoxyParamCaption
 {\footnotesize\ttfamily \label{class_cadastro_a85ac50d02ef963bed26bb543baafd065} 
 void Cadastro\+::cadastra\+Jogador (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{apelido}{, }\item[{const std\+::string \&}]{nome}{}\end{DoxyParamCaption})}
 
+
+
+Cadastra um novo jogador. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em apelido} & Apelido do jogador. \\
+\hline
+{\em nome} & Nome completo do jogador. \\
+\hline
+\end{DoxyParams}
 \Hypertarget{class_cadastro_a003e5ec58ba5062790034289919690c9}\index{Cadastro@{Cadastro}!existeJogador@{existeJogador}}
 \index{existeJogador@{existeJogador}!Cadastro@{Cadastro}}
 \doxysubsubsection{\texorpdfstring{existeJogador()}{existeJogador()}}
 {\footnotesize\ttfamily \label{class_cadastro_a003e5ec58ba5062790034289919690c9} 
 bool Cadastro\+::existe\+Jogador (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{apelido}{}\end{DoxyParamCaption}) const}
 
+
+
+Verifica se um jogador com determinado apelido está cadastrado. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em apelido} & Apelido do jogador a ser verificado. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true se o jogador existir, false caso contrário. 
+\end{DoxyReturn}
 \Hypertarget{class_cadastro_aa498351ac52ddf342be614d943971b98}\index{Cadastro@{Cadastro}!listaJogadores@{listaJogadores}}
 \index{listaJogadores@{listaJogadores}!Cadastro@{Cadastro}}
 \doxysubsubsection{\texorpdfstring{listaJogadores()}{listaJogadores()}}
 {\footnotesize\ttfamily \label{class_cadastro_aa498351ac52ddf342be614d943971b98} 
 void Cadastro\+::lista\+Jogadores (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{ordem}{}\end{DoxyParamCaption}) const}
 
+
+
+Lista todos os jogadores cadastrados. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ordem} & Especifica a ordem de listagem\+: "{}\+A"{} para ordenar por apelido, "{}\+N"{} para ordenar por nome. \\
+\hline
+\end{DoxyParams}
 \Hypertarget{class_cadastro_aa96211fefded33a0897ec4e358e7dc44}\index{Cadastro@{Cadastro}!registrarResultado@{registrarResultado}}
 \index{registrarResultado@{registrarResultado}!Cadastro@{Cadastro}}
 \doxysubsubsection{\texorpdfstring{registrarResultado()}{registrarResultado()}}
 {\footnotesize\ttfamily \label{class_cadastro_aa96211fefded33a0897ec4e358e7dc44} 
 void Cadastro\+::registrar\+Resultado (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{vencedor}{, }\item[{const std\+::string \&}]{perdedor}{, }\item[{char}]{jogo}{}\end{DoxyParamCaption})}
 
+
+
+Registra o resultado de uma partida entre dois jogadores. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vencedor} & Apelido do jogador vencedor. \\
+\hline
+{\em perdedor} & Apelido do jogador perdedor. \\
+\hline
+{\em jogo} & Identificador do jogo\+: \textquotesingle{}R\textquotesingle{} para \doxylink{class_reversi}{Reversi}, \textquotesingle{}L\textquotesingle{} para \doxylink{class_lig4}{Lig4}, \textquotesingle{}D\textquotesingle{} para Dama. \\
+\hline
+\end{DoxyParams}
 \Hypertarget{class_cadastro_a2bee46f0c4a23f71f51e2fdf6abff9e8}\index{Cadastro@{Cadastro}!removeJogador@{removeJogador}}
 \index{removeJogador@{removeJogador}!Cadastro@{Cadastro}}
 \doxysubsubsection{\texorpdfstring{removeJogador()}{removeJogador()}}
 {\footnotesize\ttfamily \label{class_cadastro_a2bee46f0c4a23f71f51e2fdf6abff9e8} 
 void Cadastro\+::remove\+Jogador (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{apelido}{}\end{DoxyParamCaption})}
 
+
+
+Remove um jogador do cadastro. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em apelido} & Apelido do jogador a ser removido. \\
+\hline
+\end{DoxyParams}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

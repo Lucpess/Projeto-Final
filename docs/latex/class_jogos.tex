@@ -2,6 +2,11 @@
 \hypertarget{class_jogos}{}\label{class_jogos}\index{Jogos@{Jogos}}
 
 
+Classe base para jogos que utilizam um tabuleiro.  
+
+
+
+
 {\ttfamily \#include $<$jogos.\+hpp$>$}
 
 Inheritance diagram for Jogos\+:\begin{figure}[H]
@@ -14,30 +19,35 @@ Inheritance diagram for Jogos\+:\begin{figure}[H]
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_jogos_a3b4fd105cd0c47d57898ffeb129b4457}{Jogos}} (char jogo)
-\item 
+\begin{DoxyCompactList}\small\item\em Construtor da classe \doxylink{class_jogos}{Jogos}. \end{DoxyCompactList}\item 
 virtual \mbox{\hyperlink{class_jogos_a67bcdb76ed95071291667ff50447f86a}{\texorpdfstring{$\sim$}{\string~}\+Jogos}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Destrutor virtual da classe \doxylink{class_jogos}{Jogos}. \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{class_jogos_a79a41dfb55b1bdce83eb97955152df04}{start}} (std\+::string jogador1, std\+::string jogador2, \mbox{\hyperlink{class_cadastro}{Cadastro}} \&cadastro)=0
-\item 
+\begin{DoxyCompactList}\small\item\em Método virtual puro para iniciar o jogo. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_jogos_aa1b6a1b33086146301e6cc53a298ed3e}{print\+Tabuleiro}} () const
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Imprime o estado atual do tabuleiro no console. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Protected Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{class_jogos_a0ee362e105f71b733bf250776e201730}{muda\+Turno}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Alterna o turno dos jogadores. \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{class_jogos_ac7eed25a60f0a28ac7c902b90f209b50}{anuncia\+Turno}} (std\+::string jogador1, std\+::string jogador2)=0
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Método virtual puro para anunciar o turno dos jogadores. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
 bool \mbox{\hyperlink{class_jogos_aecbbe002c4ed720469bc678fcef81872}{fim\+De\+Jogo}}
-\item 
+\begin{DoxyCompactList}\small\item\em Indica se o jogo terminou. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_tabuleiro}{Tabuleiro}} \mbox{\hyperlink{class_jogos_a022fc7c967fd10dbb0b6997f3b2403f5}{tabuleiro}}
-\item 
+\begin{DoxyCompactList}\small\item\em Objeto {\ttfamily \doxylink{class_tabuleiro}{Tabuleiro}} que representa o tabuleiro do jogo. \end{DoxyCompactList}\item 
 std\+::string \mbox{\hyperlink{class_jogos_af2e03fe462b5edd6c87d9a4d042bfdfd}{turno}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em String que representa o turno atual do jogo. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+Classe base para jogos que utilizam um tabuleiro. 
+
+A classe {\ttfamily \doxylink{class_jogos}{Jogos}} fornece a interface e funcionalidades comuns para todos os jogos que utilizam um tabuleiro. Inclui métodos para iniciar o jogo, imprimir o tabuleiro, e gerenciar o turno dos jogadores. 
 
 \doxysubsection{Constructor \& Destructor Documentation}
 \Hypertarget{class_jogos_a3b4fd105cd0c47d57898ffeb129b4457}\index{Jogos@{Jogos}!Jogos@{Jogos}}
@@ -46,11 +56,24 @@ std\+::string \mbox{\hyperlink{class_jogos_af2e03fe462b5edd6c87d9a4d042bfdfd}{tu
 {\footnotesize\ttfamily \label{class_jogos_a3b4fd105cd0c47d57898ffeb129b4457} 
 Jogos\+::\+Jogos (\begin{DoxyParamCaption}\item[{char}]{jogo}{}\end{DoxyParamCaption})}
 
+
+
+Construtor da classe \doxylink{class_jogos}{Jogos}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em jogo} & Caracter que indica o tipo de jogo a ser inicializado. O tabuleiro será configurado de acordo com este tipo. \\
+\hline
+\end{DoxyParams}
 \Hypertarget{class_jogos_a67bcdb76ed95071291667ff50447f86a}\index{Jogos@{Jogos}!````~Jogos@{\texorpdfstring{$\sim$}{\string~}Jogos}}
 \index{````~Jogos@{\texorpdfstring{$\sim$}{\string~}Jogos}!Jogos@{Jogos}}
 \doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Jogos()}{\string~Jogos()}}
 {\footnotesize\ttfamily \label{class_jogos_a67bcdb76ed95071291667ff50447f86a} 
 Jogos\+::\texorpdfstring{$\sim$}{\string~}\+Jogos (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Destrutor virtual da classe \doxylink{class_jogos}{Jogos}. 
 
 
 
@@ -61,19 +84,40 @@ Jogos\+::\texorpdfstring{$\sim$}{\string~}\+Jogos (\begin{DoxyParamCaption}{}{}\
 {\footnotesize\ttfamily \label{class_jogos_ac7eed25a60f0a28ac7c902b90f209b50} 
 virtual void Jogos\+::anuncia\+Turno (\begin{DoxyParamCaption}\item[{std\+::string}]{jogador1}{, }\item[{std\+::string}]{jogador2}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
 
+
+
+Método virtual puro para anunciar o turno dos jogadores. 
+
+Este método deve ser implementado pelas classes derivadas para anunciar o turno do jogador.
+
+
+\begin{DoxyParams}{Parameters}
+{\em jogador1} & Nome do primeiro jogador. \\
+\hline
+{\em jogador2} & Nome do segundo jogador. \\
+\hline
+\end{DoxyParams}
 \Hypertarget{class_jogos_a0ee362e105f71b733bf250776e201730}\index{Jogos@{Jogos}!mudaTurno@{mudaTurno}}
 \index{mudaTurno@{mudaTurno}!Jogos@{Jogos}}
 \doxysubsubsection{\texorpdfstring{mudaTurno()}{mudaTurno()}}
 {\footnotesize\ttfamily \label{class_jogos_a0ee362e105f71b733bf250776e201730} 
 void Jogos\+::muda\+Turno (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
 
-\Hypertarget{class_jogos_aa1b6a1b33086146301e6cc53a298ed3e}\index{Jogos@{Jogos}!printTabuleiro@{printTabuleiro}}
+
+
+Alterna o turno dos jogadores. 
+
+Se o turno atual for "{}\+PRETO"{}, muda para "{}\+BRANCO"{} e vice-\/versa. \Hypertarget{class_jogos_aa1b6a1b33086146301e6cc53a298ed3e}\index{Jogos@{Jogos}!printTabuleiro@{printTabuleiro}}
 \index{printTabuleiro@{printTabuleiro}!Jogos@{Jogos}}
 \doxysubsubsection{\texorpdfstring{printTabuleiro()}{printTabuleiro()}}
 {\footnotesize\ttfamily \label{class_jogos_aa1b6a1b33086146301e6cc53a298ed3e} 
 void Jogos\+::print\+Tabuleiro (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
 
-\Hypertarget{class_jogos_a79a41dfb55b1bdce83eb97955152df04}\index{Jogos@{Jogos}!start@{start}}
+
+
+Imprime o estado atual do tabuleiro no console. 
+
+Utiliza o método {\ttfamily imprime\+Tabuleiro} da classe {\ttfamily \doxylink{class_tabuleiro}{Tabuleiro}} para exibir o tabuleiro no console. \Hypertarget{class_jogos_a79a41dfb55b1bdce83eb97955152df04}\index{Jogos@{Jogos}!start@{start}}
 \index{start@{start}!Jogos@{Jogos}}
 \doxysubsubsection{\texorpdfstring{start()}{start()}}
 {\footnotesize\ttfamily \label{class_jogos_a79a41dfb55b1bdce83eb97955152df04} 
@@ -81,7 +125,22 @@ virtual void Jogos\+::start (\begin{DoxyParamCaption}\item[{std\+::string}]{joga
 
 
 
-Implemented in \mbox{\hyperlink{class_lig4_a2fe5667ca383cf813b1497f3abf09317}{Lig4}}, and \mbox{\hyperlink{class_reversi_a2f5e5c50a1f68f8e61a77c733a6b5ad6}{Reversi}}.
+Método virtual puro para iniciar o jogo. 
+
+Este método deve ser implementado pelas classes derivadas para iniciar o jogo específico.
+
+
+\begin{DoxyParams}{Parameters}
+{\em jogador1} & Nome do primeiro jogador. \\
+\hline
+{\em jogador2} & Nome do segundo jogador. \\
+\hline
+{\em cadastro} & Referência para um objeto {\ttfamily \doxylink{class_cadastro}{Cadastro}} que pode ser utilizado para registrar o jogo. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_damas_a2172cb8afed35e9528b6532e114fe6a0}{Damas}}, \mbox{\hyperlink{class_lig4_a2fe5667ca383cf813b1497f3abf09317}{Lig4}}, and \mbox{\hyperlink{class_reversi_a2f5e5c50a1f68f8e61a77c733a6b5ad6}{Reversi}}.
 
 
 
@@ -92,11 +151,19 @@ Implemented in \mbox{\hyperlink{class_lig4_a2fe5667ca383cf813b1497f3abf09317}{Li
 {\footnotesize\ttfamily \label{class_jogos_aecbbe002c4ed720469bc678fcef81872} 
 bool Jogos\+::fim\+De\+Jogo\hspace{0.3cm}{\ttfamily [protected]}}
 
-\Hypertarget{class_jogos_a022fc7c967fd10dbb0b6997f3b2403f5}\index{Jogos@{Jogos}!tabuleiro@{tabuleiro}}
+
+
+Indica se o jogo terminou. 
+
+É um flag que é atualizado durante a execução do jogo para indicar seu status. \Hypertarget{class_jogos_a022fc7c967fd10dbb0b6997f3b2403f5}\index{Jogos@{Jogos}!tabuleiro@{tabuleiro}}
 \index{tabuleiro@{tabuleiro}!Jogos@{Jogos}}
 \doxysubsubsection{\texorpdfstring{tabuleiro}{tabuleiro}}
 {\footnotesize\ttfamily \label{class_jogos_a022fc7c967fd10dbb0b6997f3b2403f5} 
 \mbox{\hyperlink{class_tabuleiro}{Tabuleiro}} Jogos\+::tabuleiro\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Objeto {\ttfamily \doxylink{class_tabuleiro}{Tabuleiro}} que representa o tabuleiro do jogo. 
 
 \Hypertarget{class_jogos_af2e03fe462b5edd6c87d9a4d042bfdfd}\index{Jogos@{Jogos}!turno@{turno}}
 \index{turno@{turno}!Jogos@{Jogos}}
@@ -105,6 +172,10 @@ bool Jogos\+::fim\+De\+Jogo\hspace{0.3cm}{\ttfamily [protected]}}
 std\+::string Jogos\+::turno\hspace{0.3cm}{\ttfamily [protected]}}
 
 
+
+String que representa o turno atual do jogo. 
+
+Pode ser "{}\+PRETO"{} ou "{}\+BRANCO"{}. 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 

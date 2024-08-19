@@ -1,3 +1,8 @@
+/**
+ * @file lig4.hpp
+ * @brief Declaração da classe Lig4, que implementa o jogo Lig4 (Conecte 4).
+ */
+
 #ifndef LIG4_H
 #define LIG4_H
 
@@ -11,7 +16,6 @@
  * para iniciar e gerenciar uma partida de Lig4, incluindo verificação de
  * jogadas, controle de turnos e detecção de vitória ou empate.
  */
-
 class Lig4 : public Jogos {
 public: 
     /**
@@ -42,6 +46,7 @@ public:
      * registrar informações dos jogadores.
      */
     void start(std::string jogador1, std::string jogador2, Cadastro& cadastro) override;
+
     /**
      * @brief Verifica se há uma sequência de 4 peças consecutivas.
      * 
@@ -55,6 +60,7 @@ public:
      * @return false Caso contrário.
      */
     bool verifica4(int linha, int coluna);
+
     /**
      * @brief Verifica se o jogo chegou ao fim após a última jogada.
      * 
@@ -83,6 +89,7 @@ private:
      * @return false Caso contrário.
      */ 
     bool jogadaPermitida(int col);
+
     /**
      * @brief Realiza a jogada na coluna especificada.
      * 
@@ -92,6 +99,7 @@ private:
      * @param col Coluna onde a jogada será feita.
      */
     void novaJogada(int col);
+
     /**
      * @brief Exibe de quem é o turno atual.
      * 

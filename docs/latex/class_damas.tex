@@ -1,0 +1,112 @@
+\doxysection{Damas Class Reference}
+\hypertarget{class_damas}{}\label{class_damas}\index{Damas@{Damas}}
+
+
+Representa o jogo de \doxylink{class_damas}{Damas}.  
+
+
+
+
+{\ttfamily \#include $<$damas.\+hpp$>$}
+
+Inheritance diagram for Damas\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_damas}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_damas_a0b219f8b8c9c89e827944ed7755a0fde}{Damas}} ()
+\begin{DoxyCompactList}\small\item\em Construtor da classe \doxylink{class_damas}{Damas}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_damas_af88efb6746bf066acf47a4101df414e2}{\texorpdfstring{$\sim$}{\string~}\+Damas}} ()
+\begin{DoxyCompactList}\small\item\em Destrutor da classe \doxylink{class_damas}{Damas}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_damas_a2172cb8afed35e9528b6532e114fe6a0}{start}} (std\+::string jogador1, std\+::string jogador2, \mbox{\hyperlink{class_cadastro}{Cadastro}} \&cadastro) override
+\begin{DoxyCompactList}\small\item\em Inicia o jogo de \doxylink{class_damas}{Damas} entre dois jogadores. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_jogos}{Jogos}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_jogos_a3b4fd105cd0c47d57898ffeb129b4457}{Jogos}} (char jogo)
+\begin{DoxyCompactList}\small\item\em Construtor da classe \doxylink{class_jogos}{Jogos}. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_jogos_a67bcdb76ed95071291667ff50447f86a}{\texorpdfstring{$\sim$}{\string~}\+Jogos}} ()
+\begin{DoxyCompactList}\small\item\em Destrutor virtual da classe \doxylink{class_jogos}{Jogos}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_jogos_aa1b6a1b33086146301e6cc53a298ed3e}{print\+Tabuleiro}} () const
+\begin{DoxyCompactList}\small\item\em Imprime o estado atual do tabuleiro no console. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_jogos}{Jogos}}}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_jogos_a0ee362e105f71b733bf250776e201730}{muda\+Turno}} ()
+\begin{DoxyCompactList}\small\item\em Alterna o turno dos jogadores. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_jogos}{Jogos}}}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_jogos_aecbbe002c4ed720469bc678fcef81872}{fim\+De\+Jogo}}
+\begin{DoxyCompactList}\small\item\em Indica se o jogo terminou. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_tabuleiro}{Tabuleiro}} \mbox{\hyperlink{class_jogos_a022fc7c967fd10dbb0b6997f3b2403f5}{tabuleiro}}
+\begin{DoxyCompactList}\small\item\em Objeto {\ttfamily \doxylink{class_tabuleiro}{Tabuleiro}} que representa o tabuleiro do jogo. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_jogos_af2e03fe462b5edd6c87d9a4d042bfdfd}{turno}}
+\begin{DoxyCompactList}\small\item\em String que representa o turno atual do jogo. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Representa o jogo de \doxylink{class_damas}{Damas}. 
+
+A classe {\ttfamily \doxylink{class_damas}{Damas}} herda de {\ttfamily \doxylink{class_jogos}{Jogos}} e implementa a lógica específica do jogo de \doxylink{class_damas}{Damas}. Inclui métodos para inicializar o jogo, gerenciar os turnos dos jogadores, movimentar peças, verificar jogadas válidas e determinar se houve uma vitória. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_damas_a0b219f8b8c9c89e827944ed7755a0fde}\index{Damas@{Damas}!Damas@{Damas}}
+\index{Damas@{Damas}!Damas@{Damas}}
+\doxysubsubsection{\texorpdfstring{Damas()}{Damas()}}
+{\footnotesize\ttfamily \label{class_damas_a0b219f8b8c9c89e827944ed7755a0fde} 
+Damas\+::\+Damas (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Construtor da classe \doxylink{class_damas}{Damas}. 
+
+Inicializa o jogo de \doxylink{class_damas}{Damas}, definindo o turno inicial como "{}\+BRANCO"{} e configurando o tabuleiro para o início do jogo. \Hypertarget{class_damas_af88efb6746bf066acf47a4101df414e2}\index{Damas@{Damas}!````~Damas@{\texorpdfstring{$\sim$}{\string~}Damas}}
+\index{````~Damas@{\texorpdfstring{$\sim$}{\string~}Damas}!Damas@{Damas}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Damas()}{\string~Damas()}}
+{\footnotesize\ttfamily \label{class_damas_af88efb6746bf066acf47a4101df414e2} 
+Damas\+::\texorpdfstring{$\sim$}{\string~}\+Damas (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Destrutor da classe \doxylink{class_damas}{Damas}. 
+
+Realiza a limpeza necessária ao finalizar um jogo de \doxylink{class_damas}{Damas}. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_damas_a2172cb8afed35e9528b6532e114fe6a0}\index{Damas@{Damas}!start@{start}}
+\index{start@{start}!Damas@{Damas}}
+\doxysubsubsection{\texorpdfstring{start()}{start()}}
+{\footnotesize\ttfamily \label{class_damas_a2172cb8afed35e9528b6532e114fe6a0} 
+void Damas\+::start (\begin{DoxyParamCaption}\item[{std\+::string}]{jogador1}{, }\item[{std\+::string}]{jogador2}{, }\item[{\mbox{\hyperlink{class_cadastro}{Cadastro}} \&}]{cadastro}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Inicia o jogo de \doxylink{class_damas}{Damas} entre dois jogadores. 
+
+Este método controla o fluxo do jogo, alternando entre os turnos dos jogadores até que haja um vencedor ou que o jogo seja encerrado. Se houver capturas obrigatórias, realiza-\/as automaticamente. Permite também que o usuário saia do jogo.
+
+
+\begin{DoxyParams}{Parameters}
+{\em jogador1} & Nome do primeiro jogador. \\
+\hline
+{\em jogador2} & Nome do segundo jogador. \\
+\hline
+{\em cadastro} & Referência ao objeto \doxylink{class_cadastro}{Cadastro} para registrar o resultado do jogo. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_jogos_a79a41dfb55b1bdce83eb97955152df04}{Jogos}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{damas_8hpp}{damas.\+hpp}}\item 
+src/\mbox{\hyperlink{damas_8cpp}{damas.\+cpp}}\end{DoxyCompactItemize}

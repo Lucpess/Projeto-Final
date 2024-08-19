@@ -2,42 +2,70 @@
 \hypertarget{jogador_8hpp_source}{}\label{jogador_8hpp_source}\index{include/jogador.hpp@{include/jogador.hpp}}
 \mbox{\hyperlink{jogador_8hpp}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ JOGADOR\_HPP}}
-\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ JOGADOR\_HPP}}
-\DoxyCodeLine{00003\ }
-\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <string>}}
-\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include<iostream>}}
-\DoxyCodeLine{00006\ }
-\DoxyCodeLine{00007\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_jogador}{Jogador}}\ \{}
-\DoxyCodeLine{00008\ \ \ \ \ \textcolor{keyword}{private}:}
-\DoxyCodeLine{00009\ \ \ \ \ \ \ \ \ std::string\ apelido;}
-\DoxyCodeLine{00010\ \ \ \ \ \ \ \ \ std::string\ nome;}
-\DoxyCodeLine{00011\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ vitoriasReversi;}
-\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ derrotasReversi;}
-\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ vitoriasLig4;}
-\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ derrotasLig4;}
-\DoxyCodeLine{00015\ \ \ \ \ }
-\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{class_jogador_aab1dd73438da8f07e1b9b8b9df0a5eb4}{getApelido}}()\ \textcolor{keyword}{const};\ }
-\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{class_jogador_a56f68b57e7fb229f932ef60d2116833c}{getNome}}()\ \textcolor{keyword}{const};\ }
-\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_jogador_a68f9478b7320d8fc9755a179494b9540}{getVitoriasReversi}}()\ \textcolor{keyword}{const};}
-\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_jogador_a9fb4c016cdd1f431592498e424abb949}{getDerrotasReversi}}()\ \textcolor{keyword}{const};}
-\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_jogador_ab73305554133ef6b1f4c6e74052989ea}{getVitoriasLig4}}()\ \textcolor{keyword}{const};}
-\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_jogador_aab3317ad34e3a92ccb6d0b4cecccc04e}{getDerrotasLig4}}()\ \textcolor{keyword}{const};}
-\DoxyCodeLine{00023\ }
-\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_jogador_a24fecaee75ae65955613d8da4bfc34d0}{printResultados}}()\ \textcolor{keyword}{const};\ }
-\DoxyCodeLine{00025\ }
-\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_jogador_af73a2b20a1be2e8c52b5e52c0c9c99b4}{setApelido}}(\textcolor{keyword}{const}\ std::string\&\ apelido);}
-\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_jogador_aefdcc627ceb2705e505bed7b8b2157ea}{addVitoriaReversi}}();}
-\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_jogador_a5c2acdf0f2b89ab6f04e607b76afe778}{addDerrotaReversi}}();}
-\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_jogador_adb12236eb21d0d60434ea45f60c2f8ba}{addVitoriaLig4}}();}
-\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_jogador_a6aa3807293030222775725d31e34d0aa}{addDerrotaLig4}}();}
-\DoxyCodeLine{00031\ }
-\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_jogador_a94a4939138ce04d2f3ceb68257517ac1}{Jogador}}();}
-\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_jogador_a94a4939138ce04d2f3ceb68257517ac1}{Jogador}}(\textcolor{keyword}{const}\ std::string\&\ apelido,\ \textcolor{keyword}{const}\ std::string\&\ nome,\ }
-\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ vitorias\_reversi\ =\ 0,\ \textcolor{keywordtype}{int}\ derrotas\_reversi\ =\ 0,\ \textcolor{keywordtype}{int}\ vitorias\_lig4\ =\ 0,\ \textcolor{keywordtype}{int}\ derrotas\_lig4\ =\ 0);}
-\DoxyCodeLine{00035\ \};\ }
-\DoxyCodeLine{00036\ }
-\DoxyCodeLine{00037\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#ifndef\ JOGADOR\_HPP}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#define\ JOGADOR\_HPP}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_jogador}{Jogador}}\ \{}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ std::string\ apelido;}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ std::string\ nome;}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ vitoriasReversi;}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ derrotasReversi;}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ vitoriasLig4;}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ derrotasLig4;}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ vitoriasDama;\ \ }
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ derrotasDama;}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{class_jogador_aab1dd73438da8f07e1b9b8b9df0a5eb4}{getApelido}}()\ \textcolor{keyword}{const};\ }
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{class_jogador_a56f68b57e7fb229f932ef60d2116833c}{getNome}}()\ \textcolor{keyword}{const};\ }
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_jogador_a68f9478b7320d8fc9755a179494b9540}{getVitoriasReversi}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_jogador_a9fb4c016cdd1f431592498e424abb949}{getDerrotasReversi}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_jogador_ab73305554133ef6b1f4c6e74052989ea}{getVitoriasLig4}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_jogador_aab3317ad34e3a92ccb6d0b4cecccc04e}{getDerrotasLig4}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_jogador_a921b69add1fbe8e9b25b67d8d19c6a88}{getVitoriasDama}}()\ \textcolor{keyword}{const};\ }
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_jogador_a1b8eadc8d91de13a7d885d4741857dd5}{getDerrotasDama}}()\ \textcolor{keyword}{const};\ }
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_jogador_a24fecaee75ae65955613d8da4bfc34d0}{printResultados}}()\ \textcolor{keyword}{const};\ }
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_jogador_af73a2b20a1be2e8c52b5e52c0c9c99b4}{setApelido}}(\textcolor{keyword}{const}\ std::string\&\ apelido);}
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_jogador_aefdcc627ceb2705e505bed7b8b2157ea}{addVitoriaReversi}}();}
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_jogador_a5c2acdf0f2b89ab6f04e607b76afe778}{addDerrotaReversi}}();}
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_jogador_adb12236eb21d0d60434ea45f60c2f8ba}{addVitoriaLig4}}();}
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_jogador_a6aa3807293030222775725d31e34d0aa}{addDerrotaLig4}}();}
+\DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00141\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_jogador_aab8c63737e35df7bae6d0e710e22f02e}{addVitoriaDama}}();\ }
+\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_jogador_af827dbd4a6075d28b71ebdb649796f75}{addDerrotaDama}}();\ }
+\DoxyCodeLine{00147\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00151\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_jogador_a94a4939138ce04d2f3ceb68257517ac1}{Jogador}}();}
+\DoxyCodeLine{00152\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00164\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_jogador_a94a4939138ce04d2f3ceb68257517ac1}{Jogador}}(\textcolor{keyword}{const}\ std::string\&\ apelido,\ \textcolor{keyword}{const}\ std::string\&\ nome,\ }
+\DoxyCodeLine{00165\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ vitoriasR\ =\ 0,\ \textcolor{keywordtype}{int}\ derrotasR\ =\ 0,\ \textcolor{keywordtype}{int}\ vitoriasL\ =\ 0,\ \textcolor{keywordtype}{int}\ derrotasL\ =\ 0,\ \textcolor{keywordtype}{int}\ vitoriasD\ =\ 0,\ \textcolor{keywordtype}{int}\ derrotasD\ =\ 0);}
+\DoxyCodeLine{00166\ \};\ }
+\DoxyCodeLine{00167\ }
+\DoxyCodeLine{00168\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ JOGADOR\_HPP}}
 
 \end{DoxyCode}
