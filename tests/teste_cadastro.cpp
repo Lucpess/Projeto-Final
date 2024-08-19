@@ -2,8 +2,6 @@
 #include "doctest.h"
 #include <stdexcept>
 #include <fstream>
-#include <iostream>
-#include <sstream>
 
 // Função auxiliar para limpar o arquivo de cadastro antes dos testes
 static void limparArquivoCadastro() {
@@ -17,70 +15,47 @@ TEST_CASE("Testes da classe Cadastro") {
     Cadastro cadastro;
 
     SUBCASE("Testa cadastro de jogador") {
-        // Suprime cout
-        std::stringstream buffer;
-        std::streambuf* oldCout = std::cout.rdbuf(buffer.rdbuf());
-
         cadastro.cadastraJogador("apelido1", "Nome Um");
-
-        // Restaura cout
-        std::cout.rdbuf(oldCout);
-        
         CHECK(cadastro.existeJogador("apelido1") == true);
+     
+        cadastro.removeJogador("apelido2");
+        CHECK(cadastro.existeJogador("apelido2") == false); // O jogador deve continuar não existindo após tentar removê-lo novamente
     }
 
     SUBCASE("Testa remoção de jogador") {
-        // Suprime cout
-        std::stringstream buffer;
-        std::streambuf* oldCout = std::cout.rdbuf(buffer.rdbuf());
-
         cadastro.cadastraJogador("apelido2", "Nome Dois");
         CHECK(cadastro.existeJogador("apelido2") == true);
 
         cadastro.removeJogador("apelido2");
-        
-        // Restaura cout
-        std::cout.rdbuf(oldCout);
-
         CHECK(cadastro.existeJogador("apelido2") == false);
+
+       cadastro.removeJogador("apelido2");
+        CHECK(cadastro.existeJogador("apelido2") == false); // O jogador deve continuar não existindo após tentar removê-lo novamente
     }
 
     SUBCASE("Testa registro de resultado") {
-        // Suprime cout
-        std::stringstream buffer;
-        std::streambuf* oldCout = std::cout.rdbuf(buffer.rdbuf());
-
         cadastro.cadastraJogador("apelido3", "Nome Três");
         cadastro.cadastraJogador("apelido4", "Nome Quatro");
 
+         // Ao invés de verificar exceções, podemos verificar se os resultados estão consistentes após a operação
         cadastro.registrarResultado("apelido3", "apelido4", 'R');
         CHECK(cadastro.existeJogador("apelido3") == true);
         CHECK(cadastro.existeJogador("apelido4") == true);
 
         cadastro.registrarResultado("apelido4", "apelido3", 'L');
-
-        // Restaura cout
-        std::cout.rdbuf(oldCout);
-
         CHECK(cadastro.existeJogador("apelido3") == true);
         CHECK(cadastro.existeJogador("apelido4") == true);
     }
 
     SUBCASE("Testa lista de jogadores ordenados") {
-        // Suprime cout
-        std::stringstream buffer;
-        std::streambuf* oldCout = std::cout.rdbuf(buffer.rdbuf());
-
         cadastro.cadastraJogador("apelido5", "Carlos");
         cadastro.cadastraJogador("apelido6", "Ana");
 
+      // Não esperamos mais exceções aqui, apenas verificamos se a função pode ser chamada
         CHECK_NOTHROW(cadastro.listaJogadores("N"));
         CHECK_NOTHROW(cadastro.listaJogadores("A"));
 
         cadastro.removeJogador("apelido5");
         cadastro.removeJogador("apelido6");
-
-        // Restaura cout
-        std::cout.rdbuf(oldCout);
     }
 }
