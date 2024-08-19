@@ -207,16 +207,13 @@ void Damas::realizaCapturaObrigatoria() {
                     // Execute a captura obrigatória
                     realizaCaptura(i, j, pecaAdversario);
                     capturaRealizada = true;
-
-                    // Verifique se há mais capturas disponíveis após a captura
                     if (temCapturaDisponivel()) {
                         // Continue a realizar capturas se houver mais disponíveis
                         realizaCapturaObrigatoria();
                     } else {
-                        // Mude o turno se não houver mais capturas disponíveis
                         mudaTurno();
                     }
-                    return; // Retorne após realizar uma captura obrigatória
+                    return;
                 }
             }
         }
@@ -245,7 +242,7 @@ void Damas::realizaCaptura(int linhaOrigem, int colunaOrigem, std::string pecaAd
                 tabuleiro.modificaTabuleiro(linhaOrigem, colunaOrigem, "NULO");
                 tabuleiro.modificaTabuleiro(meioLinha, meioColuna, "NULO");
                 tabuleiro.modificaTabuleiro(linhaDestino, colunaDestino, pecaAtual);
-                return; // Retorne após realizar uma captura
+                return;
             }
         }
     }
