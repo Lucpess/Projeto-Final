@@ -82,4 +82,4 @@ class Tabuleiro {
         void modificaTabuleiro(int linha, int coluna, std::string _estado);
 };  
 
-#endif // TABULEIRO_H
+#endif 

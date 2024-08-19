@@ -32,9 +32,9 @@ void Tabuleiro::inicializaTabuleiro(char jogo){
             for (int j = 0; j < 8; j++){
                 if ((i + j) % 2 == 0) {
                     if (i < 3) {
-                        tabuleiro[i][j].estado = "PRETO"; // Peças pretas nas duas primeiras linhas
+                        tabuleiro[i][j].estado = "PRETO";
                     } else if (i > 4) {
-                        tabuleiro[i][j].estado = "BRANCO"; // Peças brancas nas duas últimas linhas
+                        tabuleiro[i][j].estado = "BRANCO"; 
                     } else {
                         tabuleiro[i][j].estado = "NULO";
                     }

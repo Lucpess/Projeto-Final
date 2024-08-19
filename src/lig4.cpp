@@ -38,7 +38,6 @@ bool Lig4::verifica4(int linha, int col) {
   const int COLUNAS = 7;
   std::string peca = turno;
 
-  // Verifica horizontal
   int count = 0;
   for (int j = 0; j < COLUNAS; j++) {
     if (tabuleiro.verificaCasa(linha, j, peca)) {
@@ -50,7 +49,6 @@ bool Lig4::verifica4(int linha, int col) {
     }
   }
 
-  // Verifica vertical
   count = 0;
   for (int i = 0; i < LINHAS; i++) {
     if (tabuleiro.verificaCasa(i, col, peca)) {
@@ -62,7 +60,6 @@ bool Lig4::verifica4(int linha, int col) {
     }
   }
 
-  // Verifica diagonal (\)
   count = 0;
   for (int i = -3; i <= 3; i++) {
     int l = linha + i;
@@ -78,7 +75,6 @@ bool Lig4::verifica4(int linha, int col) {
     }
   }
 
-  // Verifica diagonal (/)
   count = 0;
   for (int i = -3; i <= 3; i++) {
     int l = linha - i;
@@ -141,8 +137,8 @@ void Lig4::start(std::string jogador1, std::string jogador2, Cadastro& cadastro)
                 anunciaTurno(jogador1, jogador2);
                 if (!(std::cin >> coluna)) {
                     std::cout << "Entrada invalida. Por favor, insira um numero valido." << std::endl;
-                    std::cin.clear();  // Limpa o estado de erro
-                    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');  // Descarta entrada inválida
+                    std::cin.clear(); 
+                    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); 
                 } else if (coluna < 1 || coluna > 7 || !jogadaPermitida(coluna - 1)) {
                     std::cout << "Coluna invalida. Por favor, escolha uma coluna valida." << std::endl;
                 } else {

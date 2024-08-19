@@ -1,8 +1,5 @@
 #include "jogador.hpp"
 
-
-//Talvez seja preciso trocar Jogador ()  
-
 Jogador::Jogador()
     : apelido(""), nome(""), vitoriasReversi(0), derrotasReversi(0), vitoriasLig4(0), derrotasLig4(0)  {}
 

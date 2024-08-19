@@ -13,7 +13,6 @@ void Damas::start(std::string jogador1, std::string jogador2, Cadastro& cadastro
     while (!fimDeJogo) {
         printTabuleiro();
         if (temCapturaDisponivel()) {
-            // Se há captura obrigatória, execute-a automaticamente
             realizaCapturaObrigatoria();
             std::cout << "*CAPTURA OBRIGATORIA*" << std::endl;
             if (verificaVitoria()) {
@@ -97,7 +96,6 @@ bool Damas::movimentaPeca(int linhaOrigem, int colunaOrigem, int linhaDestino, i
         int variacaoLinha = linhaDestino - linhaOrigem;
         int variacaoColuna = colunaDestino - colunaOrigem;
 
-        // Captura se houve movimento diagonal de 2 casas
         if (abs(variacaoLinha) == 2 && abs(variacaoColuna) == 2) {
             int meioLinha = linhaOrigem + variacaoLinha / 2;
             int meioColuna = colunaOrigem + variacaoColuna / 2;
@@ -124,12 +122,10 @@ bool Damas::verificaJogada(int linhaOrigem, int colunaOrigem, int linhaDestino, 
     int variacaoLinha = linhaDestino - linhaOrigem;
     int variacaoColuna = colunaDestino - colunaOrigem;
 
-    // Movimento válido simples
     if (abs(variacaoLinha) == 1 && abs(variacaoColuna) == 1) {
         return true;
     }
 
-    // Captura válida
     if (abs(variacaoLinha) == 2 && abs(variacaoColuna) == 2) {
         int meioLinha = linhaOrigem + variacaoLinha / 2;
         int meioColuna = colunaOrigem + variacaoColuna / 2;
@@ -204,11 +200,9 @@ void Damas::realizaCapturaObrigatoria() {
         for (int j = 0; j < 8; ++j) {
             if (tabuleiro.verificaCasa(i, j, pecaAtual)) {
                 if (podeCapturar(i, j, pecaAdversario)) {
-                    // Execute a captura obrigatória
                     realizaCaptura(i, j, pecaAdversario);
                     capturaRealizada = true;
                     if (temCapturaDisponivel()) {
-                        // Continue a realizar capturas se houver mais disponíveis
                         realizaCapturaObrigatoria();
                     } else {
                         mudaTurno();
@@ -220,7 +214,6 @@ void Damas::realizaCapturaObrigatoria() {
     }
 
     if (!capturaRealizada) {
-        // Se não houver captura obrigatória, mude o turno
         mudaTurno();
     }
 }
@@ -238,7 +231,6 @@ void Damas::realizaCaptura(int linhaOrigem, int colunaOrigem, std::string pecaAd
         if (linhaDestino >= 0 && linhaDestino < 8 && colunaDestino >= 0 && colunaDestino < 8) {
             if (tabuleiro.verificaCasa(linhaDestino, colunaDestino, "NULO") &&
                 tabuleiro.verificaCasa(meioLinha, meioColuna, pecaAdversario)) {
-                // Realiza a captura
                 tabuleiro.modificaTabuleiro(linhaOrigem, colunaOrigem, "NULO");
                 tabuleiro.modificaTabuleiro(meioLinha, meioColuna, "NULO");
                 tabuleiro.modificaTabuleiro(linhaDestino, colunaDestino, pecaAtual);

@@ -40,7 +40,7 @@ void Cadastro::salvarCadastro() {
         std::cerr << "Erro ao salvar cadastro: " << e.what() << std::endl;
         throw; 
     }
-} // Percorre o map e salva os dados no arquivo
+} 
 
 void Cadastro::atualizarCadastro(){
     try {
@@ -54,7 +54,6 @@ void Cadastro::atualizarCadastro(){
         std::string nome, apelido;
         int vitoriasReversi, derrotasReversi, vitoriasLig4, derrotasLig4, vitoriasDama, derrotasDama;
 
-        //primeiro apelido ou nome? 
         while(arquivo >> apelido >> nome >> vitoriasReversi >> derrotasReversi >> vitoriasLig4 >> derrotasLig4 >> vitoriasDama >> derrotasDama) {
             Jogador jogador(apelido, nome, vitoriasReversi, derrotasReversi, vitoriasLig4, derrotasLig4, vitoriasDama, derrotasDama);
             jogadores.emplace(apelido, jogador);
@@ -65,7 +64,7 @@ void Cadastro::atualizarCadastro(){
         std::cerr << "Erro ao carregar cadastro: " << e.what() << std::endl;
         throw;
     }
-} // Lê as linhas do arquivo e armazena em um map acessado pelo apelido do Jogador
+} 
 
 void Cadastro::cadastraJogador(const std::string& apelido, const std::string& nome) {
     try {
@@ -132,7 +131,7 @@ void Cadastro::listaJogadores(const std::string& ordem) const {
     } catch (const std::exception& e) {
         std::cerr << e.what() << std::endl;
     }
-} // Ordena jogadores por nome ou apelido e imprime seus atributos
+} 
 
 void Cadastro::registrarResultado(const std::string& vencedor, const std::string& perdedor, char jogo){
     try {
@@ -155,7 +154,7 @@ void Cadastro::registrarResultado(const std::string& vencedor, const std::string
     } catch (const std::exception& e) {
         std::cerr << e.what() << std::endl;
     }
-} // Incrementa vitória ou derrota do Lig4 ou Reversi aos jogadores
+}
 
 bool Cadastro::existeJogador(const std::string& apelido) const {
         return jogadores.find(apelido) != jogadores.end();
