@@ -1,0 +1,88 @@
+\doxysection{teste\+\_\+jogador.\+cpp}
+\hypertarget{teste__jogador_8cpp_source}{}\label{teste__jogador_8cpp_source}\index{tests/teste\_jogador.cpp@{tests/teste\_jogador.cpp}}
+\mbox{\hyperlink{teste__jogador_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{doctest_8h}{doctest.h}}"{}}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{jogador_8hpp}{jogador.hpp}}"{}}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <sstream>}}
+\DoxyCodeLine{00004\ \textcolor{comment}{//\ Testa\ o\ construtor\ padrão\ e\ os\ métodos\ getter}}
+\DoxyCodeLine{00005\ \mbox{\hyperlink{doctest_8h_a8bc255ff55721571e878568d2b5dcb35}{TEST\_CASE}}(\textcolor{stringliteral}{"{}Testa\ Jogador\ -\/\ Construtor\ padrão\ e\ getters"{}})\ \{}
+\DoxyCodeLine{00006\ \ \ \ \ \mbox{\hyperlink{class_jogador}{Jogador}}\ jogador;}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \ \ \ \ \textcolor{comment}{//\ Verifica\ se\ os\ valores\ iniciais\ estão\ corretos}}
+\DoxyCodeLine{00009\ \ \ \ \ \mbox{\hyperlink{doctest_8h_a836cca6b6ed3a1706353f6d1bca0935f}{CHECK}}(jogador.\mbox{\hyperlink{class_jogador_aab1dd73438da8f07e1b9b8b9df0a5eb4}{getApelido}}()\ ==\ \textcolor{stringliteral}{"{}"{}});}
+\DoxyCodeLine{00010\ \ \ \ \ \mbox{\hyperlink{doctest_8h_a836cca6b6ed3a1706353f6d1bca0935f}{CHECK}}(jogador.\mbox{\hyperlink{class_jogador_a56f68b57e7fb229f932ef60d2116833c}{getNome}}()\ ==\ \textcolor{stringliteral}{"{}"{}});}
+\DoxyCodeLine{00011\ \ \ \ \ \mbox{\hyperlink{doctest_8h_a836cca6b6ed3a1706353f6d1bca0935f}{CHECK}}(jogador.\mbox{\hyperlink{class_jogador_a68f9478b7320d8fc9755a179494b9540}{getVitoriasReversi}}()\ ==\ 0);}
+\DoxyCodeLine{00012\ \ \ \ \ \mbox{\hyperlink{doctest_8h_a836cca6b6ed3a1706353f6d1bca0935f}{CHECK}}(jogador.\mbox{\hyperlink{class_jogador_a9fb4c016cdd1f431592498e424abb949}{getDerrotasReversi}}()\ ==\ 0);}
+\DoxyCodeLine{00013\ \ \ \ \ \mbox{\hyperlink{doctest_8h_a836cca6b6ed3a1706353f6d1bca0935f}{CHECK}}(jogador.\mbox{\hyperlink{class_jogador_ab73305554133ef6b1f4c6e74052989ea}{getVitoriasLig4}}()\ ==\ 0);}
+\DoxyCodeLine{00014\ \ \ \ \ \mbox{\hyperlink{doctest_8h_a836cca6b6ed3a1706353f6d1bca0935f}{CHECK}}(jogador.\mbox{\hyperlink{class_jogador_aab3317ad34e3a92ccb6d0b4cecccc04e}{getDerrotasLig4}}()\ ==\ 0);}
+\DoxyCodeLine{00015\ \}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{comment}{//\ Testa\ o\ construtor\ parametrizado\ e\ os\ métodos\ getter}}
+\DoxyCodeLine{00018\ \mbox{\hyperlink{doctest_8h_a8bc255ff55721571e878568d2b5dcb35}{TEST\_CASE}}(\textcolor{stringliteral}{"{}Testa\ Jogador\ -\/\ Construtor\ parametrizado\ e\ getters"{}})\ \{}
+\DoxyCodeLine{00019\ \ \ \ \ \mbox{\hyperlink{class_jogador}{Jogador}}\ jogador(\textcolor{stringliteral}{"{}apelido"{}},\ \textcolor{stringliteral}{"{}nome"{}},\ 5,\ 3,\ 7,\ 2);}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{comment}{//\ Verifica\ se\ os\ valores\ estão\ corretos\ após\ a\ inicialização\ com\ o\ construtor\ parametrizado}}
+\DoxyCodeLine{00022\ \ \ \ \ \mbox{\hyperlink{doctest_8h_a836cca6b6ed3a1706353f6d1bca0935f}{CHECK}}(jogador.\mbox{\hyperlink{class_jogador_aab1dd73438da8f07e1b9b8b9df0a5eb4}{getApelido}}()\ ==\ \textcolor{stringliteral}{"{}apelido"{}});}
+\DoxyCodeLine{00023\ \ \ \ \ \mbox{\hyperlink{doctest_8h_a836cca6b6ed3a1706353f6d1bca0935f}{CHECK}}(jogador.\mbox{\hyperlink{class_jogador_a56f68b57e7fb229f932ef60d2116833c}{getNome}}()\ ==\ \textcolor{stringliteral}{"{}nome"{}});}
+\DoxyCodeLine{00024\ \ \ \ \ \mbox{\hyperlink{doctest_8h_a836cca6b6ed3a1706353f6d1bca0935f}{CHECK}}(jogador.\mbox{\hyperlink{class_jogador_a68f9478b7320d8fc9755a179494b9540}{getVitoriasReversi}}()\ ==\ 5);}
+\DoxyCodeLine{00025\ \ \ \ \ \mbox{\hyperlink{doctest_8h_a836cca6b6ed3a1706353f6d1bca0935f}{CHECK}}(jogador.\mbox{\hyperlink{class_jogador_a9fb4c016cdd1f431592498e424abb949}{getDerrotasReversi}}()\ ==\ 3);}
+\DoxyCodeLine{00026\ \ \ \ \ \mbox{\hyperlink{doctest_8h_a836cca6b6ed3a1706353f6d1bca0935f}{CHECK}}(jogador.\mbox{\hyperlink{class_jogador_ab73305554133ef6b1f4c6e74052989ea}{getVitoriasLig4}}()\ ==\ 7);}
+\DoxyCodeLine{00027\ \ \ \ \ \mbox{\hyperlink{doctest_8h_a836cca6b6ed3a1706353f6d1bca0935f}{CHECK}}(jogador.\mbox{\hyperlink{class_jogador_aab3317ad34e3a92ccb6d0b4cecccc04e}{getDerrotasLig4}}()\ ==\ 2);}
+\DoxyCodeLine{00028\ \}}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \textcolor{comment}{//\ Testa\ o\ método\ setApelido}}
+\DoxyCodeLine{00031\ \mbox{\hyperlink{doctest_8h_a8bc255ff55721571e878568d2b5dcb35}{TEST\_CASE}}(\textcolor{stringliteral}{"{}Testa\ Jogador\ -\/\ setApelido"{}})\ \{}
+\DoxyCodeLine{00032\ \ \ \ \ \mbox{\hyperlink{class_jogador}{Jogador}}\ jogador;}
+\DoxyCodeLine{00033\ \ \ \ \ jogador.\mbox{\hyperlink{class_jogador_af73a2b20a1be2e8c52b5e52c0c9c99b4}{setApelido}}(\textcolor{stringliteral}{"{}novoApelido"{}});}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{comment}{//\ Verifica\ se\ o\ apelido\ foi\ alterado\ corretamente}}
+\DoxyCodeLine{00036\ \ \ \ \ \mbox{\hyperlink{doctest_8h_a836cca6b6ed3a1706353f6d1bca0935f}{CHECK}}(jogador.\mbox{\hyperlink{class_jogador_aab1dd73438da8f07e1b9b8b9df0a5eb4}{getApelido}}()\ ==\ \textcolor{stringliteral}{"{}novoApelido"{}});}
+\DoxyCodeLine{00037\ \}}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \textcolor{comment}{//\ Testa\ os\ métodos\ addVitoria\ e\ addDerrota}}
+\DoxyCodeLine{00040\ \mbox{\hyperlink{doctest_8h_a8bc255ff55721571e878568d2b5dcb35}{TEST\_CASE}}(\textcolor{stringliteral}{"{}Testa\ Jogador\ -\/\ Métodos\ addVitoria\ e\ addDerrota"{}})\ \{}
+\DoxyCodeLine{00041\ \ \ \ \ \mbox{\hyperlink{class_jogador}{Jogador}}\ jogador;}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{comment}{//\ Testa\ as\ vitórias\ e\ derrotas\ para\ Lig4}}
+\DoxyCodeLine{00044\ \ \ \ \ jogador.\mbox{\hyperlink{class_jogador_adb12236eb21d0d60434ea45f60c2f8ba}{addVitoriaLig4}}();}
+\DoxyCodeLine{00045\ \ \ \ \ jogador.\mbox{\hyperlink{class_jogador_adb12236eb21d0d60434ea45f60c2f8ba}{addVitoriaLig4}}();}
+\DoxyCodeLine{00046\ \ \ \ \ jogador.\mbox{\hyperlink{class_jogador_a6aa3807293030222775725d31e34d0aa}{addDerrotaLig4}}();}
+\DoxyCodeLine{00047\ \ \ \ \ }
+\DoxyCodeLine{00048\ \ \ \ \ \mbox{\hyperlink{doctest_8h_a836cca6b6ed3a1706353f6d1bca0935f}{CHECK}}(jogador.\mbox{\hyperlink{class_jogador_ab73305554133ef6b1f4c6e74052989ea}{getVitoriasLig4}}()\ ==\ 2);}
+\DoxyCodeLine{00049\ \ \ \ \ \mbox{\hyperlink{doctest_8h_a836cca6b6ed3a1706353f6d1bca0935f}{CHECK}}(jogador.\mbox{\hyperlink{class_jogador_aab3317ad34e3a92ccb6d0b4cecccc04e}{getDerrotasLig4}}()\ ==\ 1);}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{comment}{//\ Testa\ as\ vitórias\ e\ derrotas\ para\ Reversi}}
+\DoxyCodeLine{00052\ \ \ \ \ jogador.\mbox{\hyperlink{class_jogador_aefdcc627ceb2705e505bed7b8b2157ea}{addVitoriaReversi}}();}
+\DoxyCodeLine{00053\ \ \ \ \ jogador.\mbox{\hyperlink{class_jogador_a5c2acdf0f2b89ab6f04e607b76afe778}{addDerrotaReversi}}();}
+\DoxyCodeLine{00054\ \ \ \ \ jogador.\mbox{\hyperlink{class_jogador_a5c2acdf0f2b89ab6f04e607b76afe778}{addDerrotaReversi}}();}
+\DoxyCodeLine{00055\ \ \ \ \ }
+\DoxyCodeLine{00056\ \ \ \ \ \mbox{\hyperlink{doctest_8h_a836cca6b6ed3a1706353f6d1bca0935f}{CHECK}}(jogador.\mbox{\hyperlink{class_jogador_a68f9478b7320d8fc9755a179494b9540}{getVitoriasReversi}}()\ ==\ 1);}
+\DoxyCodeLine{00057\ \ \ \ \ \mbox{\hyperlink{doctest_8h_a836cca6b6ed3a1706353f6d1bca0935f}{CHECK}}(jogador.\mbox{\hyperlink{class_jogador_a9fb4c016cdd1f431592498e424abb949}{getDerrotasReversi}}()\ ==\ 2);}
+\DoxyCodeLine{00058\ \}}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ \textcolor{comment}{//\ Testa\ o\ método\ printResultados}}
+\DoxyCodeLine{00061\ \mbox{\hyperlink{doctest_8h_a8bc255ff55721571e878568d2b5dcb35}{TEST\_CASE}}(\textcolor{stringliteral}{"{}Testa\ Jogador\ -\/\ printResultados"{}})\ \{}
+\DoxyCodeLine{00062\ \ \ \ \ \mbox{\hyperlink{class_jogador}{Jogador}}\ jogador(\textcolor{stringliteral}{"{}apelido"{}},\ \textcolor{stringliteral}{"{}nome"{}},\ 1,\ 2,\ 3,\ 4);}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{comment}{//\ Captura\ a\ saída\ do\ std::cout}}
+\DoxyCodeLine{00065\ \ \ \ \ std::stringstream\ buffer;}
+\DoxyCodeLine{00066\ \ \ \ \ std::streambuf*\ oldCout\ =\ std::cout.rdbuf(buffer.rdbuf());\ \textcolor{comment}{//\ Redireciona\ std::cout\ para\ o\ buffer}}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{comment}{//\ Chama\ o\ método\ que\ imprime\ os\ resultados}}
+\DoxyCodeLine{00069\ \ \ \ \ jogador.\mbox{\hyperlink{class_jogador_a24fecaee75ae65955613d8da4bfc34d0}{printResultados}}();}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{comment}{//\ Restaura\ std::cout}}
+\DoxyCodeLine{00072\ \ \ \ \ std::cout.rdbuf(oldCout);}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{comment}{//\ Define\ a\ saída\ esperada}}
+\DoxyCodeLine{00075\ \ \ \ \ std::string\ expectedOutput\ =}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}apelido\ nome\(\backslash\)n"{}}}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}REVERSI\ -\/\ V:\ 1\ D:\ 2\(\backslash\)n"{}}}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}LIG4\ \ \ \ -\/\ V:\ 3\ D:\ 4\(\backslash\)n"{}};}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00080\ \ \ \ \ \textcolor{comment}{//\ Verifica\ se\ a\ saída\ gerada\ corresponde\ à\ esperada}}
+\DoxyCodeLine{00081\ \ \ \ \ \mbox{\hyperlink{doctest_8h_a836cca6b6ed3a1706353f6d1bca0935f}{CHECK}}(buffer.str()\ ==\ expectedOutput);}
+\DoxyCodeLine{00082\ \}}
+
+\end{DoxyCode}

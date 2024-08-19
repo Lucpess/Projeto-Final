@@ -1,0 +1,66 @@
+\doxysection{teste\+\_\+lig4.\+cpp}
+\hypertarget{teste__lig4_8cpp_source}{}\label{teste__lig4_8cpp_source}\index{tests/teste\_lig4.cpp@{tests/teste\_lig4.cpp}}
+\mbox{\hyperlink{teste__lig4_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{doctest_8h}{doctest.h}}"{}}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{lig4_8hpp}{lig4.hpp}}"{}}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{tabuleiro_8hpp}{tabuleiro.hpp}}"{}}\ \textcolor{comment}{//\ Inclua\ o\ arquivo\ apropriado}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <sstream>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ Testa\ a\ construtora\ da\ classe\ Lig4}}
+\DoxyCodeLine{00008\ \mbox{\hyperlink{doctest_8h_a8bc255ff55721571e878568d2b5dcb35}{TEST\_CASE}}(\textcolor{stringliteral}{"{}Testar\ construtora\ da\ classe\ Lig4"{}})\ \{}
+\DoxyCodeLine{00009\ \ \ \ \ \mbox{\hyperlink{doctest_8h_a78e70f011f20c4ade1d1ac2b8fd33626}{CHECK\_NOTHROW}}(\mbox{\hyperlink{class_lig4}{Lig4}}\ lig4);}
+\DoxyCodeLine{00010\ \}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{comment}{//\ Testa\ a\ função\ printTabuleiro}}
+\DoxyCodeLine{00013\ \mbox{\hyperlink{doctest_8h_a8bc255ff55721571e878568d2b5dcb35}{TEST\_CASE}}(\textcolor{stringliteral}{"{}Testar\ printTabuleiro"{}})\ \{}
+\DoxyCodeLine{00014\ \ \ \ \ \mbox{\hyperlink{class_lig4}{Lig4}}\ lig4;}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{comment}{//\ Redireciona\ a\ saída\ para\ um\ stream\ para\ capturar\ a\ mensagem}}
+\DoxyCodeLine{00017\ \ \ \ \ std::ostringstream\ outputStream;}
+\DoxyCodeLine{00018\ \ \ \ \ std::streambuf*\ originalBuffer\ =\ std::cout.rdbuf();}
+\DoxyCodeLine{00019\ \ \ \ \ std::cout.rdbuf(outputStream.rdbuf());}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \ \ \ \ lig4.\mbox{\hyperlink{class_jogos_aa1b6a1b33086146301e6cc53a298ed3e}{printTabuleiro}}();}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \ \ \ \ std::string\ output\ =\ outputStream.str();}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{comment}{//\ Aqui\ você\ deve\ verificar\ a\ saída\ para\ garantir\ que\ o\ tabuleiro\ foi\ impresso\ corretamente}}
+\DoxyCodeLine{00025\ \ \ \ \ \mbox{\hyperlink{doctest_8h_a836cca6b6ed3a1706353f6d1bca0935f}{CHECK}}(output.find(\textcolor{stringliteral}{"{}Tabuleiro"{}})\ !=\ std::string::npos);\ \textcolor{comment}{//\ Ajuste\ o\ padrão\ conforme\ necessário}}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \ \ \ \ std::cout.rdbuf(originalBuffer);}
+\DoxyCodeLine{00028\ \}}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \textcolor{comment}{//\ Testa\ a\ função\ start}}
+\DoxyCodeLine{00031\ \mbox{\hyperlink{doctest_8h_a8bc255ff55721571e878568d2b5dcb35}{TEST\_CASE}}(\textcolor{stringliteral}{"{}Testar\ start"{}})\ \{}
+\DoxyCodeLine{00032\ \ \ \ \ \mbox{\hyperlink{class_lig4}{Lig4}}\ lig4;}
+\DoxyCodeLine{00033\ \ \ \ \ \mbox{\hyperlink{class_cadastro}{Cadastro}}\ cadastro;}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{comment}{//\ Redireciona\ a\ saída\ para\ um\ stream\ para\ capturar\ a\ mensagem}}
+\DoxyCodeLine{00036\ \ \ \ \ std::ostringstream\ outputStream;}
+\DoxyCodeLine{00037\ \ \ \ \ std::streambuf*\ originalBuffer\ =\ std::cout.rdbuf();}
+\DoxyCodeLine{00038\ \ \ \ \ std::cout.rdbuf(outputStream.rdbuf());}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{comment}{//\ Simula\ a\ entrada\ do\ usuário\ para\ as\ jogadas}}
+\DoxyCodeLine{00041\ \ \ \ \ std::istringstream\ inputStream(\textcolor{stringliteral}{"{}1\(\backslash\)n2\(\backslash\)n3\(\backslash\)n4\(\backslash\)n5\(\backslash\)n6\(\backslash\)n7\(\backslash\)n"{}});}
+\DoxyCodeLine{00042\ \ \ \ \ std::streambuf*\ originalInputBuffer\ =\ std::cin.rdbuf();}
+\DoxyCodeLine{00043\ \ \ \ \ std::cin.rdbuf(inputStream.rdbuf());}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \ \ \ \ lig4.\mbox{\hyperlink{class_lig4_a2fe5667ca383cf813b1497f3abf09317}{start}}(\textcolor{stringliteral}{"{}Jogador1"{}},\ \textcolor{stringliteral}{"{}Jogador2"{}},\ cadastro);}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \ \ \ \ std::string\ output\ =\ outputStream.str();}
+\DoxyCodeLine{00048\ \ \ \ \ }
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{comment}{//\ Verifica\ as\ mensagens\ esperadas\ usando\ SUBCASE\ para\ evitar\ complexidade}}
+\DoxyCodeLine{00050\ \ \ \ \ \mbox{\hyperlink{doctest_8h_a4147381e5cb6f68c1a315a852c63bf70}{SUBCASE}}(\textcolor{stringliteral}{"{}Verificar\ turno\ de\ Jogador1"{}})\ \{}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{doctest_8h_a836cca6b6ed3a1706353f6d1bca0935f}{CHECK}}(output.find(\textcolor{stringliteral}{"{}TURNO\ DE\ Jogador1"{}})\ !=\ std::string::npos);}
+\DoxyCodeLine{00052\ \ \ \ \ \}}
+\DoxyCodeLine{00053\ \ \ \ \ }
+\DoxyCodeLine{00054\ \ \ \ \ \mbox{\hyperlink{doctest_8h_a4147381e5cb6f68c1a315a852c63bf70}{SUBCASE}}(\textcolor{stringliteral}{"{}Verificar\ turno\ de\ Jogador2"{}})\ \{}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{doctest_8h_a836cca6b6ed3a1706353f6d1bca0935f}{CHECK}}(output.find(\textcolor{stringliteral}{"{}TURNO\ DE\ Jogador2"{}})\ !=\ std::string::npos);}
+\DoxyCodeLine{00056\ \ \ \ \ \}}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ \ \ \ \ std::cin.rdbuf(originalInputBuffer);}
+\DoxyCodeLine{00059\ \ \ \ \ std::cout.rdbuf(originalBuffer);}
+\DoxyCodeLine{00060\ \}}
+
+\end{DoxyCode}

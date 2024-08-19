@@ -1,0 +1,37 @@
+\doxysection{teste\+\_\+reversi.\+cpp}
+\hypertarget{teste__reversi_8cpp_source}{}\label{teste__reversi_8cpp_source}\index{tests/teste\_reversi.cpp@{tests/teste\_reversi.cpp}}
+\mbox{\hyperlink{teste__reversi_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{reversi_8hpp}{reversi.hpp}}"{}}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{doctest_8h}{doctest.h}}"{}}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <sstream>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \mbox{\hyperlink{doctest_8h_a8bc255ff55721571e878568d2b5dcb35}{TEST\_CASE}}(\textcolor{stringliteral}{"{}Teste\ do\ construtor\ Reversi"{}})\ \{}
+\DoxyCodeLine{00007\ \ \ \ \ \mbox{\hyperlink{class_reversi}{Reversi}}\ jogo;}
+\DoxyCodeLine{00008\ \ \ \ \ \mbox{\hyperlink{class_cadastro}{Cadastro}}\ cadastro;\ \ \textcolor{comment}{//\ Objeto\ local\ para\ passar\ como\ referência}}
+\DoxyCodeLine{00009\ \ \ \ \ \mbox{\hyperlink{doctest_8h_a7bf095d8512cb180f8ff3a2258a6eaac}{CHECK\_FALSE}}(jogo.\mbox{\hyperlink{class_reversi_a08eb0f4733cf4f4111808ac738b946b6}{verificaFimDeJogo}}(\textcolor{stringliteral}{"{}Jogador1"{}},\ \textcolor{stringliteral}{"{}Jogador2"{}},\ cadastro));}
+\DoxyCodeLine{00010\ \}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \mbox{\hyperlink{doctest_8h_a8bc255ff55721571e878568d2b5dcb35}{TEST\_CASE}}(\textcolor{stringliteral}{"{}Teste\ peça\ adversária"{}})\ \{}
+\DoxyCodeLine{00013\ \ \ \ \ \mbox{\hyperlink{class_reversi}{Reversi}}\ jogo;}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{comment}{//\ Supondo\ que\ o\ turno\ inicial\ seja\ "{}PRETO"{}.}}
+\DoxyCodeLine{00015\ \ \ \ \ \mbox{\hyperlink{doctest_8h_a836cca6b6ed3a1706353f6d1bca0935f}{CHECK}}(jogo.\mbox{\hyperlink{class_reversi_a0c015d7075f854589ec9bc435ccc6241}{pecaAdversaria}}()\ ==\ \textcolor{stringliteral}{"{}BRANCO"{}});}
+\DoxyCodeLine{00016\ \}}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \mbox{\hyperlink{doctest_8h_a8bc255ff55721571e878568d2b5dcb35}{TEST\_CASE}}(\textcolor{stringliteral}{"{}Teste\ posição\ permitida"{}})\ \{}
+\DoxyCodeLine{00019\ \ \ \ \ \mbox{\hyperlink{class_reversi}{Reversi}}\ jogo;}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{comment}{//\ Supondo\ que\ a\ posição\ (0,\ 0)\ seja\ permitida\ para\ o\ turno\ atual.}}
+\DoxyCodeLine{00021\ \ \ \ \ \mbox{\hyperlink{doctest_8h_a836cca6b6ed3a1706353f6d1bca0935f}{CHECK}}(jogo.\mbox{\hyperlink{class_reversi_ae260f3b4a8e2f0db0fa170ee9707c821}{posicaoPermitida}}(0,\ 0,\ \textcolor{stringliteral}{"{}PRETO"{}})\ ==\ \textcolor{keyword}{true});}
+\DoxyCodeLine{00022\ \ \ \ \ \mbox{\hyperlink{doctest_8h_a836cca6b6ed3a1706353f6d1bca0935f}{CHECK}}(jogo.\mbox{\hyperlink{class_reversi_ae260f3b4a8e2f0db0fa170ee9707c821}{posicaoPermitida}}(1,\ 1,\ \textcolor{stringliteral}{"{}BRANCO"{}})\ ==\ \textcolor{keyword}{false});}
+\DoxyCodeLine{00023\ \}}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \mbox{\hyperlink{doctest_8h_a8bc255ff55721571e878568d2b5dcb35}{TEST\_CASE}}(\textcolor{stringliteral}{"{}Teste\ verificação\ de\ coluna"{}})\ \{}
+\DoxyCodeLine{00026\ \ \ \ \ \mbox{\hyperlink{class_reversi}{Reversi}}\ jogo;}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{comment}{//\ Supondo\ que\ a\ função\ de\ verificação\ de\ coluna\ esteja\ funcionando\ corretamente.}}
+\DoxyCodeLine{00028\ \ \ \ \ \mbox{\hyperlink{doctest_8h_a836cca6b6ed3a1706353f6d1bca0935f}{CHECK}}(jogo.\mbox{\hyperlink{class_reversi_a671909797a8f896296dc7ef3876f4c48}{verificaColuna}}(3,\ 4,\ \textcolor{stringliteral}{"{}PRETO"{}})\ ==\ \textcolor{keyword}{true});}
+\DoxyCodeLine{00029\ \ \ \ \ \mbox{\hyperlink{doctest_8h_a836cca6b6ed3a1706353f6d1bca0935f}{CHECK}}(jogo.\mbox{\hyperlink{class_reversi_a671909797a8f896296dc7ef3876f4c48}{verificaColuna}}(5,\ 6,\ \textcolor{stringliteral}{"{}BRANCO"{}})\ ==\ \textcolor{keyword}{false});}
+\DoxyCodeLine{00030\ \}}
+\DoxyCodeLine{00031\ }
+
+\end{DoxyCode}
