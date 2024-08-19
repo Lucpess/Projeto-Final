@@ -1,15 +1,9 @@
 var searchData=
 [
-  ['_7ecadastro_0',['~Cadastro',['../class_cadastro.html#a6a3a70840193b4bef174cba0a75f7501',1,'Cadastro']]],
-  ['_7econtext_1',['~Context',['../classdoctest_1_1_context.html#a33b344fbc4803dca81147c4a4cc9edbd',1,'doctest::Context']]],
-  ['_7econtextscope_2',['~ContextScope',['../classdoctest_1_1detail_1_1_context_scope.html#a1ee7d4702398ee8d0e80ab843aa260d7',1,'doctest::detail::ContextScope']]],
-  ['_7econtextscopebase_3',['~ContextScopeBase',['../structdoctest_1_1detail_1_1_context_scope_base.html#a3adec03d141d955f6b4655fdb1202583',1,'doctest::detail::ContextScopeBase']]],
-  ['_7edamas_4',['~Damas',['../class_damas.html#af88efb6746bf066acf47a4101df414e2',1,'Damas']]],
-  ['_7ejogos_5',['~Jogos',['../class_jogos.html#a67bcdb76ed95071291667ff50447f86a',1,'Jogos']]],
-  ['_7elig4_6',['~Lig4',['../class_lig4.html#add1bf78f99caaf523113e7f4cf843744',1,'Lig4']]],
-  ['_7emessagebuilder_7',['~MessageBuilder',['../structdoctest_1_1detail_1_1_message_builder.html#aa8dca00768780164f52e309276692f96',1,'doctest::detail::MessageBuilder']]],
-  ['_7ereversi_8',['~Reversi',['../class_reversi.html#afd006e4fdacdedc4a3bb34fe6f1d1940',1,'Reversi']]],
-  ['_7estring_9',['~String',['../classdoctest_1_1_string.html#af5dce5deeb8f25a4866efdff75e92975',1,'doctest::String']]],
-  ['_7esubcase_10',['~Subcase',['../structdoctest_1_1detail_1_1_subcase.html#a4812988371d226236be53c302c86abe2',1,'doctest::detail::Subcase']]],
-  ['_7etestcase_11',['~TestCase',['../structdoctest_1_1detail_1_1_test_case.html#a1fed36b077f87cd75276875fe1db00b9',1,'doctest::detail::TestCase']]]
+  ['verifica4_0',['verifica4',['../class_lig4.html#aae4580104c813a6015328a54f08f5381',1,'Lig4']]],
+  ['verificacasa_1',['verificaCasa',['../class_tabuleiro.html#a27d190ace363ac487980f1f137e36960',1,'Tabuleiro']]],
+  ['verificacoluna_2',['verificaColuna',['../class_reversi.html#a671909797a8f896296dc7ef3876f4c48',1,'Reversi']]],
+  ['verificadiagonal_3',['verificaDiagonal',['../class_reversi.html#a4338723e062ab15e31a14e5c38067791',1,'Reversi']]],
+  ['verificafimdejogo_4',['verificaFimDeJogo',['../class_lig4.html#aa69d47955ffc48d1347659fd4224a6a9',1,'Lig4::verificaFimDeJogo()'],['../class_reversi.html#a08eb0f4733cf4f4111808ac738b946b6',1,'Reversi::verificaFimDeJogo(std::string jogador1, std::string jogador2, Cadastro &amp;cadastro)']]],
+  ['verificalinha_5',['verificaLinha',['../class_reversi.html#ae47e31bdcfd335c435b6a0438322df0e',1,'Reversi']]]
 ];

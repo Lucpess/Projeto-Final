@@ -27,7 +27,9 @@ void \mbox{\hyperlink{class_lig4_a2fe5667ca383cf813b1497f3abf09317}{start}} (std
 bool \mbox{\hyperlink{class_lig4_aae4580104c813a6015328a54f08f5381}{verifica4}} (int linha, int coluna)
 \begin{DoxyCompactList}\small\item\em Verifica se há uma sequência de 4 peças consecutivas. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{class_lig4_aa69d47955ffc48d1347659fd4224a6a9}{verifica\+Fim\+De\+Jogo}} (int coluna, std\+::string jogador1, std\+::string jogador2, \mbox{\hyperlink{class_cadastro}{Cadastro}} \&cadastro)
-\begin{DoxyCompactList}\small\item\em Verifica se o jogo chegou ao fim após a última jogada. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Verifica se o jogo chegou ao fim após a última jogada. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_lig4_a9cc4e79368fc1434aa133ddd78829111}{nova\+Jogada}} (int col)
+\begin{DoxyCompactList}\small\item\em Realiza a jogada na coluna especificada. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_jogos}{Jogos}}}
 \begin{DoxyCompactItemize}
 \item 
@@ -83,6 +85,23 @@ Destrutor da classe \doxylink{class_lig4}{Lig4}.
 Libera quaisquer recursos alocados durante o jogo, garantindo uma finalização limpa do objeto \doxylink{class_lig4}{Lig4}. 
 
 \doxysubsection{Member Function Documentation}
+\Hypertarget{class_lig4_a9cc4e79368fc1434aa133ddd78829111}\index{Lig4@{Lig4}!novaJogada@{novaJogada}}
+\index{novaJogada@{novaJogada}!Lig4@{Lig4}}
+\doxysubsubsection{\texorpdfstring{novaJogada()}{novaJogada()}}
+{\footnotesize\ttfamily \label{class_lig4_a9cc4e79368fc1434aa133ddd78829111} 
+void Lig4\+::nova\+Jogada (\begin{DoxyParamCaption}\item[{int}]{col}{}\end{DoxyParamCaption})}
+
+
+
+Realiza a jogada na coluna especificada. 
+
+Insere a peça na coluna escolhida, atualizando o estado do tabuleiro e preparando-\/o para a próxima verificação de vitória.
+
+
+\begin{DoxyParams}{Parameters}
+{\em col} & Coluna onde a jogada será feita. \\
+\hline
+\end{DoxyParams}
 \Hypertarget{class_lig4_a2fe5667ca383cf813b1497f3abf09317}\index{Lig4@{Lig4}!start@{start}}
 \index{start@{start}!Lig4@{Lig4}}
 \doxysubsubsection{\texorpdfstring{start()}{start()}}

@@ -1,0 +1,45 @@
+\doxysection{teste\+\_\+damas.\+cpp}
+\hypertarget{teste__damas_8cpp_source}{}\label{teste__damas_8cpp_source}\index{tests/teste\_damas.cpp@{tests/teste\_damas.cpp}}
+\mbox{\hyperlink{teste__damas_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{doctest_8h}{doctest.h}}"{}}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{damas_8hpp}{damas.hpp}}"{}}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{tabuleiro_8hpp}{tabuleiro.hpp}}"{}}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{comment}{//\ Teste\ da\ inicialização\ e\ movimentação\ do\ tabuleiro\ para\ o\ jogo\ de\ Damas}}
+\DoxyCodeLine{00007\ \mbox{\hyperlink{doctest_8h_a8bc255ff55721571e878568d2b5dcb35}{TEST\_CASE}}(\textcolor{stringliteral}{"{}Teste\ -\/\ Inicialização\ do\ tabuleiro\ e\ movimentação\ em\ Damas"{}})\ \{}
+\DoxyCodeLine{00008\ \ \ \ \ \mbox{\hyperlink{class_tabuleiro}{Tabuleiro}}\ tabuleiro;}
+\DoxyCodeLine{00009\ \ \ \ \ tabuleiro.\mbox{\hyperlink{class_tabuleiro_a8fd74e701547bfc43651b2c127f4a918}{inicializaTabuleiro}}(\textcolor{charliteral}{'D'});}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{comment}{//\ Verificar\ se\ o\ tabuleiro\ foi\ inicializado\ corretamente\ para\ o\ jogo\ de\ Damas}}
+\DoxyCodeLine{00012\ \ \ \ \ \mbox{\hyperlink{doctest_8h_a836cca6b6ed3a1706353f6d1bca0935f}{CHECK}}(tabuleiro.\mbox{\hyperlink{class_tabuleiro_a27d190ace363ac487980f1f137e36960}{verificaCasa}}(0,\ 0,\ \textcolor{stringliteral}{"{}PRETO"{}}));\ \textcolor{comment}{//\ Deve\ ter\ uma\ peça\ PRETA\ na\ linha\ 0}}
+\DoxyCodeLine{00013\ \ \ \ \ \mbox{\hyperlink{doctest_8h_a836cca6b6ed3a1706353f6d1bca0935f}{CHECK}}(tabuleiro.\mbox{\hyperlink{class_tabuleiro_a27d190ace363ac487980f1f137e36960}{verificaCasa}}(7,\ 7,\ \textcolor{stringliteral}{"{}BRANCO"{}}));\ \textcolor{comment}{//\ Deve\ ter\ uma\ peça\ BRANCA\ na\ linha\ 7}}
+\DoxyCodeLine{00014\ \ \ \ \ \mbox{\hyperlink{doctest_8h_a836cca6b6ed3a1706353f6d1bca0935f}{CHECK}}(tabuleiro.\mbox{\hyperlink{class_tabuleiro_a27d190ace363ac487980f1f137e36960}{verificaCasa}}(3,\ 3,\ \textcolor{stringliteral}{"{}NULO"{}}));\ \textcolor{comment}{//\ Centro\ do\ tabuleiro\ deve\ estar\ vazio\ (NULO)}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{comment}{//\ Teste\ de\ movimentação}}
+\DoxyCodeLine{00017\ \ \ \ \ tabuleiro.\mbox{\hyperlink{class_tabuleiro_a61ff1cc55aa56fdb7fe4feaf7f151794}{modificaTabuleiro}}(5,\ 0,\ \textcolor{stringliteral}{"{}NULO"{}});\ \textcolor{comment}{//\ Remove\ uma\ peça\ BRANCA}}
+\DoxyCodeLine{00018\ \ \ \ \ tabuleiro.\mbox{\hyperlink{class_tabuleiro_a61ff1cc55aa56fdb7fe4feaf7f151794}{modificaTabuleiro}}(4,\ 1,\ \textcolor{stringliteral}{"{}BRANCO"{}});\ \textcolor{comment}{//\ Movimenta\ a\ peça\ BRANCA\ para\ uma\ nova\ posição}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \ \ \ \ \mbox{\hyperlink{doctest_8h_a836cca6b6ed3a1706353f6d1bca0935f}{CHECK}}(tabuleiro.\mbox{\hyperlink{class_tabuleiro_a27d190ace363ac487980f1f137e36960}{verificaCasa}}(5,\ 0,\ \textcolor{stringliteral}{"{}NULO"{}}));\ \textcolor{comment}{//\ Verifica\ se\ a\ casa\ original\ está\ vazia}}
+\DoxyCodeLine{00021\ \ \ \ \ \mbox{\hyperlink{doctest_8h_a836cca6b6ed3a1706353f6d1bca0935f}{CHECK}}(tabuleiro.\mbox{\hyperlink{class_tabuleiro_a27d190ace363ac487980f1f137e36960}{verificaCasa}}(4,\ 1,\ \textcolor{stringliteral}{"{}BRANCO"{}}));\ \textcolor{comment}{//\ Verifica\ se\ a\ casa\ de\ destino\ está\ com\ a\ peça\ BRANCA}}
+\DoxyCodeLine{00022\ \}}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \mbox{\hyperlink{doctest_8h_a8bc255ff55721571e878568d2b5dcb35}{TEST\_CASE}}(\textcolor{stringliteral}{"{}Teste\ -\/\ Inicialização\ do\ tabuleiro\ e\ movimentação\ em\ Damas\ (Valores\ Diferentes)"{}})\ \{}
+\DoxyCodeLine{00025\ \ \ \ \ \mbox{\hyperlink{class_tabuleiro}{Tabuleiro}}\ tabuleiro;}
+\DoxyCodeLine{00026\ \ \ \ \ tabuleiro.\mbox{\hyperlink{class_tabuleiro_a8fd74e701547bfc43651b2c127f4a918}{inicializaTabuleiro}}(\textcolor{charliteral}{'D'});}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{comment}{//\ Verificar\ se\ o\ tabuleiro\ foi\ inicializado\ corretamente\ para\ o\ jogo\ de\ Damas\ em\ posições\ diferentes}}
+\DoxyCodeLine{00029\ \ \ \ \ \mbox{\hyperlink{doctest_8h_a836cca6b6ed3a1706353f6d1bca0935f}{CHECK}}(tabuleiro.\mbox{\hyperlink{class_tabuleiro_a27d190ace363ac487980f1f137e36960}{verificaCasa}}(0,\ 2,\ \textcolor{stringliteral}{"{}PRETO"{}}));\ \textcolor{comment}{//\ Deve\ ter\ uma\ peça\ PRETA\ na\ linha\ 0,\ coluna\ 2}}
+\DoxyCodeLine{00030\ \ \ \ \ \mbox{\hyperlink{doctest_8h_a836cca6b6ed3a1706353f6d1bca0935f}{CHECK}}(tabuleiro.\mbox{\hyperlink{class_tabuleiro_a27d190ace363ac487980f1f137e36960}{verificaCasa}}(7,\ 5,\ \textcolor{stringliteral}{"{}BRANCO"{}}));\ \textcolor{comment}{//\ Deve\ ter\ uma\ peça\ BRANCA\ na\ linha\ 7,\ coluna\ 5}}
+\DoxyCodeLine{00031\ \ \ \ \ \mbox{\hyperlink{doctest_8h_a836cca6b6ed3a1706353f6d1bca0935f}{CHECK}}(tabuleiro.\mbox{\hyperlink{class_tabuleiro_a27d190ace363ac487980f1f137e36960}{verificaCasa}}(4,\ 4,\ \textcolor{stringliteral}{"{}NULO"{}}));\ \textcolor{comment}{//\ Casa\ (4,\ 4)\ deve\ estar\ vazia\ (NULO)}}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{comment}{//\ Teste\ de\ movimentação}}
+\DoxyCodeLine{00034\ \ \ \ \ tabuleiro.\mbox{\hyperlink{class_tabuleiro_a61ff1cc55aa56fdb7fe4feaf7f151794}{modificaTabuleiro}}(2,\ 1,\ \textcolor{stringliteral}{"{}NULO"{}});\ \textcolor{comment}{//\ Remove\ uma\ peça\ PRETA}}
+\DoxyCodeLine{00035\ \ \ \ \ tabuleiro.\mbox{\hyperlink{class_tabuleiro_a61ff1cc55aa56fdb7fe4feaf7f151794}{modificaTabuleiro}}(3,\ 2,\ \textcolor{stringliteral}{"{}PRETO"{}});\ \textcolor{comment}{//\ Movimenta\ a\ peça\ PRETA\ para\ uma\ nova\ posição}}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \ \ \ \ \mbox{\hyperlink{doctest_8h_a836cca6b6ed3a1706353f6d1bca0935f}{CHECK}}(tabuleiro.\mbox{\hyperlink{class_tabuleiro_a27d190ace363ac487980f1f137e36960}{verificaCasa}}(2,\ 1,\ \textcolor{stringliteral}{"{}NULO"{}}));\ \textcolor{comment}{//\ Verifica\ se\ a\ casa\ original\ está\ vazia}}
+\DoxyCodeLine{00038\ \ \ \ \ \mbox{\hyperlink{doctest_8h_a836cca6b6ed3a1706353f6d1bca0935f}{CHECK}}(tabuleiro.\mbox{\hyperlink{class_tabuleiro_a27d190ace363ac487980f1f137e36960}{verificaCasa}}(3,\ 2,\ \textcolor{stringliteral}{"{}PRETO"{}}));\ \textcolor{comment}{//\ Verifica\ se\ a\ casa\ de\ destino\ está\ com\ a\ peça\ PRETA}}
+\DoxyCodeLine{00039\ \}}
+
+\end{DoxyCode}
