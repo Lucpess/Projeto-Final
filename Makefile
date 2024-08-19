@@ -6,7 +6,7 @@ TEST_TARGET = bin/testes.exe
 # Objetos para o programa principal
 OBJECTS = obj/tabuleiro.o obj/jogador.o obj/cadastro.o obj/jogos.o obj/damas.o obj/lig4.o obj/reversi.o obj/main.o
 # Objetos para os testes
-TEST_OBJECTS = obj/teste_cadastro.o obj/teste_jogador.o obj/teste_lig4.o obj/teste_reversi.o obj/teste_tabuleiro.o obj/teste_main.o
+TEST_OBJECTS = obj/teste_cadastro.o obj/teste_jogador.o obj/teste_damas.o obj/teste_lig4.o obj/teste_reversi.o obj/teste_tabuleiro.o obj/teste_main.o
 
 # Compilar o programa principal
 $(TARGET): $(OBJECTS)
@@ -48,6 +48,9 @@ obj/teste_cadastro.o: tests/teste_cadastro.cpp include/cadastro.hpp include/joga
 
 obj/teste_jogador.o: tests/teste_jogador.cpp include/jogador.hpp
 	$(CXX) $(CXXFLAGS) -c tests/teste_jogador.cpp -o obj/teste_jogador.o
+
+obj/teste_damas.o: tests/teste_damas.cpp include/damas.hpp include/jogos.hpp
+	$(CXX) $(CXXFLAGS) -c tests/teste_damas.cpp -o obj/teste_damas.o
 
 obj/teste_lig4.o: tests/teste_lig4.cpp include/lig4.hpp include/jogos.hpp
 	$(CXX) $(CXXFLAGS) -c tests/teste_lig4.cpp -o obj/teste_lig4.o

@@ -35,6 +35,29 @@ TEST_CASE("Testa inicializaTabuleiro para o jogo Lig4") {
     }
 }
 
+// Testa a inicialização do tabuleiro para o jogo Damas
+TEST_CASE("Testa inicializaTabuleiro para o jogo Damas") {
+    Tabuleiro tab;
+    tab.inicializaTabuleiro('D');
+
+    // Verifica o estado das casas no tabuleiro de Damas
+    for (int i = 0; i< 8; i++) {
+            for (int j = 0; j < 8; j++){
+                if ((i + j) % 2 == 0) {
+                    if (i < 3) {
+                        CHECK(tab.verificaCasa(i, j, "PRETO")); 
+                    } else if (i > 4) {
+                        CHECK(tab.verificaCasa(i, j, "BRANCO"));
+                    } else {
+                        CHECK(tab.verificaCasa(i, j, "NULO"));
+                    }
+                } else {
+                    CHECK(tab.verificaCasa(i, j, "NULO"));
+                }
+            }
+        }
+}
+
 // Testa a impressão do tabuleiro para o jogo Reversi
 TEST_CASE("Testa imprimeTabuleiro para o jogo Reversi") {
     Tabuleiro tab;
@@ -52,11 +75,11 @@ TEST_CASE("Testa imprimeTabuleiro para o jogo Reversi") {
 
     // Define a saída esperada
     std::string expectedOutput =
+        "| | | | | | | | |\n"
+        "| | | | | | | | |\n"
+        "| | | | | | | | |\n"
         "| | | |O|X| | | |\n"
         "| | | |X|O| | | |\n"
-        "| | | | | | | | |\n"
-        "| | | | | | | | |\n"
-        "| | | | | | | | |\n"
         "| | | | | | | | |\n"
         "| | | | | | | | |\n"
         "| | | | | | | | |\n";
@@ -93,6 +116,36 @@ TEST_CASE("Testa imprimeTabuleiro para o jogo Lig4") {
     CHECK(buffer.str() == expectedOutput);
 }
 
+// Testa a impressão do tabuleiro para o jogo Lig4
+TEST_CASE("Testa imprimeTabuleiro para o jogo Damas") {
+    Tabuleiro tab;
+    tab.inicializaTabuleiro('D');
+
+    // Captura a saída do std::cout
+    std::stringstream buffer;
+    std::streambuf* oldCout = std::cout.rdbuf(buffer.rdbuf()); // Redireciona std::cout para o buffer
+
+    // Chama o método que imprime o tabuleiro
+    tab.imprimeTabuleiro();
+
+    // Restaura std::cout
+    std::cout.rdbuf(oldCout);
+
+    // Define a saída esperada
+    std::string expectedOutput =
+        "|X| |X| |X| |X| |\n"
+        "| |X| |X| |X| |X|\n"
+        "|X| |X| |X| |X| |\n"
+        "| | | | | | | | |\n"
+        "| | | | | | | | |\n"
+        "| |O| |O| |O| |O|\n"
+        "|O| |O| |O| |O| |\n"
+        "| |O| |O| |O| |O|\n";
+
+    // Verifica se a saída gerada corresponde à esperada
+    CHECK(buffer.str() == expectedOutput);
+}
+
 // Testa o método verificaCasa após a inicialização do tabuleiro para o jogo Reversi
 TEST_CASE("Testa verificaCasa para o jogo Reversi") {
     Tabuleiro tab;
@@ -123,8 +176,31 @@ TEST_CASE("Testa verificaCasa para o jogo Lig4") {
     }
 
     // Verifica que casas fora do intervalo retornam false
-    CHECK_FALSE(tab.verificaCasa(6, 7, "NULO"));
+    CHECK_FALSE(tab.verificaCasa(6, 7, "BRANCO"));
     CHECK_FALSE(tab.verificaCasa(5, 6, "PRETO"));
+}
+
+TEST_CASE("Testa verificaCasa para o jogo Damas") {
+    Tabuleiro tab;
+    tab.inicializaTabuleiro('D');
+
+    for (int i = 0; i< 8; i++) {
+            for (int j = 0; j < 8; j++){
+                //verifica casas pares
+                if ((i + j) % 2 == 0) {
+                    if (i < 3) {
+                        CHECK(tab.verificaCasa(i, j, "PRETO")); 
+                    } else if (i > 4) {
+                        CHECK(tab.verificaCasa(i, j, "BRANCO"));
+                    } else {
+                        CHECK(tab.verificaCasa(i, j, "NULO"));
+                    }
+                } else {
+                    CHECK(tab.verificaCasa(i, j, "NULO"));
+                }
+            }
+        }
+    
 }
 
 // Testa o método modificaTabuleiro para o jogo Reversi

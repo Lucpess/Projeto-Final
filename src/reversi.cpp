@@ -7,6 +7,7 @@
 using namespace std;
 
 Reversi::Reversi() : Jogos('R'){
+    turno = "PRETO";
 }
 
 Reversi::~Reversi(){
@@ -417,7 +418,6 @@ void Reversi::contarPecas(int& pecasBrancas, int& pecasPretas) {
 }
 
 void Reversi::start(std::string jogador1, std::string jogador2, Cadastro& cadastro) {
-    turno = "PRETO";
     printTabuleiro();
     std::cout << jogador1 << " == X | " << jogador2 << " == O" << std::endl;
 

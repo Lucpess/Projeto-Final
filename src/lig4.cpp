@@ -3,6 +3,7 @@
 #include <limits>
 
 Lig4::Lig4() : Jogos('L'){
+  turno = "PRETO";
 }
 
 Lig4::~Lig4(){
@@ -133,7 +134,6 @@ int Lig4::verificaFimDeJogo(int col, std::string jogador1, std::string jogador2,
 }
 
 void Lig4::start(std::string jogador1, std::string jogador2, Cadastro& cadastro) {
-    turno = "PRETO";
     printTabuleiro();
     while(!fimDeJogo){
         int coluna;

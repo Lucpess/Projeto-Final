@@ -77,6 +77,16 @@ public:
      */
     int verificaFimDeJogo (int coluna, std::string jogador1, std::string jogador2, Cadastro& cadastro);
 
+    /**
+     * @brief Realiza a jogada na coluna especificada.
+     * 
+     * Insere a peça na coluna escolhida, atualizando o estado do tabuleiro e
+     * preparando-o para a próxima verificação de vitória.
+     * 
+     * @param col Coluna onde a jogada será feita.
+     */
+    void novaJogada(int col);
+
 private:
     /**
      * @brief Verifica se uma jogada é válida na coluna especificada.
@@ -89,16 +99,6 @@ private:
      * @return false Caso contrário.
      */ 
     bool jogadaPermitida(int col);
-
-    /**
-     * @brief Realiza a jogada na coluna especificada.
-     * 
-     * Insere a peça na coluna escolhida, atualizando o estado do tabuleiro e
-     * preparando-o para a próxima verificação de vitória.
-     * 
-     * @param col Coluna onde a jogada será feita.
-     */
-    void novaJogada(int col);
 
     /**
      * @brief Exibe de quem é o turno atual.

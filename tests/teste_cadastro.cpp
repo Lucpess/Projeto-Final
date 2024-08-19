@@ -54,5 +54,8 @@ TEST_CASE("Testes da classe Cadastro") {
       // Não esperamos mais exceções aqui, apenas verificamos se a função pode ser chamada
         CHECK_NOTHROW(cadastro.listaJogadores("N"));
         CHECK_NOTHROW(cadastro.listaJogadores("A"));
+
+        cadastro.removeJogador("apelido5");
+        cadastro.removeJogador("apelido6");
     }
 }

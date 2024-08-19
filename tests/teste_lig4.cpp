@@ -1,60 +1,119 @@
 #include "doctest.h"
+#include "tabuleiro.hpp"
 #include "lig4.hpp"
-#include "tabuleiro.hpp" // Inclua o arquivo apropriado
-#include <sstream>
-#include <iostream>
+#include "cadastro.hpp"
 
-// Testa a construtora da classe Lig4
-TEST_CASE("Testar construtora da classe Lig4") {
-    CHECK_NOTHROW(Lig4 lig4);
+// Testa a inicialização do tabuleiro para o jogo Lig4
+TEST_CASE("Testa inicializaTabuleiro para o jogo Lig4") {
+    Tabuleiro tab;
+    tab.inicializaTabuleiro('L');
+
+    // Verifica que todas as casas estão inicializadas como "NULO"
+    for (int i = 0; i < 6; i++) {
+        for (int j = 0; j < 7; j++) {
+            CHECK(tab.verificaCasa(i, j, "NULO"));
+        }
+    }
 }
 
-// Testa a função printTabuleiro
-TEST_CASE("Testar printTabuleiro") {
-    Lig4 lig4;
+// Testa a modificação de algumas casas no tabuleiro para o jogo Lig4
+TEST_CASE("Testa modificaTabuleiro para o jogo Lig4") {
+    Tabuleiro tab;
+    tab.inicializaTabuleiro('L');
 
-    // Redireciona a saída para um stream para capturar a mensagem
-    std::ostringstream outputStream;
-    std::streambuf* originalBuffer = std::cout.rdbuf();
-    std::cout.rdbuf(outputStream.rdbuf());
+    // Modifica o estado de algumas casas
+    tab.modificaTabuleiro(0, 0, "BRANCO");
+    tab.modificaTabuleiro(1, 1, "PRETO");
+    
+    // Verifica se o estado das casas foi alterado corretamente
+    CHECK(tab.verificaCasa(0, 0, "BRANCO"));
+    CHECK(tab.verificaCasa(1, 1, "PRETO"));
 
-    lig4.printTabuleiro();
-
-    std::string output = outputStream.str();
-    // Aqui você deve verificar a saída para garantir que o tabuleiro foi impresso corretamente
-    CHECK(output.find("Tabuleiro") != std::string::npos); // Ajuste o padrão conforme necessário
-
-    std::cout.rdbuf(originalBuffer);
+    // Verifica que casas que não foram modificadas ainda têm o estado correto
+    CHECK(tab.verificaCasa(2, 2, "NULO"));
 }
 
-// Testa a função start
-TEST_CASE("Testar start") {
-    Lig4 lig4;
-    Cadastro cadastro;
+TEST_CASE("Testa modificaTabuleiro para o jogo Lig4") {
+    Tabuleiro tab;
+    tab.inicializaTabuleiro('L');
 
-    // Redireciona a saída para um stream para capturar a mensagem
-    std::ostringstream outputStream;
-    std::streambuf* originalBuffer = std::cout.rdbuf();
-    std::cout.rdbuf(outputStream.rdbuf());
-
-    // Simula a entrada do usuário para as jogadas
-    std::istringstream inputStream("1\n2\n3\n4\n5\n6\n7\n");
-    std::streambuf* originalInputBuffer = std::cin.rdbuf();
-    std::cin.rdbuf(inputStream.rdbuf());
-
-    lig4.start("Jogador1", "Jogador2", cadastro);
-
-    std::string output = outputStream.str();
+    // Modifica o estado de algumas casas
+    tab.modificaTabuleiro(0, 0, "BRANCO");
+    tab.modificaTabuleiro(1, 1, "PRETO");
     
-    // Verifica as mensagens esperadas usando SUBCASE para evitar complexidade
-    SUBCASE("Verificar turno de Jogador1") {
-        CHECK(output.find("TURNO DE Jogador1") != std::string::npos);
-    }
-    
-    SUBCASE("Verificar turno de Jogador2") {
-        CHECK(output.find("TURNO DE Jogador2") != std::string::npos);
-    }
+    // Verifica se o estado das casas foi alterado corretamente
+    CHECK(tab.verificaCasa(0, 0, "BRANCO"));
+    CHECK(tab.verificaCasa(1, 1, "PRETO"));
 
-    std::cin.rdbuf(originalInputBuffer);
-    std::cout.rdbuf(originalBuffer);
+    // Verifica que casas que não foram modificadas ainda têm o estado correto
+    CHECK(tab.verificaCasa(2, 2, "NULO"));
+}
+
+TEST_CASE("Teste verifica 4 inicial"){
+    Lig4 jogo;
+
+    for(int i = 0; i<6; i++){
+        for(int j = 0; j<7; j++){
+            CHECK(!jogo.verifica4(i, j));
+        }
+    }
+}
+
+TEST_CASE("Teste verifica 4 vertical"){
+    Lig4 jogo;
+
+    jogo.novaJogada(0);
+    jogo.novaJogada(0);
+    jogo.novaJogada(0);
+    jogo.novaJogada(0);
+
+    CHECK(jogo.verifica4(5,0));
+    CHECK(jogo.verifica4(4,0));
+    CHECK(jogo.verifica4(3,0));
+    CHECK(jogo.verifica4(2,0));
+
+    for(int i = 0; i<5; i++){
+        for(int j = 1; j<7; j++){
+            CHECK(!jogo.verifica4(i, j));
+        }
+    }
+}
+
+TEST_CASE("Teste verifica 4 horizontal"){
+    Lig4 jogo;
+
+    jogo.novaJogada(0);
+    jogo.novaJogada(1);
+    jogo.novaJogada(2);
+    jogo.novaJogada(3);
+
+    CHECK(jogo.verifica4(5,0));
+    CHECK(jogo.verifica4(5,1));
+    CHECK(jogo.verifica4(5,2));
+    CHECK(jogo.verifica4(5,3));
+
+    for(int i = 0; i<5; i++){
+        for(int j = 0; j<7; j++){
+            CHECK(!jogo.verifica4(i, j));
+        }
+    }
+}
+
+TEST_CASE("Teste verifica 4 diagonal"){
+    Lig4 jogo;
+
+    jogo.novaJogada(0);
+    jogo.novaJogada(1);
+    jogo.novaJogada(1);
+    jogo.novaJogada(2);
+    jogo.novaJogada(2);
+    jogo.novaJogada(2);
+    jogo.novaJogada(3);
+    jogo.novaJogada(3);
+    jogo.novaJogada(3);
+    jogo.novaJogada(3);
+
+    CHECK(jogo.verifica4(4,1));
+    CHECK(jogo.verifica4(3,2));
+    CHECK(!jogo.verifica4(4,2));
 }
