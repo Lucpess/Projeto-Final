@@ -31,7 +31,8 @@ void Cadastro::salvarCadastro() {
             const Jogador& jogador = par.second;
             arquivo << jogador.getApelido() << " " << jogador.getNome() << " "
                     << jogador.getVitoriasReversi() << " " << jogador.getDerrotasReversi() << " "
-                    << jogador.getVitoriasLig4() << " " << jogador.getDerrotasLig4() << std::endl;
+                    << jogador.getVitoriasLig4() << " " << jogador.getDerrotasLig4() << " " 
+                    << jogador.getVitoriasDama() << " " << jogador.getDerrotasDama() << std::endl;
         }
 
         arquivo.close();
@@ -51,11 +52,11 @@ void Cadastro::atualizarCadastro(){
         jogadores.clear();
 
         std::string nome, apelido;
-        int vitoriasReversi, derrotasReversi, vitoriasLig4, derrotasLig4;
+        int vitoriasReversi, derrotasReversi, vitoriasLig4, derrotasLig4, vitoriasDama, derrotasDama;
 
         //primeiro apelido ou nome? 
-        while(arquivo >> apelido >> nome >> vitoriasReversi >> derrotasReversi >> vitoriasLig4 >> derrotasLig4) {
-            Jogador jogador(apelido, nome, vitoriasReversi, derrotasReversi, vitoriasLig4, derrotasLig4);
+        while(arquivo >> apelido >> nome >> vitoriasReversi >> derrotasReversi >> vitoriasLig4 >> derrotasLig4 >> vitoriasDama >> derrotasDama) {
+            Jogador jogador(apelido, nome, vitoriasReversi, derrotasReversi, vitoriasLig4, derrotasLig4, vitoriasDama, derrotasDama);
             jogadores.emplace(apelido, jogador);
         }
 
@@ -126,6 +127,7 @@ void Cadastro::listaJogadores(const std::string& ordem) const {
             std::cout << apelido << " " << jogador.getNome() << std::endl;
             std::cout << "REVERSI - V: " << jogador.getVitoriasReversi() << " D: " << jogador.getDerrotasReversi() << std::endl;
             std::cout << "LIG4 - V: " << jogador.getVitoriasLig4() << " D: " << jogador.getDerrotasLig4() << std::endl;
+            std::cout << "DAMA - V: " << jogador.getVitoriasDama() << " D: " << jogador.getDerrotasDama() << std::endl;
         }
     } catch (const std::exception& e) {
         std::cerr << e.what() << std::endl;
@@ -143,6 +145,9 @@ void Cadastro::registrarResultado(const std::string& vencedor, const std::string
         } else if (jogo == 'L') {
             jogadores[vencedor].addVitoriaLig4();
             jogadores[perdedor].addDerrotaLig4();
+        } else if (jogo == 'D') {
+            jogadores[vencedor].addVitoriaDama();
+            jogadores[perdedor].addDerrotaDama();
         } else {
             throw std::runtime_error("ERRO: Jogo inválido");
         }

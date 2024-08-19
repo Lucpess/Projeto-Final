@@ -6,10 +6,10 @@
 Jogador::Jogador()
     : apelido(""), nome(""), vitoriasReversi(0), derrotasReversi(0), vitoriasLig4(0), derrotasLig4(0)  {}
 
-Jogador::Jogador(const std::string& apelido, const std::string& nome, const int vitoriasReversi, 
-                 const int derrotasReversi, const int vitoriasLig4, const int derrotasLig4)
-    : apelido(apelido), nome(nome), vitoriasReversi(vitoriasReversi), derrotasReversi(derrotasReversi),
-      vitoriasLig4(vitoriasLig4), derrotasLig4(derrotasLig4){}
+Jogador::Jogador(const std::string& apelido, const std::string& nome, const int vitoriasR, 
+                 const int derrotasR, const int vitoriasL, const int derrotasL, const int vitoriasD, const int derrotasD)
+    : apelido(apelido), nome(nome), vitoriasReversi(vitoriasR), derrotasReversi(derrotasR),
+      vitoriasLig4(vitoriasL), derrotasLig4(derrotasL), vitoriasDama(vitoriasD), derrotasDama(derrotasD){}
       
 
 std::string Jogador::getApelido() const {
@@ -36,6 +36,14 @@ int Jogador::getDerrotasLig4() const {
     return derrotasLig4;
 }
 
+int Jogador::getVitoriasDama() const { 
+    return vitoriasDama; 
+}
+
+int Jogador::getDerrotasDama() const { 
+    return derrotasDama; 
+}
+
 void Jogador::printResultados() const {
     std::cout << apelido << " " << nome << std::endl;
     std::cout << "REVERSI - V: " << vitoriasReversi << " D: " << derrotasReversi << std::endl;
@@ -60,4 +68,12 @@ void Jogador::addDerrotaLig4 (){
 
 void Jogador::addDerrotaReversi (){
      derrotasReversi++;
+}
+
+void Jogador::addVitoriaDama() { 
+    vitoriasDama++; 
+}
+
+void Jogador::addDerrotaDama() { 
+    derrotasDama++; 
 }
