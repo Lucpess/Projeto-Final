@@ -49,7 +49,7 @@ Durante o desenvolvimento do projeto, algumas dificuldades foram encontradas:
 
 - *Gerenciamento de Turnos*: Implementar a alternância de turnos e verificar as condições de vitória exigiu um entendimento aprofundado das regras dos jogos e uma cuidadosa implementação da lógica.
 - *Documentação*: Garantir que toda a documentação estivesse completa e precisa foi desafiador, especialmente ao detalhar a estrutura de dados e o funcionamento interno das classes.
-- *Testes*: Implementar e garantir que os testes cobrissem todos os casos possíveis, especialmente para teste_cadastro (uma vez que o arquivo já contava com o tratamento de exceções) foi um desafio adicional, pois estavamos nos deparando com problemas de funções que eram definidas multiplas vezes e com detalhes do uso do doctest que foram muito complicados de se compreennder e resolver. Desde problemas que exigiram a reinstalção do mingw e do vs code como alteração completa do código previamente feito, mesmo sem o sucesso absoluto nessa parte, consideramos como um válido aprendizado.
+- *Testes*: Implementar e garantir que os testes cobrissem todos os casos possíveis, especialmente para teste_cadastro (uma vez que o arquivo já contava com o tratamento de exceções) foi um desafio adicional, pois estavamos nos deparando com problemas de funções que eram definidas multiplas vezes e com detalhes do uso do doctest que foram muito complicados de se compreennder e resolver. Desde problemas que exigiram a reinstalção do mingw e do vs code como alteração completa do código previamente feito.
 
 ## Extras Implementados
 
