@@ -3,64 +3,123 @@
 \mbox{\hyperlink{teste__lig4_8cpp}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00001\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{doctest_8h}{doctest.h}}"{}}}
-\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{lig4_8hpp}{lig4.hpp}}"{}}}
-\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{tabuleiro_8hpp}{tabuleiro.hpp}}"{}}\ \textcolor{comment}{//\ Inclua\ o\ arquivo\ apropriado}}
-\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <sstream>}}
-\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <iostream>}}
-\DoxyCodeLine{00006\ }
-\DoxyCodeLine{00007\ \textcolor{comment}{//\ Testa\ a\ construtora\ da\ classe\ Lig4}}
-\DoxyCodeLine{00008\ \mbox{\hyperlink{doctest_8h_a8bc255ff55721571e878568d2b5dcb35}{TEST\_CASE}}(\textcolor{stringliteral}{"{}Testar\ construtora\ da\ classe\ Lig4"{}})\ \{}
-\DoxyCodeLine{00009\ \ \ \ \ \mbox{\hyperlink{doctest_8h_a78e70f011f20c4ade1d1ac2b8fd33626}{CHECK\_NOTHROW}}(\mbox{\hyperlink{class_lig4}{Lig4}}\ lig4);}
-\DoxyCodeLine{00010\ \}}
-\DoxyCodeLine{00011\ }
-\DoxyCodeLine{00012\ \textcolor{comment}{//\ Testa\ a\ função\ printTabuleiro}}
-\DoxyCodeLine{00013\ \mbox{\hyperlink{doctest_8h_a8bc255ff55721571e878568d2b5dcb35}{TEST\_CASE}}(\textcolor{stringliteral}{"{}Testar\ printTabuleiro"{}})\ \{}
-\DoxyCodeLine{00014\ \ \ \ \ \mbox{\hyperlink{class_lig4}{Lig4}}\ lig4;}
-\DoxyCodeLine{00015\ }
-\DoxyCodeLine{00016\ \ \ \ \ \textcolor{comment}{//\ Redireciona\ a\ saída\ para\ um\ stream\ para\ capturar\ a\ mensagem}}
-\DoxyCodeLine{00017\ \ \ \ \ std::ostringstream\ outputStream;}
-\DoxyCodeLine{00018\ \ \ \ \ std::streambuf*\ originalBuffer\ =\ std::cout.rdbuf();}
-\DoxyCodeLine{00019\ \ \ \ \ std::cout.rdbuf(outputStream.rdbuf());}
-\DoxyCodeLine{00020\ }
-\DoxyCodeLine{00021\ \ \ \ \ lig4.\mbox{\hyperlink{class_jogos_aa1b6a1b33086146301e6cc53a298ed3e}{printTabuleiro}}();}
-\DoxyCodeLine{00022\ }
-\DoxyCodeLine{00023\ \ \ \ \ std::string\ output\ =\ outputStream.str();}
-\DoxyCodeLine{00024\ \ \ \ \ \textcolor{comment}{//\ Aqui\ você\ deve\ verificar\ a\ saída\ para\ garantir\ que\ o\ tabuleiro\ foi\ impresso\ corretamente}}
-\DoxyCodeLine{00025\ \ \ \ \ \mbox{\hyperlink{doctest_8h_a836cca6b6ed3a1706353f6d1bca0935f}{CHECK}}(output.find(\textcolor{stringliteral}{"{}Tabuleiro"{}})\ !=\ std::string::npos);\ \textcolor{comment}{//\ Ajuste\ o\ padrão\ conforme\ necessário}}
-\DoxyCodeLine{00026\ }
-\DoxyCodeLine{00027\ \ \ \ \ std::cout.rdbuf(originalBuffer);}
-\DoxyCodeLine{00028\ \}}
-\DoxyCodeLine{00029\ }
-\DoxyCodeLine{00030\ \textcolor{comment}{//\ Testa\ a\ função\ start}}
-\DoxyCodeLine{00031\ \mbox{\hyperlink{doctest_8h_a8bc255ff55721571e878568d2b5dcb35}{TEST\_CASE}}(\textcolor{stringliteral}{"{}Testar\ start"{}})\ \{}
-\DoxyCodeLine{00032\ \ \ \ \ \mbox{\hyperlink{class_lig4}{Lig4}}\ lig4;}
-\DoxyCodeLine{00033\ \ \ \ \ \mbox{\hyperlink{class_cadastro}{Cadastro}}\ cadastro;}
-\DoxyCodeLine{00034\ }
-\DoxyCodeLine{00035\ \ \ \ \ \textcolor{comment}{//\ Redireciona\ a\ saída\ para\ um\ stream\ para\ capturar\ a\ mensagem}}
-\DoxyCodeLine{00036\ \ \ \ \ std::ostringstream\ outputStream;}
-\DoxyCodeLine{00037\ \ \ \ \ std::streambuf*\ originalBuffer\ =\ std::cout.rdbuf();}
-\DoxyCodeLine{00038\ \ \ \ \ std::cout.rdbuf(outputStream.rdbuf());}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{tabuleiro_8hpp}{tabuleiro.hpp}}"{}}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{lig4_8hpp}{lig4.hpp}}"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{cadastro_8hpp}{cadastro.hpp}}"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{comment}{//\ Testa\ a\ inicialização\ do\ tabuleiro\ para\ o\ jogo\ Lig4}}
+\DoxyCodeLine{00007\ \mbox{\hyperlink{doctest_8h_a8bc255ff55721571e878568d2b5dcb35}{TEST\_CASE}}(\textcolor{stringliteral}{"{}Testa\ inicializaTabuleiro\ para\ o\ jogo\ Lig4"{}})\ \{}
+\DoxyCodeLine{00008\ \ \ \ \ \mbox{\hyperlink{class_tabuleiro}{Tabuleiro}}\ tab;}
+\DoxyCodeLine{00009\ \ \ \ \ tab.\mbox{\hyperlink{class_tabuleiro_a8fd74e701547bfc43651b2c127f4a918}{inicializaTabuleiro}}(\textcolor{charliteral}{'L'});}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{comment}{//\ Verifica\ que\ todas\ as\ casas\ estão\ inicializadas\ como\ "{}NULO"{}}}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ 6;\ i++)\ \{}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ 7;\ j++)\ \{}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{doctest_8h_a836cca6b6ed3a1706353f6d1bca0935f}{CHECK}}(tab.\mbox{\hyperlink{class_tabuleiro_a27d190ace363ac487980f1f137e36960}{verificaCasa}}(i,\ j,\ \textcolor{stringliteral}{"{}NULO"{}}));}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00016\ \ \ \ \ \}}
+\DoxyCodeLine{00017\ \}}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \textcolor{comment}{//\ Testa\ a\ modificação\ de\ algumas\ casas\ no\ tabuleiro\ para\ o\ jogo\ Lig4}}
+\DoxyCodeLine{00020\ \mbox{\hyperlink{doctest_8h_a8bc255ff55721571e878568d2b5dcb35}{TEST\_CASE}}(\textcolor{stringliteral}{"{}Testa\ modificaTabuleiro\ para\ o\ jogo\ Lig4"{}})\ \{}
+\DoxyCodeLine{00021\ \ \ \ \ \mbox{\hyperlink{class_tabuleiro}{Tabuleiro}}\ tab;}
+\DoxyCodeLine{00022\ \ \ \ \ tab.\mbox{\hyperlink{class_tabuleiro_a8fd74e701547bfc43651b2c127f4a918}{inicializaTabuleiro}}(\textcolor{charliteral}{'L'});}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{comment}{//\ Modifica\ o\ estado\ de\ algumas\ casas}}
+\DoxyCodeLine{00025\ \ \ \ \ tab.\mbox{\hyperlink{class_tabuleiro_a61ff1cc55aa56fdb7fe4feaf7f151794}{modificaTabuleiro}}(0,\ 0,\ \textcolor{stringliteral}{"{}BRANCO"{}});}
+\DoxyCodeLine{00026\ \ \ \ \ tab.\mbox{\hyperlink{class_tabuleiro_a61ff1cc55aa56fdb7fe4feaf7f151794}{modificaTabuleiro}}(1,\ 1,\ \textcolor{stringliteral}{"{}PRETO"{}});}
+\DoxyCodeLine{00027\ \ \ \ \ }
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{comment}{//\ Verifica\ se\ o\ estado\ das\ casas\ foi\ alterado\ corretamente}}
+\DoxyCodeLine{00029\ \ \ \ \ \mbox{\hyperlink{doctest_8h_a836cca6b6ed3a1706353f6d1bca0935f}{CHECK}}(tab.\mbox{\hyperlink{class_tabuleiro_a27d190ace363ac487980f1f137e36960}{verificaCasa}}(0,\ 0,\ \textcolor{stringliteral}{"{}BRANCO"{}}));}
+\DoxyCodeLine{00030\ \ \ \ \ \mbox{\hyperlink{doctest_8h_a836cca6b6ed3a1706353f6d1bca0935f}{CHECK}}(tab.\mbox{\hyperlink{class_tabuleiro_a27d190ace363ac487980f1f137e36960}{verificaCasa}}(1,\ 1,\ \textcolor{stringliteral}{"{}PRETO"{}}));}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{comment}{//\ Verifica\ que\ casas\ que\ não\ foram\ modificadas\ ainda\ têm\ o\ estado\ correto}}
+\DoxyCodeLine{00033\ \ \ \ \ \mbox{\hyperlink{doctest_8h_a836cca6b6ed3a1706353f6d1bca0935f}{CHECK}}(tab.\mbox{\hyperlink{class_tabuleiro_a27d190ace363ac487980f1f137e36960}{verificaCasa}}(2,\ 2,\ \textcolor{stringliteral}{"{}NULO"{}}));}
+\DoxyCodeLine{00034\ \}}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \mbox{\hyperlink{doctest_8h_a8bc255ff55721571e878568d2b5dcb35}{TEST\_CASE}}(\textcolor{stringliteral}{"{}Testa\ modificaTabuleiro\ para\ o\ jogo\ Lig4"{}})\ \{}
+\DoxyCodeLine{00037\ \ \ \ \ \mbox{\hyperlink{class_tabuleiro}{Tabuleiro}}\ tab;}
+\DoxyCodeLine{00038\ \ \ \ \ tab.\mbox{\hyperlink{class_tabuleiro_a8fd74e701547bfc43651b2c127f4a918}{inicializaTabuleiro}}(\textcolor{charliteral}{'L'});}
 \DoxyCodeLine{00039\ }
-\DoxyCodeLine{00040\ \ \ \ \ \textcolor{comment}{//\ Simula\ a\ entrada\ do\ usuário\ para\ as\ jogadas}}
-\DoxyCodeLine{00041\ \ \ \ \ std::istringstream\ inputStream(\textcolor{stringliteral}{"{}1\(\backslash\)n2\(\backslash\)n3\(\backslash\)n4\(\backslash\)n5\(\backslash\)n6\(\backslash\)n7\(\backslash\)n"{}});}
-\DoxyCodeLine{00042\ \ \ \ \ std::streambuf*\ originalInputBuffer\ =\ std::cin.rdbuf();}
-\DoxyCodeLine{00043\ \ \ \ \ std::cin.rdbuf(inputStream.rdbuf());}
-\DoxyCodeLine{00044\ }
-\DoxyCodeLine{00045\ \ \ \ \ lig4.\mbox{\hyperlink{class_lig4_a2fe5667ca383cf813b1497f3abf09317}{start}}(\textcolor{stringliteral}{"{}Jogador1"{}},\ \textcolor{stringliteral}{"{}Jogador2"{}},\ cadastro);}
-\DoxyCodeLine{00046\ }
-\DoxyCodeLine{00047\ \ \ \ \ std::string\ output\ =\ outputStream.str();}
-\DoxyCodeLine{00048\ \ \ \ \ }
-\DoxyCodeLine{00049\ \ \ \ \ \textcolor{comment}{//\ Verifica\ as\ mensagens\ esperadas\ usando\ SUBCASE\ para\ evitar\ complexidade}}
-\DoxyCodeLine{00050\ \ \ \ \ \mbox{\hyperlink{doctest_8h_a4147381e5cb6f68c1a315a852c63bf70}{SUBCASE}}(\textcolor{stringliteral}{"{}Verificar\ turno\ de\ Jogador1"{}})\ \{}
-\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{doctest_8h_a836cca6b6ed3a1706353f6d1bca0935f}{CHECK}}(output.find(\textcolor{stringliteral}{"{}TURNO\ DE\ Jogador1"{}})\ !=\ std::string::npos);}
-\DoxyCodeLine{00052\ \ \ \ \ \}}
-\DoxyCodeLine{00053\ \ \ \ \ }
-\DoxyCodeLine{00054\ \ \ \ \ \mbox{\hyperlink{doctest_8h_a4147381e5cb6f68c1a315a852c63bf70}{SUBCASE}}(\textcolor{stringliteral}{"{}Verificar\ turno\ de\ Jogador2"{}})\ \{}
-\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{doctest_8h_a836cca6b6ed3a1706353f6d1bca0935f}{CHECK}}(output.find(\textcolor{stringliteral}{"{}TURNO\ DE\ Jogador2"{}})\ !=\ std::string::npos);}
-\DoxyCodeLine{00056\ \ \ \ \ \}}
-\DoxyCodeLine{00057\ }
-\DoxyCodeLine{00058\ \ \ \ \ std::cin.rdbuf(originalInputBuffer);}
-\DoxyCodeLine{00059\ \ \ \ \ std::cout.rdbuf(originalBuffer);}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{comment}{//\ Modifica\ o\ estado\ de\ algumas\ casas}}
+\DoxyCodeLine{00041\ \ \ \ \ tab.\mbox{\hyperlink{class_tabuleiro_a61ff1cc55aa56fdb7fe4feaf7f151794}{modificaTabuleiro}}(0,\ 0,\ \textcolor{stringliteral}{"{}BRANCO"{}});}
+\DoxyCodeLine{00042\ \ \ \ \ tab.\mbox{\hyperlink{class_tabuleiro_a61ff1cc55aa56fdb7fe4feaf7f151794}{modificaTabuleiro}}(1,\ 1,\ \textcolor{stringliteral}{"{}PRETO"{}});}
+\DoxyCodeLine{00043\ \ \ \ \ }
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{comment}{//\ Verifica\ se\ o\ estado\ das\ casas\ foi\ alterado\ corretamente}}
+\DoxyCodeLine{00045\ \ \ \ \ \mbox{\hyperlink{doctest_8h_a836cca6b6ed3a1706353f6d1bca0935f}{CHECK}}(tab.\mbox{\hyperlink{class_tabuleiro_a27d190ace363ac487980f1f137e36960}{verificaCasa}}(0,\ 0,\ \textcolor{stringliteral}{"{}BRANCO"{}}));}
+\DoxyCodeLine{00046\ \ \ \ \ \mbox{\hyperlink{doctest_8h_a836cca6b6ed3a1706353f6d1bca0935f}{CHECK}}(tab.\mbox{\hyperlink{class_tabuleiro_a27d190ace363ac487980f1f137e36960}{verificaCasa}}(1,\ 1,\ \textcolor{stringliteral}{"{}PRETO"{}}));}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{comment}{//\ Verifica\ que\ casas\ que\ não\ foram\ modificadas\ ainda\ têm\ o\ estado\ correto}}
+\DoxyCodeLine{00049\ \ \ \ \ \mbox{\hyperlink{doctest_8h_a836cca6b6ed3a1706353f6d1bca0935f}{CHECK}}(tab.\mbox{\hyperlink{class_tabuleiro_a27d190ace363ac487980f1f137e36960}{verificaCasa}}(2,\ 2,\ \textcolor{stringliteral}{"{}NULO"{}}));}
+\DoxyCodeLine{00050\ \}}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \mbox{\hyperlink{doctest_8h_a8bc255ff55721571e878568d2b5dcb35}{TEST\_CASE}}(\textcolor{stringliteral}{"{}Teste\ verifica\ 4\ inicial"{}})\{}
+\DoxyCodeLine{00053\ \ \ \ \ \mbox{\hyperlink{class_lig4}{Lig4}}\ jogo;}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i\ =\ 0;\ i<6;\ i++)\{}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ j\ =\ 0;\ j<7;\ j++)\{}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{doctest_8h_a836cca6b6ed3a1706353f6d1bca0935f}{CHECK}}(!jogo.\mbox{\hyperlink{class_lig4_aae4580104c813a6015328a54f08f5381}{verifica4}}(i,\ j));}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00059\ \ \ \ \ \}}
 \DoxyCodeLine{00060\ \}}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \mbox{\hyperlink{doctest_8h_a8bc255ff55721571e878568d2b5dcb35}{TEST\_CASE}}(\textcolor{stringliteral}{"{}Teste\ verifica\ 4\ vertical"{}})\{}
+\DoxyCodeLine{00063\ \ \ \ \ \mbox{\hyperlink{class_lig4}{Lig4}}\ jogo;}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00065\ \ \ \ \ jogo.\mbox{\hyperlink{class_lig4_a9cc4e79368fc1434aa133ddd78829111}{novaJogada}}(0);}
+\DoxyCodeLine{00066\ \ \ \ \ jogo.\mbox{\hyperlink{class_lig4_a9cc4e79368fc1434aa133ddd78829111}{novaJogada}}(0);}
+\DoxyCodeLine{00067\ \ \ \ \ jogo.\mbox{\hyperlink{class_lig4_a9cc4e79368fc1434aa133ddd78829111}{novaJogada}}(0);}
+\DoxyCodeLine{00068\ \ \ \ \ jogo.\mbox{\hyperlink{class_lig4_a9cc4e79368fc1434aa133ddd78829111}{novaJogada}}(0);}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00070\ \ \ \ \ \mbox{\hyperlink{doctest_8h_a836cca6b6ed3a1706353f6d1bca0935f}{CHECK}}(jogo.\mbox{\hyperlink{class_lig4_aae4580104c813a6015328a54f08f5381}{verifica4}}(5,0));}
+\DoxyCodeLine{00071\ \ \ \ \ \mbox{\hyperlink{doctest_8h_a836cca6b6ed3a1706353f6d1bca0935f}{CHECK}}(jogo.\mbox{\hyperlink{class_lig4_aae4580104c813a6015328a54f08f5381}{verifica4}}(4,0));}
+\DoxyCodeLine{00072\ \ \ \ \ \mbox{\hyperlink{doctest_8h_a836cca6b6ed3a1706353f6d1bca0935f}{CHECK}}(jogo.\mbox{\hyperlink{class_lig4_aae4580104c813a6015328a54f08f5381}{verifica4}}(3,0));}
+\DoxyCodeLine{00073\ \ \ \ \ \mbox{\hyperlink{doctest_8h_a836cca6b6ed3a1706353f6d1bca0935f}{CHECK}}(jogo.\mbox{\hyperlink{class_lig4_aae4580104c813a6015328a54f08f5381}{verifica4}}(2,0));}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i\ =\ 0;\ i<5;\ i++)\{}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ j\ =\ 1;\ j<7;\ j++)\{}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{doctest_8h_a836cca6b6ed3a1706353f6d1bca0935f}{CHECK}}(!jogo.\mbox{\hyperlink{class_lig4_aae4580104c813a6015328a54f08f5381}{verifica4}}(i,\ j));}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00079\ \ \ \ \ \}}
+\DoxyCodeLine{00080\ \}}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00082\ \mbox{\hyperlink{doctest_8h_a8bc255ff55721571e878568d2b5dcb35}{TEST\_CASE}}(\textcolor{stringliteral}{"{}Teste\ verifica\ 4\ horizontal"{}})\{}
+\DoxyCodeLine{00083\ \ \ \ \ \mbox{\hyperlink{class_lig4}{Lig4}}\ jogo;}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00085\ \ \ \ \ jogo.\mbox{\hyperlink{class_lig4_a9cc4e79368fc1434aa133ddd78829111}{novaJogada}}(0);}
+\DoxyCodeLine{00086\ \ \ \ \ jogo.\mbox{\hyperlink{class_lig4_a9cc4e79368fc1434aa133ddd78829111}{novaJogada}}(1);}
+\DoxyCodeLine{00087\ \ \ \ \ jogo.\mbox{\hyperlink{class_lig4_a9cc4e79368fc1434aa133ddd78829111}{novaJogada}}(2);}
+\DoxyCodeLine{00088\ \ \ \ \ jogo.\mbox{\hyperlink{class_lig4_a9cc4e79368fc1434aa133ddd78829111}{novaJogada}}(3);}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00090\ \ \ \ \ \mbox{\hyperlink{doctest_8h_a836cca6b6ed3a1706353f6d1bca0935f}{CHECK}}(jogo.\mbox{\hyperlink{class_lig4_aae4580104c813a6015328a54f08f5381}{verifica4}}(5,0));}
+\DoxyCodeLine{00091\ \ \ \ \ \mbox{\hyperlink{doctest_8h_a836cca6b6ed3a1706353f6d1bca0935f}{CHECK}}(jogo.\mbox{\hyperlink{class_lig4_aae4580104c813a6015328a54f08f5381}{verifica4}}(5,1));}
+\DoxyCodeLine{00092\ \ \ \ \ \mbox{\hyperlink{doctest_8h_a836cca6b6ed3a1706353f6d1bca0935f}{CHECK}}(jogo.\mbox{\hyperlink{class_lig4_aae4580104c813a6015328a54f08f5381}{verifica4}}(5,2));}
+\DoxyCodeLine{00093\ \ \ \ \ \mbox{\hyperlink{doctest_8h_a836cca6b6ed3a1706353f6d1bca0935f}{CHECK}}(jogo.\mbox{\hyperlink{class_lig4_aae4580104c813a6015328a54f08f5381}{verifica4}}(5,3));}
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00095\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i\ =\ 0;\ i<5;\ i++)\{}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ j\ =\ 0;\ j<7;\ j++)\{}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{doctest_8h_a836cca6b6ed3a1706353f6d1bca0935f}{CHECK}}(!jogo.\mbox{\hyperlink{class_lig4_aae4580104c813a6015328a54f08f5381}{verifica4}}(i,\ j));}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00099\ \ \ \ \ \}}
+\DoxyCodeLine{00100\ \}}
+\DoxyCodeLine{00101\ }
+\DoxyCodeLine{00102\ \mbox{\hyperlink{doctest_8h_a8bc255ff55721571e878568d2b5dcb35}{TEST\_CASE}}(\textcolor{stringliteral}{"{}Teste\ verifica\ 4\ diagonal"{}})\{}
+\DoxyCodeLine{00103\ \ \ \ \ \mbox{\hyperlink{class_lig4}{Lig4}}\ jogo;}
+\DoxyCodeLine{00104\ }
+\DoxyCodeLine{00105\ \ \ \ \ jogo.\mbox{\hyperlink{class_lig4_a9cc4e79368fc1434aa133ddd78829111}{novaJogada}}(0);}
+\DoxyCodeLine{00106\ \ \ \ \ jogo.\mbox{\hyperlink{class_lig4_a9cc4e79368fc1434aa133ddd78829111}{novaJogada}}(1);}
+\DoxyCodeLine{00107\ \ \ \ \ jogo.\mbox{\hyperlink{class_lig4_a9cc4e79368fc1434aa133ddd78829111}{novaJogada}}(1);}
+\DoxyCodeLine{00108\ \ \ \ \ jogo.\mbox{\hyperlink{class_lig4_a9cc4e79368fc1434aa133ddd78829111}{novaJogada}}(2);}
+\DoxyCodeLine{00109\ \ \ \ \ jogo.\mbox{\hyperlink{class_lig4_a9cc4e79368fc1434aa133ddd78829111}{novaJogada}}(2);}
+\DoxyCodeLine{00110\ \ \ \ \ jogo.\mbox{\hyperlink{class_lig4_a9cc4e79368fc1434aa133ddd78829111}{novaJogada}}(2);}
+\DoxyCodeLine{00111\ \ \ \ \ jogo.\mbox{\hyperlink{class_lig4_a9cc4e79368fc1434aa133ddd78829111}{novaJogada}}(3);}
+\DoxyCodeLine{00112\ \ \ \ \ jogo.\mbox{\hyperlink{class_lig4_a9cc4e79368fc1434aa133ddd78829111}{novaJogada}}(3);}
+\DoxyCodeLine{00113\ \ \ \ \ jogo.\mbox{\hyperlink{class_lig4_a9cc4e79368fc1434aa133ddd78829111}{novaJogada}}(3);}
+\DoxyCodeLine{00114\ \ \ \ \ jogo.\mbox{\hyperlink{class_lig4_a9cc4e79368fc1434aa133ddd78829111}{novaJogada}}(3);}
+\DoxyCodeLine{00115\ }
+\DoxyCodeLine{00116\ \ \ \ \ \mbox{\hyperlink{doctest_8h_a836cca6b6ed3a1706353f6d1bca0935f}{CHECK}}(jogo.\mbox{\hyperlink{class_lig4_aae4580104c813a6015328a54f08f5381}{verifica4}}(4,1));}
+\DoxyCodeLine{00117\ \ \ \ \ \mbox{\hyperlink{doctest_8h_a836cca6b6ed3a1706353f6d1bca0935f}{CHECK}}(jogo.\mbox{\hyperlink{class_lig4_aae4580104c813a6015328a54f08f5381}{verifica4}}(3,2));}
+\DoxyCodeLine{00118\ \ \ \ \ \mbox{\hyperlink{doctest_8h_a836cca6b6ed3a1706353f6d1bca0935f}{CHECK}}(!jogo.\mbox{\hyperlink{class_lig4_aae4580104c813a6015328a54f08f5381}{verifica4}}(4,2));}
+\DoxyCodeLine{00119\ \}}
 
 \end{DoxyCode}
