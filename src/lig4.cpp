@@ -10,10 +10,11 @@ Lig4::~Lig4(){
 
 void Lig4::anunciaTurno(std::string jogador1, std::string jogador2){
     if(turno == "PRETO"){
-        std::cout << "TURNO DE " << jogador1 << std::endl << "-DIGITE O NUMERO DA COLUNA PARA JOGAR-";
+        std::cout << "-TURNO DE " << jogador1 << " (X)-" << std::endl << "-DIGITE O NUMERO DA COLUNA PARA JOGAR-" << std::endl;
     } else{
-        std::cout << "TURNO DE " << jogador2 << std::endl << "-DIGITE O NUMERO DA COLUNA PARA JOGAR-";
+        std::cout << "-TURNO DE " << jogador2 << " (O)-"<< std::endl << "-DIGITE O NUMERO DA COLUNA PARA JOGAR-" << std::endl;
     }
+    std::cout << "-> ";
 }
 
 bool Lig4::jogadaPermitida(int col){
@@ -126,7 +127,7 @@ int Lig4::verificaFimDeJogo(int col, std::string jogador1, std::string jogador2,
     }
     if(tabuleiroCheio){
         fimDeJogo = true;
-        std::cout << "EMPATE, TABULEIRO CHEIO" << std::endl;
+        std::cout << "EMPATE :/, TABULEIRO CHEIO" << std::endl;
     }
     return 0;
 }
@@ -134,7 +135,6 @@ int Lig4::verificaFimDeJogo(int col, std::string jogador1, std::string jogador2,
 void Lig4::start(std::string jogador1, std::string jogador2, Cadastro& cadastro) {
     turno = "PRETO";
     printTabuleiro();
-    std::cout << jogador1 << " == X | " << jogador2 << " == O" << std::endl;
     while(!fimDeJogo){
         int coluna;
         while (true) {
