@@ -1,8 +1,10 @@
 var searchData=
 [
-  ['registrarresultado_0',['registrarResultado',['../class_cadastro.html#aa96211fefded33a0897ec4e358e7dc44',1,'Cadastro']]],
-  ['removejogador_1',['removeJogador',['../class_cadastro.html#a2bee46f0c4a23f71f51e2fdf6abff9e8',1,'Cadastro']]],
-  ['reversi_2',['Reversi',['../class_reversi.html',1,'Reversi'],['../class_reversi.html#a73e3ca5c21b634f9c490b404d62f0e01',1,'Reversi::Reversi()']]],
-  ['reversi_2ecpp_3',['reversi.cpp',['../reversi_8cpp.html',1,'']]],
-  ['reversi_2ehpp_4',['reversi.hpp',['../reversi_8hpp.html',1,'']]]
+  ['jogadasvalidas_0',['jogadasValidas',['../class_reversi.html#a45886fc3420b9bb2489600344d099456',1,'Reversi']]],
+  ['jogador_1',['Jogador',['../class_jogador.html',1,'Jogador'],['../class_jogador.html#a94a4939138ce04d2f3ceb68257517ac1',1,'Jogador::Jogador()'],['../class_jogador.html#ad4fbe85edf3b7f92481224e1e28e7c54',1,'Jogador::Jogador(const std::string &amp;apelido, const std::string &amp;nome, int vitorias_reversi=0, int derrotas_reversi=0, int vitorias_lig4=0, int derrotas_lig4=0)']]],
+  ['jogador_2ecpp_2',['jogador.cpp',['../jogador_8cpp.html',1,'']]],
+  ['jogador_2ehpp_3',['jogador.hpp',['../jogador_8hpp.html',1,'']]],
+  ['jogos_4',['Jogos',['../class_jogos.html',1,'Jogos'],['../class_jogos.html#a3b4fd105cd0c47d57898ffeb129b4457',1,'Jogos::Jogos()']]],
+  ['jogos_2ecpp_5',['jogos.cpp',['../jogos_8cpp.html',1,'']]],
+  ['jogos_2ehpp_6',['jogos.hpp',['../jogos_8hpp.html',1,'']]]
 ];
