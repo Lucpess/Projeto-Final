@@ -15,9 +15,9 @@ Reversi::~Reversi(){
 
 void Reversi::anunciaTurno(std::string jogador1, std::string jogador2){
     if(turno == "PRETO"){
-        std::cout << "TURNO DE " << jogador1 << std::endl << "-DIGITE O NÚMERO DA LINHA E COLUNA, RESPECTIVAMENTE, PARA JOGAR-" << std::endl;
+        std::cout << "TURNO DE " << jogador1 << std::endl << "-DIGITE O NUMERO DA LINHA E COLUNA, RESPECTIVAMENTE, PARA JOGAR-" << std::endl;
     } else{
-        std::cout << "TURNO DE " << jogador2 << std::endl << "-DIGITE O NÚMERO DA LINHA E COLUNA, RESPECTIVAMENTE, PARA JOGAR-" << std::endl;
+        std::cout << "TURNO DE " << jogador2 << std::endl << "-DIGITE O NUMERO DA LINHA E COLUNA, RESPECTIVAMENTE, PARA JOGAR-" << std::endl;
     }
 }
 
@@ -33,10 +33,6 @@ bool Reversi::posicaoPermitida(int i, int j, std::string turno) {
     if (verificaDiagonal(i, j, turno))
         return true;
     else return false;
-}
-
-bool Reversi::jogadaPermitida(int linha, int col) {
-    return tabuleiro.verificaCasa(linha, col, "NULO") && posicaoPermitida(linha, col, turno);
 }
 
 bool Reversi::verificaColuna(int i, int j, std::string turno) {
@@ -371,7 +367,6 @@ void Reversi::jogadasValidas(std::string turno) {
         tabuleiroCheio = true;
     }
 
-    // Verifica se há espaço no tabuleiro para jogar
     for (int i = 0; i < 8; i++) {
         for (int j = 0; j < 8; j++) {
             if (posicaoPermitida(i, j, "PRETO") || posicaoPermitida(i, j, "BRANCO")) {
@@ -422,7 +417,7 @@ void Reversi::contarPecas(int& pecasBrancas, int& pecasPretas) {
 }
 
 void Reversi::start(std::string jogador1, std::string jogador2, Cadastro& cadastro) {
-    turno = "PRETO";  // Inicia o jogo com o turno do jogador Preto
+    turno = "PRETO";
     printTabuleiro();
     std::cout << jogador1 << " == X | " << jogador2 << " == O" << std::endl;
 
@@ -430,11 +425,10 @@ void Reversi::start(std::string jogador1, std::string jogador2, Cadastro& cadast
         int linha = -1;
         int coluna = -1;
 
-        // Verifica se há jogadas válidas para o jogador atual
         if (!temJogadasValidas(turno)) {
-            std::cout << "SEM JOGADAS VÁLIDAS PARA " << (turno == "PRETO" ? jogador1 : jogador2) << ". VEZ DE " << (turno == "PRETO" ? jogador2 : jogador1) << "." << std::endl;
-            mudaTurno();  // Muda o turno se não há jogadas válidas
-            continue;  // Pula para o próximo turno
+            std::cout << "SEM JOGADAS VALIDAS PARA " << (turno == "PRETO" ? jogador1 : jogador2) << ". VEZ DE " << (turno == "PRETO" ? jogador2 : jogador1) << "." << std::endl;
+            mudaTurno();
+            continue;
         }
 
         while (true) {
@@ -442,13 +436,13 @@ void Reversi::start(std::string jogador1, std::string jogador2, Cadastro& cadast
             jogadasValidas(turno);
             
             if (!(std::cin >> linha  >> coluna)) {
-                std::cout << "Formato da jogada incorreto. Por favor, insira coordenadas válidas." << std::endl;
-                std::cin.clear();  // Limpa o estado de erro
-                std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');  // Descarta entrada inválida
+                std::cout << "Formato da jogada incorreto. Por favor, insira coordenadas validas." << std::endl;
+                std::cin.clear();
+                std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
             } else if (linha - 1 < 0 || linha - 1 > 7 || coluna - 1 < 0 || coluna - 1 > 7) {
-                std::cout << "Jogada inválida. Por favor, escolha coordenadas dentro do tabuleiro." << std::endl;
+                std::cout << "Jogada invalida. Por favor, escolha coordenadas dentro do tabuleiro." << std::endl;
             } else {
-                break;  // Sai do loop se a entrada for válida
+                break;
             }
         }
 
@@ -459,16 +453,14 @@ void Reversi::start(std::string jogador1, std::string jogador2, Cadastro& cadast
             viraPecasDiagonal(linha - 1, coluna - 1, turno);
             printTabuleiro();
         } else {
-            std::cout << "Jogada inválida. Tente novamente." << std::endl;
-            continue;  // Se a jogada não for permitida, continua o loop para o mesmo turno
+            std::cout << "Jogada invalida. Tente novamente." << std::endl;
+            continue;  
         }
 
-        // Verifica se o jogo terminou
         if (verificaFimDeJogo(jogador1, jogador2, cadastro)) {
             break;
         }
 
-        // Muda o turno após uma jogada válida e verificação do fim de jogo
         mudaTurno();
     }
 }
