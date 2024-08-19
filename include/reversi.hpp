@@ -19,7 +19,6 @@ public:
    void jogadasValidas(std::string turno);
 
 private:
-   bool jogadaPermitida(int linha, int col);
    void viraPecasColuna(int linha, int col, std::string turno);
    void viraPecasLinha(int linha, int col, std::string turno);
    void viraPecasDiagonal(int linha, int col, std::string turno);
