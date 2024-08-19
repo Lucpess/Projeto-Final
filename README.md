@@ -43,6 +43,10 @@ A documentação do código foi gerada utilizando Doxygen5. A documentação inc
 
 Para visualizar a documentação, consulte o diretório docs gerado pelo Doxygen. Ao pegar o arquivo de nome "index.html" e arrastá-lo para o navegador, será aberta uma página com a documentação.
 
+## Cartões CRC
+
+[Aqui](./docs/crc_cards) está o direcionamento para os Cartões CRC.
+
 ## Dificuldades Encontradas
 
 Durante o desenvolvimento do projeto, algumas dificuldades foram encontradas:
