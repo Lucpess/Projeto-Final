@@ -25,6 +25,24 @@ void Tabuleiro::inicializaTabuleiro(char jogo){
                 tabuleiro[i][j].estado = "NULO";
             }
         }
+    } else
+    if (jogo == 'D'){
+        tabuleiro.resize(8, std::vector<Casa>(8));
+        for (int i = 0; i< 8; i++) {
+            for (int j = 0; j < 8; j++){
+                if ((i + j) % 2 == 0) {
+                    if (i < 3) {
+                        tabuleiro[i][j].estado = "PRETO"; // Peças pretas nas duas primeiras linhas
+                    } else if (i > 4) {
+                        tabuleiro[i][j].estado = "BRANCO"; // Peças brancas nas duas últimas linhas
+                    } else {
+                        tabuleiro[i][j].estado = "NULO";
+                    }
+                } else {
+                    tabuleiro[i][j].estado = "NULO";
+                }
+            }
+        }
     }
 }
 

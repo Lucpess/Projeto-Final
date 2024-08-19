@@ -2,6 +2,7 @@
 #include <sstream>
 #include <string>
 #include "cadastro.hpp"
+#include "damas.hpp"
 #include "lig4.hpp"
 #include "reversi.hpp"
 
@@ -17,7 +18,7 @@ int main() {
         std::cout<< ".CADASTRAR JOGADOR: DIGITE ''CJ <Apelido> <Nome>''" << std::endl;
         std::cout<< ".REMOVER JOGADOR: DIGITE ''RJ <APELIDO>''" << std::endl;
         std::cout<< ".LISTAR JOGADORES: DIGITE ''LJ [A/N]''" <<std::endl;
-        std::cout<< ".EXECUTAR PARTIDA: DIGITE ''EP <JOGO: (R/L)> <Apelido1> <Apelido2>''" << std::endl;
+        std::cout<< ".EXECUTAR PARTIDA: DIGITE ''EP <JOGO: (D/L/R)> <Apelido1> <Apelido2>''" << std::endl;
         std::cout<< ".FINALIZAR SISTEMA: DIGITE ''FS''" << std::endl;
         std::cout<< "--------------------------------------------------------------------" <<std::endl;
         std::cout<< "-> ";
@@ -61,7 +62,7 @@ int main() {
             std::string jogador1;
             std::string jogador2;
             if(iss >> jogo >> jogador1 >> jogador2){
-                if(jogo != "R" && jogo != "L") {
+                if(jogo != "R" && jogo != "L" && jogo != "D") {
                     std::cout << "ERRO: dados incorretos" << std:: endl;
                     continue;
                 }
@@ -86,7 +87,11 @@ int main() {
                         jogo->start(jogador1, jogador2, cadastro);
                         delete jogo;
                         std::cin.ignore();
-                    }
+                } else if (jogo == "D") {
+                        Damas* jogo = new Damas();
+                        jogo->start(jogador1, jogador2, cadastro);
+                        delete jogo;
+                }
             } else{
                 std::cout << "Comando invalido para executar partida!" << std::endl;
                 }
