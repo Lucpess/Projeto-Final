@@ -6,7 +6,6 @@
 
 // Testa a construtora da classe Lig4
 TEST_CASE("Testar construtora da classe Lig4") {
-    Lig4 lig4;
     CHECK_NOTHROW(Lig4 lig4);
 }
 
@@ -45,11 +44,17 @@ TEST_CASE("Testar start") {
 
     lig4.start("Jogador1", "Jogador2", cadastro);
 
-    // Verifica se o jogo terminou e se a saída foi impressa corretamente
     std::string output = outputStream.str();
-    CHECK(output.find("TURNO DE Jogador1") != std::string::npos || 
-          output.find("TURNO DE Jogador2") != std::string::npos);
+    
+    // Verifica as mensagens esperadas usando SUBCASE para evitar complexidade
+    SUBCASE("Verificar turno de Jogador1") {
+        CHECK(output.find("TURNO DE Jogador1") != std::string::npos);
+    }
+    
+    SUBCASE("Verificar turno de Jogador2") {
+        CHECK(output.find("TURNO DE Jogador2") != std::string::npos);
+    }
 
     std::cin.rdbuf(originalInputBuffer);
     std::cout.rdbuf(originalBuffer);
-} 
+}

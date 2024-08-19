@@ -257,13 +257,6 @@ TEST_CASE("Cadastro::registrarResultado") {
         CHECK_THROWS_AS(cadastro.registrarResultado("jogador1", "jogador3", 'R'), std::runtime_error);
     }
 }
-// Helper function to set up a Cadastro instance with sample data
-Cadastro createSampleCadastro() {
-    Cadastro cadastro;
-    cadastro.cadastraJogador("jogador1", "Nome1");
-    cadastro.cadastraJogador("jogador2", "Nome2");
-    return cadastro;
-}
 
 TEST_CASE("Cadastro::existeJogador") {
     Cadastro cadastro = createSampleCadastro();

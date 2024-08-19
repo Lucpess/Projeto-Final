@@ -1,7 +1,6 @@
 #include "doctest.h"
 #include "jogador.hpp"
-#include <sstream> // Necessário para std::stringstream
-
+#include <sstream>
 // Testa o construtor padrão e os métodos getter
 TEST_CASE("Testa Jogador - Construtor padrão e getters") {
     Jogador jogador;
