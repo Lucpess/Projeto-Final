@@ -1,0 +1,64 @@
+\doxysection{teste\+\_\+cadastro.\+cpp}
+\hypertarget{teste__cadastro_8cpp_source}{}\label{teste__cadastro_8cpp_source}\index{tests/teste\_cadastro.cpp@{tests/teste\_cadastro.cpp}}
+\mbox{\hyperlink{teste__cadastro_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{cadastro_8hpp}{cadastro.hpp}}"{}}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{doctest_8h}{doctest.h}}"{}}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <stdexcept>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <fstream>}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{comment}{//\ Função\ auxiliar\ para\ limpar\ o\ arquivo\ de\ cadastro\ antes\ dos\ testes}}
+\DoxyCodeLine{00007\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ limparArquivoCadastro()\ \{}
+\DoxyCodeLine{00008\ \ \ \ \ std::ofstream\ arquivo(\textcolor{stringliteral}{"{}cadastro\_jogadores.txt"{}},\ std::ios::trunc);}
+\DoxyCodeLine{00009\ \ \ \ \ arquivo.close();}
+\DoxyCodeLine{00010\ \}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \mbox{\hyperlink{doctest_8h_a8bc255ff55721571e878568d2b5dcb35}{TEST\_CASE}}(\textcolor{stringliteral}{"{}Testes\ da\ classe\ Cadastro"{}})\ \{}
+\DoxyCodeLine{00013\ \ \ \ \ limparArquivoCadastro();\ \textcolor{comment}{//\ Garante\ que\ o\ arquivo\ esteja\ vazio\ antes\ de\ cada\ teste}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \ \ \ \ \mbox{\hyperlink{class_cadastro}{Cadastro}}\ cadastro;}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \ \ \ \ \mbox{\hyperlink{doctest_8h_a4147381e5cb6f68c1a315a852c63bf70}{SUBCASE}}(\textcolor{stringliteral}{"{}Testa\ cadastro\ de\ jogador"{}})\ \{}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ cadastro.\mbox{\hyperlink{class_cadastro_a85ac50d02ef963bed26bb543baafd065}{cadastraJogador}}(\textcolor{stringliteral}{"{}apelido1"{}},\ \textcolor{stringliteral}{"{}Nome\ Um"{}});}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{doctest_8h_a836cca6b6ed3a1706353f6d1bca0935f}{CHECK}}(cadastro.\mbox{\hyperlink{class_cadastro_a003e5ec58ba5062790034289919690c9}{existeJogador}}(\textcolor{stringliteral}{"{}apelido1"{}})\ ==\ \textcolor{keyword}{true});}
+\DoxyCodeLine{00020\ \ \ \ \ \ }
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ cadastro.\mbox{\hyperlink{class_cadastro_a2bee46f0c4a23f71f51e2fdf6abff9e8}{removeJogador}}(\textcolor{stringliteral}{"{}apelido2"{}});}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{doctest_8h_a836cca6b6ed3a1706353f6d1bca0935f}{CHECK}}(cadastro.\mbox{\hyperlink{class_cadastro_a003e5ec58ba5062790034289919690c9}{existeJogador}}(\textcolor{stringliteral}{"{}apelido2"{}})\ ==\ \textcolor{keyword}{false});\ \textcolor{comment}{//\ O\ jogador\ deve\ continuar\ não\ existindo\ após\ tentar\ removê-\/lo\ novamente}}
+\DoxyCodeLine{00023\ \ \ \ \ \}}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \ \ \mbox{\hyperlink{doctest_8h_a4147381e5cb6f68c1a315a852c63bf70}{SUBCASE}}(\textcolor{stringliteral}{"{}Testa\ remoção\ de\ jogador"{}})\ \{}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ cadastro.\mbox{\hyperlink{class_cadastro_a85ac50d02ef963bed26bb543baafd065}{cadastraJogador}}(\textcolor{stringliteral}{"{}apelido2"{}},\ \textcolor{stringliteral}{"{}Nome\ Dois"{}});}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{doctest_8h_a836cca6b6ed3a1706353f6d1bca0935f}{CHECK}}(cadastro.\mbox{\hyperlink{class_cadastro_a003e5ec58ba5062790034289919690c9}{existeJogador}}(\textcolor{stringliteral}{"{}apelido2"{}})\ ==\ \textcolor{keyword}{true});}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ cadastro.\mbox{\hyperlink{class_cadastro_a2bee46f0c4a23f71f51e2fdf6abff9e8}{removeJogador}}(\textcolor{stringliteral}{"{}apelido2"{}});}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{doctest_8h_a836cca6b6ed3a1706353f6d1bca0935f}{CHECK}}(cadastro.\mbox{\hyperlink{class_cadastro_a003e5ec58ba5062790034289919690c9}{existeJogador}}(\textcolor{stringliteral}{"{}apelido2"{}})\ ==\ \textcolor{keyword}{false});}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ cadastro.\mbox{\hyperlink{class_cadastro_a2bee46f0c4a23f71f51e2fdf6abff9e8}{removeJogador}}(\textcolor{stringliteral}{"{}apelido2"{}});}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{doctest_8h_a836cca6b6ed3a1706353f6d1bca0935f}{CHECK}}(cadastro.\mbox{\hyperlink{class_cadastro_a003e5ec58ba5062790034289919690c9}{existeJogador}}(\textcolor{stringliteral}{"{}apelido2"{}})\ ==\ \textcolor{keyword}{false});\ \textcolor{comment}{//\ O\ jogador\ deve\ continuar\ não\ existindo\ após\ tentar\ removê-\/lo\ novamente}}
+\DoxyCodeLine{00034\ \ \ \ \ \}}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \ \ \ \ \mbox{\hyperlink{doctest_8h_a4147381e5cb6f68c1a315a852c63bf70}{SUBCASE}}(\textcolor{stringliteral}{"{}Testa\ registro\ de\ resultado"{}})\ \{}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ cadastro.\mbox{\hyperlink{class_cadastro_a85ac50d02ef963bed26bb543baafd065}{cadastraJogador}}(\textcolor{stringliteral}{"{}apelido3"{}},\ \textcolor{stringliteral}{"{}Nome\ Três"{}});}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ cadastro.\mbox{\hyperlink{class_cadastro_a85ac50d02ef963bed26bb543baafd065}{cadastraJogador}}(\textcolor{stringliteral}{"{}apelido4"{}},\ \textcolor{stringliteral}{"{}Nome\ Quatro"{}});}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Ao\ invés\ de\ verificar\ exceções,\ podemos\ verificar\ se\ os\ resultados\ estão\ consistentes\ após\ a\ operação}}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ cadastro.\mbox{\hyperlink{class_cadastro_aa96211fefded33a0897ec4e358e7dc44}{registrarResultado}}(\textcolor{stringliteral}{"{}apelido3"{}},\ \textcolor{stringliteral}{"{}apelido4"{}},\ \textcolor{charliteral}{'R'});}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{doctest_8h_a836cca6b6ed3a1706353f6d1bca0935f}{CHECK}}(cadastro.\mbox{\hyperlink{class_cadastro_a003e5ec58ba5062790034289919690c9}{existeJogador}}(\textcolor{stringliteral}{"{}apelido3"{}})\ ==\ \textcolor{keyword}{true});}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{doctest_8h_a836cca6b6ed3a1706353f6d1bca0935f}{CHECK}}(cadastro.\mbox{\hyperlink{class_cadastro_a003e5ec58ba5062790034289919690c9}{existeJogador}}(\textcolor{stringliteral}{"{}apelido4"{}})\ ==\ \textcolor{keyword}{true});}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ cadastro.\mbox{\hyperlink{class_cadastro_aa96211fefded33a0897ec4e358e7dc44}{registrarResultado}}(\textcolor{stringliteral}{"{}apelido4"{}},\ \textcolor{stringliteral}{"{}apelido3"{}},\ \textcolor{charliteral}{'L'});}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{doctest_8h_a836cca6b6ed3a1706353f6d1bca0935f}{CHECK}}(cadastro.\mbox{\hyperlink{class_cadastro_a003e5ec58ba5062790034289919690c9}{existeJogador}}(\textcolor{stringliteral}{"{}apelido3"{}})\ ==\ \textcolor{keyword}{true});}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{doctest_8h_a836cca6b6ed3a1706353f6d1bca0935f}{CHECK}}(cadastro.\mbox{\hyperlink{class_cadastro_a003e5ec58ba5062790034289919690c9}{existeJogador}}(\textcolor{stringliteral}{"{}apelido4"{}})\ ==\ \textcolor{keyword}{true});}
+\DoxyCodeLine{00048\ \ \ \ \ \}}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \ \ \ \ \mbox{\hyperlink{doctest_8h_a4147381e5cb6f68c1a315a852c63bf70}{SUBCASE}}(\textcolor{stringliteral}{"{}Testa\ lista\ de\ jogadores\ ordenados"{}})\ \{}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ cadastro.\mbox{\hyperlink{class_cadastro_a85ac50d02ef963bed26bb543baafd065}{cadastraJogador}}(\textcolor{stringliteral}{"{}apelido5"{}},\ \textcolor{stringliteral}{"{}Carlos"{}});}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ cadastro.\mbox{\hyperlink{class_cadastro_a85ac50d02ef963bed26bb543baafd065}{cadastraJogador}}(\textcolor{stringliteral}{"{}apelido6"{}},\ \textcolor{stringliteral}{"{}Ana"{}});}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \textcolor{comment}{//\ Não\ esperamos\ mais\ exceções\ aqui,\ apenas\ verificamos\ se\ a\ função\ pode\ ser\ chamada}}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{doctest_8h_a78e70f011f20c4ade1d1ac2b8fd33626}{CHECK\_NOTHROW}}(cadastro.\mbox{\hyperlink{class_cadastro_aa498351ac52ddf342be614d943971b98}{listaJogadores}}(\textcolor{stringliteral}{"{}N"{}}));}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{doctest_8h_a78e70f011f20c4ade1d1ac2b8fd33626}{CHECK\_NOTHROW}}(cadastro.\mbox{\hyperlink{class_cadastro_aa498351ac52ddf342be614d943971b98}{listaJogadores}}(\textcolor{stringliteral}{"{}A"{}}));}
+\DoxyCodeLine{00057\ \ \ \ \ \}}
+\DoxyCodeLine{00058\ \}}
+
+\end{DoxyCode}

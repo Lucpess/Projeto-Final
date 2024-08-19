@@ -1,5 +1,8 @@
 var searchData=
 [
-  ['imprimetabuleiro_0',['imprimeTabuleiro',['../class_tabuleiro.html#afd32590d321f13edfdba8a26273f3f03',1,'Tabuleiro']]],
-  ['inicializatabuleiro_1',['inicializaTabuleiro',['../class_tabuleiro.html#a8fd74e701547bfc43651b2c127f4a918',1,'Tabuleiro']]]
+  ['epsilon_0',['epsilon',['../structdoctest_1_1_approx.html#a3a9093777280fcf5fd79e79b1c202ba8',1,'doctest::Approx']]],
+  ['exceptiontranslator_1',['ExceptionTranslator',['../classdoctest_1_1detail_1_1_exception_translator.html#a3ac05488993c40c6ba55ce51a6bf7eae',1,'doctest::detail::ExceptionTranslator']]],
+  ['existejogador_2',['existeJogador',['../class_cadastro.html#a003e5ec58ba5062790034289919690c9',1,'Cadastro']]],
+  ['expression_5flhs_3',['Expression_lhs',['../structdoctest_1_1detail_1_1_expression__lhs.html#ab5d05d371e81dd7724592174afbfeba1',1,'doctest::detail::Expression_lhs']]],
+  ['expressiondecomposer_4',['ExpressionDecomposer',['../structdoctest_1_1detail_1_1_expression_decomposer.html#a6bf2c46ebf0dc68106be801a90776e65',1,'doctest::detail::ExpressionDecomposer']]]
 ];

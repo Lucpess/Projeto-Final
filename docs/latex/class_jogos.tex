@@ -1,0 +1,112 @@
+\doxysection{Jogos Class Reference}
+\hypertarget{class_jogos}{}\label{class_jogos}\index{Jogos@{Jogos}}
+
+
+{\ttfamily \#include $<$jogos.\+hpp$>$}
+
+Inheritance diagram for Jogos\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_jogos}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_jogos_a3b4fd105cd0c47d57898ffeb129b4457}{Jogos}} (char jogo)
+\item 
+virtual \mbox{\hyperlink{class_jogos_a67bcdb76ed95071291667ff50447f86a}{\texorpdfstring{$\sim$}{\string~}\+Jogos}} ()
+\item 
+virtual void \mbox{\hyperlink{class_jogos_a79a41dfb55b1bdce83eb97955152df04}{start}} (std\+::string jogador1, std\+::string jogador2, \mbox{\hyperlink{class_cadastro}{Cadastro}} \&cadastro)=0
+\item 
+void \mbox{\hyperlink{class_jogos_aa1b6a1b33086146301e6cc53a298ed3e}{print\+Tabuleiro}} () const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_jogos_a0ee362e105f71b733bf250776e201730}{muda\+Turno}} ()
+\item 
+virtual void \mbox{\hyperlink{class_jogos_ac7eed25a60f0a28ac7c902b90f209b50}{anuncia\+Turno}} (std\+::string jogador1, std\+::string jogador2)=0
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_jogos_aecbbe002c4ed720469bc678fcef81872}{fim\+De\+Jogo}}
+\item 
+\mbox{\hyperlink{class_tabuleiro}{Tabuleiro}} \mbox{\hyperlink{class_jogos_a022fc7c967fd10dbb0b6997f3b2403f5}{tabuleiro}}
+\item 
+std\+::string \mbox{\hyperlink{class_jogos_af2e03fe462b5edd6c87d9a4d042bfdfd}{turno}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_jogos_a3b4fd105cd0c47d57898ffeb129b4457}\index{Jogos@{Jogos}!Jogos@{Jogos}}
+\index{Jogos@{Jogos}!Jogos@{Jogos}}
+\doxysubsubsection{\texorpdfstring{Jogos()}{Jogos()}}
+{\footnotesize\ttfamily \label{class_jogos_a3b4fd105cd0c47d57898ffeb129b4457} 
+Jogos\+::\+Jogos (\begin{DoxyParamCaption}\item[{char}]{jogo}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_jogos_a67bcdb76ed95071291667ff50447f86a}\index{Jogos@{Jogos}!````~Jogos@{\texorpdfstring{$\sim$}{\string~}Jogos}}
+\index{````~Jogos@{\texorpdfstring{$\sim$}{\string~}Jogos}!Jogos@{Jogos}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Jogos()}{\string~Jogos()}}
+{\footnotesize\ttfamily \label{class_jogos_a67bcdb76ed95071291667ff50447f86a} 
+Jogos\+::\texorpdfstring{$\sim$}{\string~}\+Jogos (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_jogos_ac7eed25a60f0a28ac7c902b90f209b50}\index{Jogos@{Jogos}!anunciaTurno@{anunciaTurno}}
+\index{anunciaTurno@{anunciaTurno}!Jogos@{Jogos}}
+\doxysubsubsection{\texorpdfstring{anunciaTurno()}{anunciaTurno()}}
+{\footnotesize\ttfamily \label{class_jogos_ac7eed25a60f0a28ac7c902b90f209b50} 
+virtual void Jogos\+::anuncia\+Turno (\begin{DoxyParamCaption}\item[{std\+::string}]{jogador1}{, }\item[{std\+::string}]{jogador2}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+\Hypertarget{class_jogos_a0ee362e105f71b733bf250776e201730}\index{Jogos@{Jogos}!mudaTurno@{mudaTurno}}
+\index{mudaTurno@{mudaTurno}!Jogos@{Jogos}}
+\doxysubsubsection{\texorpdfstring{mudaTurno()}{mudaTurno()}}
+{\footnotesize\ttfamily \label{class_jogos_a0ee362e105f71b733bf250776e201730} 
+void Jogos\+::muda\+Turno (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_jogos_aa1b6a1b33086146301e6cc53a298ed3e}\index{Jogos@{Jogos}!printTabuleiro@{printTabuleiro}}
+\index{printTabuleiro@{printTabuleiro}!Jogos@{Jogos}}
+\doxysubsubsection{\texorpdfstring{printTabuleiro()}{printTabuleiro()}}
+{\footnotesize\ttfamily \label{class_jogos_aa1b6a1b33086146301e6cc53a298ed3e} 
+void Jogos\+::print\+Tabuleiro (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+\Hypertarget{class_jogos_a79a41dfb55b1bdce83eb97955152df04}\index{Jogos@{Jogos}!start@{start}}
+\index{start@{start}!Jogos@{Jogos}}
+\doxysubsubsection{\texorpdfstring{start()}{start()}}
+{\footnotesize\ttfamily \label{class_jogos_a79a41dfb55b1bdce83eb97955152df04} 
+virtual void Jogos\+::start (\begin{DoxyParamCaption}\item[{std\+::string}]{jogador1}{, }\item[{std\+::string}]{jogador2}{, }\item[{\mbox{\hyperlink{class_cadastro}{Cadastro}} \&}]{cadastro}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_lig4_a2fe5667ca383cf813b1497f3abf09317}{Lig4}}, and \mbox{\hyperlink{class_reversi_a2f5e5c50a1f68f8e61a77c733a6b5ad6}{Reversi}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_jogos_aecbbe002c4ed720469bc678fcef81872}\index{Jogos@{Jogos}!fimDeJogo@{fimDeJogo}}
+\index{fimDeJogo@{fimDeJogo}!Jogos@{Jogos}}
+\doxysubsubsection{\texorpdfstring{fimDeJogo}{fimDeJogo}}
+{\footnotesize\ttfamily \label{class_jogos_aecbbe002c4ed720469bc678fcef81872} 
+bool Jogos\+::fim\+De\+Jogo\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_jogos_a022fc7c967fd10dbb0b6997f3b2403f5}\index{Jogos@{Jogos}!tabuleiro@{tabuleiro}}
+\index{tabuleiro@{tabuleiro}!Jogos@{Jogos}}
+\doxysubsubsection{\texorpdfstring{tabuleiro}{tabuleiro}}
+{\footnotesize\ttfamily \label{class_jogos_a022fc7c967fd10dbb0b6997f3b2403f5} 
+\mbox{\hyperlink{class_tabuleiro}{Tabuleiro}} Jogos\+::tabuleiro\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_jogos_af2e03fe462b5edd6c87d9a4d042bfdfd}\index{Jogos@{Jogos}!turno@{turno}}
+\index{turno@{turno}!Jogos@{Jogos}}
+\doxysubsubsection{\texorpdfstring{turno}{turno}}
+{\footnotesize\ttfamily \label{class_jogos_af2e03fe462b5edd6c87d9a4d042bfdfd} 
+std\+::string Jogos\+::turno\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{jogos_8hpp}{jogos.\+hpp}}\item 
+src/\mbox{\hyperlink{jogos_8cpp}{jogos.\+cpp}}\end{DoxyCompactItemize}

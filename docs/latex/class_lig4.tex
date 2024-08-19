@@ -4,18 +4,48 @@
 
 {\ttfamily \#include $<$lig4.\+hpp$>$}
 
+Inheritance diagram for Lig4\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_lig4}
+\end{center}
+\end{figure}
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_lig4_adffdeddf3d20829f752913801554126d}{Lig4}} ()
 \item 
-void \mbox{\hyperlink{class_lig4_a8535fb3473b042102eb906c90eddc191}{start}} (std\+::string jogador1, std\+::string jogador2, \mbox{\hyperlink{class_cadastro}{Cadastro}} \&cadastro)
+\mbox{\hyperlink{class_lig4_add1bf78f99caaf523113e7f4cf843744}{\texorpdfstring{$\sim$}{\string~}\+Lig4}} ()
+\item 
+void \mbox{\hyperlink{class_lig4_a2fe5667ca383cf813b1497f3abf09317}{start}} (std\+::string jogador1, std\+::string jogador2, \mbox{\hyperlink{class_cadastro}{Cadastro}} \&cadastro) override
 \item 
 bool \mbox{\hyperlink{class_lig4_aae4580104c813a6015328a54f08f5381}{verifica4}} (int linha, int coluna)
 \item 
 int \mbox{\hyperlink{class_lig4_aa69d47955ffc48d1347659fd4224a6a9}{verifica\+Fim\+De\+Jogo}} (int coluna, std\+::string jogador1, std\+::string jogador2, \mbox{\hyperlink{class_cadastro}{Cadastro}} \&cadastro)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_jogos}{Jogos}}}
+\begin{DoxyCompactItemize}
 \item 
-void \mbox{\hyperlink{class_lig4_ad6d70005f2f3362fb6cd5708466a3cab}{print\+Tabuleiro}} () const
+\mbox{\hyperlink{class_jogos_a3b4fd105cd0c47d57898ffeb129b4457}{Jogos}} (char jogo)
+\item 
+virtual \mbox{\hyperlink{class_jogos_a67bcdb76ed95071291667ff50447f86a}{\texorpdfstring{$\sim$}{\string~}\+Jogos}} ()
+\item 
+void \mbox{\hyperlink{class_jogos_aa1b6a1b33086146301e6cc53a298ed3e}{print\+Tabuleiro}} () const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_jogos}{Jogos}}}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_jogos_a0ee362e105f71b733bf250776e201730}{muda\+Turno}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_jogos}{Jogos}}}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_jogos_aecbbe002c4ed720469bc678fcef81872}{fim\+De\+Jogo}}
+\item 
+\mbox{\hyperlink{class_tabuleiro}{Tabuleiro}} \mbox{\hyperlink{class_jogos_a022fc7c967fd10dbb0b6997f3b2403f5}{tabuleiro}}
+\item 
+std\+::string \mbox{\hyperlink{class_jogos_af2e03fe462b5edd6c87d9a4d042bfdfd}{turno}}
 \end{DoxyCompactItemize}
 
 
@@ -26,20 +56,24 @@ void \mbox{\hyperlink{class_lig4_ad6d70005f2f3362fb6cd5708466a3cab}{print\+Tabul
 {\footnotesize\ttfamily \label{class_lig4_adffdeddf3d20829f752913801554126d} 
 Lig4\+::\+Lig4 (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
+\Hypertarget{class_lig4_add1bf78f99caaf523113e7f4cf843744}\index{Lig4@{Lig4}!````~Lig4@{\texorpdfstring{$\sim$}{\string~}Lig4}}
+\index{````~Lig4@{\texorpdfstring{$\sim$}{\string~}Lig4}!Lig4@{Lig4}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Lig4()}{\string~Lig4()}}
+{\footnotesize\ttfamily \label{class_lig4_add1bf78f99caaf523113e7f4cf843744} 
+Lig4\+::\texorpdfstring{$\sim$}{\string~}\+Lig4 (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
 
 
 \doxysubsection{Member Function Documentation}
-\Hypertarget{class_lig4_ad6d70005f2f3362fb6cd5708466a3cab}\index{Lig4@{Lig4}!printTabuleiro@{printTabuleiro}}
-\index{printTabuleiro@{printTabuleiro}!Lig4@{Lig4}}
-\doxysubsubsection{\texorpdfstring{printTabuleiro()}{printTabuleiro()}}
-{\footnotesize\ttfamily \label{class_lig4_ad6d70005f2f3362fb6cd5708466a3cab} 
-void Lig4\+::print\+Tabuleiro (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
-
-\Hypertarget{class_lig4_a8535fb3473b042102eb906c90eddc191}\index{Lig4@{Lig4}!start@{start}}
+\Hypertarget{class_lig4_a2fe5667ca383cf813b1497f3abf09317}\index{Lig4@{Lig4}!start@{start}}
 \index{start@{start}!Lig4@{Lig4}}
 \doxysubsubsection{\texorpdfstring{start()}{start()}}
-{\footnotesize\ttfamily \label{class_lig4_a8535fb3473b042102eb906c90eddc191} 
-void Lig4\+::start (\begin{DoxyParamCaption}\item[{std\+::string}]{jogador1}{, }\item[{std\+::string}]{jogador2}{, }\item[{\mbox{\hyperlink{class_cadastro}{Cadastro}} \&}]{cadastro}{}\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \label{class_lig4_a2fe5667ca383cf813b1497f3abf09317} 
+void Lig4\+::start (\begin{DoxyParamCaption}\item[{std\+::string}]{jogador1}{, }\item[{std\+::string}]{jogador2}{, }\item[{\mbox{\hyperlink{class_cadastro}{Cadastro}} \&}]{cadastro}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_jogos_a79a41dfb55b1bdce83eb97955152df04}{Jogos}}.
 
 \Hypertarget{class_lig4_aae4580104c813a6015328a54f08f5381}\index{Lig4@{Lig4}!verifica4@{verifica4}}
 \index{verifica4@{verifica4}!Lig4@{Lig4}}

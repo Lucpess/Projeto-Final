@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['pecaadversaria_0',['pecaAdversaria',['../class_reversi.html#a0c015d7075f854589ec9bc435ccc6241',1,'Reversi']]],
-  ['posicaopermitida_1',['posicaoPermitida',['../class_reversi.html#ae260f3b4a8e2f0db0fa170ee9707c821',1,'Reversi']]],
-  ['printresultados_2',['printResultados',['../class_jogador.html#a24fecaee75ae65955613d8da4bfc34d0',1,'Jogador']]],
-  ['printtabuleiro_3',['printTabuleiro',['../class_lig4.html#ad6d70005f2f3362fb6cd5708466a3cab',1,'Lig4::printTabuleiro()'],['../class_reversi.html#a86bb92a4fb19f9633306950944894bb2',1,'Reversi::printTabuleiro()']]]
+  ['jogadasvalidas_0',['jogadasValidas',['../class_reversi.html#a45886fc3420b9bb2489600344d099456',1,'Reversi']]],
+  ['jogador_1',['Jogador',['../class_jogador.html#a94a4939138ce04d2f3ceb68257517ac1',1,'Jogador::Jogador()'],['../class_jogador.html#ad4fbe85edf3b7f92481224e1e28e7c54',1,'Jogador::Jogador(const std::string &amp;apelido, const std::string &amp;nome, int vitorias_reversi=0, int derrotas_reversi=0, int vitorias_lig4=0, int derrotas_lig4=0)']]],
+  ['jogos_2',['Jogos',['../class_jogos.html#a3b4fd105cd0c47d57898ffeb129b4457',1,'Jogos']]]
 ];

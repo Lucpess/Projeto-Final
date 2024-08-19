@@ -5,37 +5,33 @@
 \DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ REVERSI\_HPP}}
 \DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ REVERSI\_HPP}}
 \DoxyCodeLine{00003\ }
-\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{tabuleiro_8hpp}{tabuleiro.hpp}}"{}}}
-\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{cadastro_8hpp}{cadastro.hpp}}"{}}}
-\DoxyCodeLine{00006\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_reversi}{Reversi}}\ \{}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{jogos_8hpp}{jogos.hpp}}"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_reversi}{Reversi}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_jogos}{Jogos}}\{}
 \DoxyCodeLine{00007\ \textcolor{keyword}{public}:}
 \DoxyCodeLine{00008\ \ \ \ \mbox{\hyperlink{class_reversi_a73e3ca5c21b634f9c490b404d62f0e01}{Reversi}}();}
-\DoxyCodeLine{00009\ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_reversi_a31c311ebedd69fc7441f00dddd17ab0b}{start}}(std::string\ jogador1,\ std::string\ jogador2,\ \mbox{\hyperlink{class_cadastro}{Cadastro}}\&\ cadastro\ );}
-\DoxyCodeLine{00010\ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_reversi_a08eb0f4733cf4f4111808ac738b946b6}{verificaFimDeJogo}}(std::string\ jogador1,\ std::string\ jogador2,\ \mbox{\hyperlink{class_cadastro}{Cadastro}}\&\ cadastro);}
-\DoxyCodeLine{00011\ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_reversi_a86bb92a4fb19f9633306950944894bb2}{printTabuleiro}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00009\ \ \ \ \mbox{\hyperlink{class_reversi_afd006e4fdacdedc4a3bb34fe6f1d1940}{\string~Reversi}}();}
+\DoxyCodeLine{00010\ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_reversi_a2f5e5c50a1f68f8e61a77c733a6b5ad6}{start}}(std::string\ jogador1,\ std::string\ jogador2,\ \mbox{\hyperlink{class_cadastro}{Cadastro}}\&\ cadastro\ )\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00011\ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_reversi_a08eb0f4733cf4f4111808ac738b946b6}{verificaFimDeJogo}}(std::string\ jogador1,\ std::string\ jogador2,\ \mbox{\hyperlink{class_cadastro}{Cadastro}}\&\ cadastro);}
 \DoxyCodeLine{00012\ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_reversi_ae47e31bdcfd335c435b6a0438322df0e}{verificaLinha}}(\textcolor{keywordtype}{int},\ \textcolor{keywordtype}{int},\ std::string\ estado);}
 \DoxyCodeLine{00013\ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_reversi_a671909797a8f896296dc7ef3876f4c48}{verificaColuna}}(\textcolor{keywordtype}{int},\ \textcolor{keywordtype}{int},\ std::string\ estado);}
 \DoxyCodeLine{00014\ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_reversi_a4338723e062ab15e31a14e5c38067791}{verificaDiagonal}}(\textcolor{keywordtype}{int},\ \textcolor{keywordtype}{int},\ std::string\ estado);}
 \DoxyCodeLine{00015\ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_reversi_a0d25dfa7c4fca829e5fd471fb00e5243}{contarPecas}}(\textcolor{keywordtype}{int}\&\ pecasBrancas,\ \textcolor{keywordtype}{int}\&\ pecasPretas);}
 \DoxyCodeLine{00016\ \ \ \ std::string\ \mbox{\hyperlink{class_reversi_a0c015d7075f854589ec9bc435ccc6241}{pecaAdversaria}}();}
-\DoxyCodeLine{00017\ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_reversi_ae260f3b4a8e2f0db0fa170ee9707c821}{posicaoPermitida}}(\textcolor{keywordtype}{int}\ i,\ \textcolor{keywordtype}{int}\ j,\ std::string\ turno);}
+\DoxyCodeLine{00017\ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_reversi_ae260f3b4a8e2f0db0fa170ee9707c821}{posicaoPermitida}}(\textcolor{keywordtype}{int}\ i,\ \textcolor{keywordtype}{int}\ j,\ std::string\ \mbox{\hyperlink{class_jogos_af2e03fe462b5edd6c87d9a4d042bfdfd}{turno}});}
 \DoxyCodeLine{00018\ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_reversi_ab7f2baa7cb4bf083806ba3b7ea229f28}{temJogadasValidas}}(std::string\ jogador);}
-\DoxyCodeLine{00019\ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_reversi_a45886fc3420b9bb2489600344d099456}{jogadasValidas}}(std::string\ turno);}
+\DoxyCodeLine{00019\ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_reversi_a45886fc3420b9bb2489600344d099456}{jogadasValidas}}(std::string\ \mbox{\hyperlink{class_jogos_af2e03fe462b5edd6c87d9a4d042bfdfd}{turno}});}
 \DoxyCodeLine{00020\ }
 \DoxyCodeLine{00021\ \textcolor{keyword}{private}:}
-\DoxyCodeLine{00022\ \ \ \ \textcolor{keywordtype}{bool}\ fimDeJogo;}
-\DoxyCodeLine{00023\ \ \ \ \mbox{\hyperlink{class_tabuleiro}{Tabuleiro}}\ tabuleiro;}
-\DoxyCodeLine{00024\ \ \ \ std::string\ turno;}
-\DoxyCodeLine{00025\ \ \ \ \textcolor{keywordtype}{bool}\ jogadaPermitida(\textcolor{keywordtype}{int}\ linha,\ \textcolor{keywordtype}{int}\ col);}
-\DoxyCodeLine{00026\ \ \ \ \textcolor{keywordtype}{void}\ viraPecasColuna(\textcolor{keywordtype}{int}\ linha,\ \textcolor{keywordtype}{int}\ col,\ std::string\ turno);}
-\DoxyCodeLine{00027\ \ \ \ \textcolor{keywordtype}{void}\ viraPecasLinha(\textcolor{keywordtype}{int}\ linha,\ \textcolor{keywordtype}{int}\ col,\ std::string\ turno);}
-\DoxyCodeLine{00028\ \ \ \ \textcolor{keywordtype}{void}\ viraPecasDiagonal(\textcolor{keywordtype}{int}\ linha,\ \textcolor{keywordtype}{int}\ col,\ std::string\ turno);}
-\DoxyCodeLine{00029\ \ \ \ \textcolor{keywordtype}{void}\ mudaTurno();}
-\DoxyCodeLine{00030\ \ \ \ \textcolor{keywordtype}{void}\ anunciaTurno(std::string\ jogador1,\ std::string\ jogador2);}
-\DoxyCodeLine{00031\ \ \ \ std::vector<std::pair<int,\ int>>\ jogadasValidas\_;}
-\DoxyCodeLine{00032\ \ \ \ std::string\ jogador;}
-\DoxyCodeLine{00033\ \};}
-\DoxyCodeLine{00034\ }
-\DoxyCodeLine{00035\ \textcolor{preprocessor}{\#endif\ }}
+\DoxyCodeLine{00022\ \ \ \ \textcolor{keywordtype}{bool}\ jogadaPermitida(\textcolor{keywordtype}{int}\ linha,\ \textcolor{keywordtype}{int}\ col);}
+\DoxyCodeLine{00023\ \ \ \ \textcolor{keywordtype}{void}\ viraPecasColuna(\textcolor{keywordtype}{int}\ linha,\ \textcolor{keywordtype}{int}\ col,\ std::string\ \mbox{\hyperlink{class_jogos_af2e03fe462b5edd6c87d9a4d042bfdfd}{turno}});}
+\DoxyCodeLine{00024\ \ \ \ \textcolor{keywordtype}{void}\ viraPecasLinha(\textcolor{keywordtype}{int}\ linha,\ \textcolor{keywordtype}{int}\ col,\ std::string\ \mbox{\hyperlink{class_jogos_af2e03fe462b5edd6c87d9a4d042bfdfd}{turno}});}
+\DoxyCodeLine{00025\ \ \ \ \textcolor{keywordtype}{void}\ viraPecasDiagonal(\textcolor{keywordtype}{int}\ linha,\ \textcolor{keywordtype}{int}\ col,\ std::string\ \mbox{\hyperlink{class_jogos_af2e03fe462b5edd6c87d9a4d042bfdfd}{turno}});}
+\DoxyCodeLine{00026\ \ \ \ \textcolor{keywordtype}{void}\ anunciaTurno(std::string\ jogador1,\ std::string\ jogador2)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00027\ \ \ \ std::vector<std::pair<int,\ int>>\ jogadasValidas\_;}
+\DoxyCodeLine{00028\ \ \ \ std::string\ jogador;}
+\DoxyCodeLine{00029\ \};}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#endif\ }}
 
 \end{DoxyCode}

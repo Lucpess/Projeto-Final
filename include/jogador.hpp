@@ -12,6 +12,8 @@ class Jogador {
         int derrotasReversi;
         int vitoriasLig4;
         int derrotasLig4;
+        int vitoriasDama;  
+        int derrotasDama;
     
     public:
         std::string getApelido() const; 
@@ -20,6 +22,8 @@ class Jogador {
         int getDerrotasReversi() const;
         int getVitoriasLig4() const;
         int getDerrotasLig4() const;
+        int getVitoriasDama() const; 
+        int getDerrotasDama() const;
 
         void printResultados() const; 
 
@@ -28,10 +32,12 @@ class Jogador {
         void addDerrotaReversi();
         void addVitoriaLig4();
         void addDerrotaLig4();
+        void addVitoriaDama(); 
+        void addDerrotaDama(); 
 
         Jogador();
         Jogador(const std::string& apelido, const std::string& nome, 
-        int vitorias_reversi = 0, int derrotas_reversi = 0, int vitorias_lig4 = 0, int derrotas_lig4 = 0);
+        int vitorias_reversi = 0, int derrotas_reversi = 0, int vitorias_lig4 = 0, int derrotas_lig4 = 0, int vitorias_dama = 0, int derrotas_dama = 0);
 }; 
 
 #endif

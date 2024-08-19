@@ -4,16 +4,22 @@
 
 {\ttfamily \#include $<$reversi.\+hpp$>$}
 
+Inheritance diagram for Reversi\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_reversi}
+\end{center}
+\end{figure}
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_reversi_a73e3ca5c21b634f9c490b404d62f0e01}{Reversi}} ()
 \item 
-void \mbox{\hyperlink{class_reversi_a31c311ebedd69fc7441f00dddd17ab0b}{start}} (std\+::string jogador1, std\+::string jogador2, \mbox{\hyperlink{class_cadastro}{Cadastro}} \&cadastro)
+\mbox{\hyperlink{class_reversi_afd006e4fdacdedc4a3bb34fe6f1d1940}{\texorpdfstring{$\sim$}{\string~}\+Reversi}} ()
+\item 
+void \mbox{\hyperlink{class_reversi_a2f5e5c50a1f68f8e61a77c733a6b5ad6}{start}} (std\+::string jogador1, std\+::string jogador2, \mbox{\hyperlink{class_cadastro}{Cadastro}} \&cadastro) override
 \item 
 bool \mbox{\hyperlink{class_reversi_a08eb0f4733cf4f4111808ac738b946b6}{verifica\+Fim\+De\+Jogo}} (std\+::string jogador1, std\+::string jogador2, \mbox{\hyperlink{class_cadastro}{Cadastro}} \&cadastro)
-\item 
-void \mbox{\hyperlink{class_reversi_a86bb92a4fb19f9633306950944894bb2}{print\+Tabuleiro}} () const
 \item 
 bool \mbox{\hyperlink{class_reversi_ae47e31bdcfd335c435b6a0438322df0e}{verifica\+Linha}} (int, int, std\+::string estado)
 \item 
@@ -25,11 +31,35 @@ void \mbox{\hyperlink{class_reversi_a0d25dfa7c4fca829e5fd471fb00e5243}{contar\+P
 \item 
 std\+::string \mbox{\hyperlink{class_reversi_a0c015d7075f854589ec9bc435ccc6241}{peca\+Adversaria}} ()
 \item 
-bool \mbox{\hyperlink{class_reversi_ae260f3b4a8e2f0db0fa170ee9707c821}{posicao\+Permitida}} (int i, int j, std\+::string turno)
+bool \mbox{\hyperlink{class_reversi_ae260f3b4a8e2f0db0fa170ee9707c821}{posicao\+Permitida}} (int i, int j, std\+::string \mbox{\hyperlink{class_jogos_af2e03fe462b5edd6c87d9a4d042bfdfd}{turno}})
 \item 
 bool \mbox{\hyperlink{class_reversi_ab7f2baa7cb4bf083806ba3b7ea229f28}{tem\+Jogadas\+Validas}} (std\+::string jogador)
 \item 
-void \mbox{\hyperlink{class_reversi_a45886fc3420b9bb2489600344d099456}{jogadas\+Validas}} (std\+::string turno)
+void \mbox{\hyperlink{class_reversi_a45886fc3420b9bb2489600344d099456}{jogadas\+Validas}} (std\+::string \mbox{\hyperlink{class_jogos_af2e03fe462b5edd6c87d9a4d042bfdfd}{turno}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_jogos}{Jogos}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_jogos_a3b4fd105cd0c47d57898ffeb129b4457}{Jogos}} (char jogo)
+\item 
+virtual \mbox{\hyperlink{class_jogos_a67bcdb76ed95071291667ff50447f86a}{\texorpdfstring{$\sim$}{\string~}\+Jogos}} ()
+\item 
+void \mbox{\hyperlink{class_jogos_aa1b6a1b33086146301e6cc53a298ed3e}{print\+Tabuleiro}} () const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_jogos}{Jogos}}}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_jogos_a0ee362e105f71b733bf250776e201730}{muda\+Turno}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_jogos}{Jogos}}}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_jogos_aecbbe002c4ed720469bc678fcef81872}{fim\+De\+Jogo}}
+\item 
+\mbox{\hyperlink{class_tabuleiro}{Tabuleiro}} \mbox{\hyperlink{class_jogos_a022fc7c967fd10dbb0b6997f3b2403f5}{tabuleiro}}
+\item 
+std\+::string \mbox{\hyperlink{class_jogos_af2e03fe462b5edd6c87d9a4d042bfdfd}{turno}}
 \end{DoxyCompactItemize}
 
 
@@ -39,6 +69,12 @@ void \mbox{\hyperlink{class_reversi_a45886fc3420b9bb2489600344d099456}{jogadas\+
 \doxysubsubsection{\texorpdfstring{Reversi()}{Reversi()}}
 {\footnotesize\ttfamily \label{class_reversi_a73e3ca5c21b634f9c490b404d62f0e01} 
 Reversi\+::\+Reversi (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_reversi_afd006e4fdacdedc4a3bb34fe6f1d1940}\index{Reversi@{Reversi}!````~Reversi@{\texorpdfstring{$\sim$}{\string~}Reversi}}
+\index{````~Reversi@{\texorpdfstring{$\sim$}{\string~}Reversi}!Reversi@{Reversi}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Reversi()}{\string~Reversi()}}
+{\footnotesize\ttfamily \label{class_reversi_afd006e4fdacdedc4a3bb34fe6f1d1940} 
+Reversi\+::\texorpdfstring{$\sim$}{\string~}\+Reversi (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
 
 
@@ -67,17 +103,15 @@ std\+::string Reversi\+::peca\+Adversaria (\begin{DoxyParamCaption}{}{}\end{Doxy
 {\footnotesize\ttfamily \label{class_reversi_ae260f3b4a8e2f0db0fa170ee9707c821} 
 bool Reversi\+::posicao\+Permitida (\begin{DoxyParamCaption}\item[{int}]{i}{, }\item[{int}]{j}{, }\item[{std\+::string}]{turno}{}\end{DoxyParamCaption})}
 
-\Hypertarget{class_reversi_a86bb92a4fb19f9633306950944894bb2}\index{Reversi@{Reversi}!printTabuleiro@{printTabuleiro}}
-\index{printTabuleiro@{printTabuleiro}!Reversi@{Reversi}}
-\doxysubsubsection{\texorpdfstring{printTabuleiro()}{printTabuleiro()}}
-{\footnotesize\ttfamily \label{class_reversi_a86bb92a4fb19f9633306950944894bb2} 
-void Reversi\+::print\+Tabuleiro (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
-
-\Hypertarget{class_reversi_a31c311ebedd69fc7441f00dddd17ab0b}\index{Reversi@{Reversi}!start@{start}}
+\Hypertarget{class_reversi_a2f5e5c50a1f68f8e61a77c733a6b5ad6}\index{Reversi@{Reversi}!start@{start}}
 \index{start@{start}!Reversi@{Reversi}}
 \doxysubsubsection{\texorpdfstring{start()}{start()}}
-{\footnotesize\ttfamily \label{class_reversi_a31c311ebedd69fc7441f00dddd17ab0b} 
-void Reversi\+::start (\begin{DoxyParamCaption}\item[{std\+::string}]{jogador1}{, }\item[{std\+::string}]{jogador2}{, }\item[{\mbox{\hyperlink{class_cadastro}{Cadastro}} \&}]{cadastro}{}\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \label{class_reversi_a2f5e5c50a1f68f8e61a77c733a6b5ad6} 
+void Reversi\+::start (\begin{DoxyParamCaption}\item[{std\+::string}]{jogador1}{, }\item[{std\+::string}]{jogador2}{, }\item[{\mbox{\hyperlink{class_cadastro}{Cadastro}} \&}]{cadastro}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_jogos_a79a41dfb55b1bdce83eb97955152df04}{Jogos}}.
 
 \Hypertarget{class_reversi_ab7f2baa7cb4bf083806ba3b7ea229f28}\index{Reversi@{Reversi}!temJogadasValidas@{temJogadasValidas}}
 \index{temJogadasValidas@{temJogadasValidas}!Reversi@{Reversi}}

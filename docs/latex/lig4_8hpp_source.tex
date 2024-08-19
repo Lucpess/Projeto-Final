@@ -5,27 +5,22 @@
 \DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ LIG4\_H}}
 \DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ LIG4\_H}}
 \DoxyCodeLine{00003\ }
-\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{tabuleiro_8hpp}{tabuleiro.hpp}}"{}}}
-\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{cadastro_8hpp}{cadastro.hpp}}"{}}}
-\DoxyCodeLine{00006\ }
-\DoxyCodeLine{00007\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_lig4}{Lig4}}\ \{}
-\DoxyCodeLine{00008\ \textcolor{keyword}{public}:\ }
-\DoxyCodeLine{00009\ \ \ \ \ \mbox{\hyperlink{class_lig4_adffdeddf3d20829f752913801554126d}{Lig4}}();}
-\DoxyCodeLine{00010\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_lig4_a8535fb3473b042102eb906c90eddc191}{start}}(std::string\ jogador1,\ std::string\ jogador2,\ \mbox{\hyperlink{class_cadastro}{Cadastro}}\&\ cadastro);}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{jogos_8hpp}{jogos.hpp}}"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_lig4}{Lig4}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_jogos}{Jogos}}\ \{}
+\DoxyCodeLine{00007\ \textcolor{keyword}{public}:\ }
+\DoxyCodeLine{00008\ \ \ \ \ \mbox{\hyperlink{class_lig4_adffdeddf3d20829f752913801554126d}{Lig4}}();}
+\DoxyCodeLine{00009\ \ \ \ \ \mbox{\hyperlink{class_lig4_add1bf78f99caaf523113e7f4cf843744}{\string~Lig4}}();}
+\DoxyCodeLine{00010\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_lig4_a2fe5667ca383cf813b1497f3abf09317}{start}}(std::string\ jogador1,\ std::string\ jogador2,\ \mbox{\hyperlink{class_cadastro}{Cadastro}}\&\ cadastro)\ \textcolor{keyword}{override};}
 \DoxyCodeLine{00011\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_lig4_aae4580104c813a6015328a54f08f5381}{verifica4}}(\textcolor{keywordtype}{int}\ linha,\ \textcolor{keywordtype}{int}\ coluna);}
 \DoxyCodeLine{00012\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_lig4_aa69d47955ffc48d1347659fd4224a6a9}{verificaFimDeJogo}}\ (\textcolor{keywordtype}{int}\ coluna,\ std::string\ jogador1,\ std::string\ jogador2,\ \mbox{\hyperlink{class_cadastro}{Cadastro}}\&\ cadastro);}
-\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_lig4_ad6d70005f2f3362fb6cd5708466a3cab}{printTabuleiro}}\ ()\ \textcolor{keyword}{const};}
-\DoxyCodeLine{00014\ }
-\DoxyCodeLine{00015\ \textcolor{keyword}{private}:\ }
-\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ fimDeJogo;}
-\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_tabuleiro}{Tabuleiro}}\ tabuleiro;}
-\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ std::string\ turno;}
-\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ jogadaPermitida(\textcolor{keywordtype}{int}\ col);}
-\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ novaJogada(\textcolor{keywordtype}{int}\ col);}
-\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ mudaTurno();}
-\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ anunciaTurno(std::string\ jogador1,\ std::string\ jogador2);}
-\DoxyCodeLine{00023\ \};}
-\DoxyCodeLine{00024\ }
-\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{private}:\ }
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ jogadaPermitida(\textcolor{keywordtype}{int}\ col);}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ novaJogada(\textcolor{keywordtype}{int}\ col);}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ anunciaTurno(std::string\ jogador1,\ std::string\ jogador2)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00018\ \};}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#endif}}
 
 \end{DoxyCode}
