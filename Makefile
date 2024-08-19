@@ -4,7 +4,7 @@ TARGET = bin/jogo.exe
 TEST_TARGET = bin/testes.exe
 
 # Objetos para o programa principal
-OBJECTS = obj/tabuleiro.o obj/jogador.o obj/cadastro.o obj/jogos.o obj/lig4.o obj/reversi.o obj/main.o
+OBJECTS = obj/tabuleiro.o obj/jogador.o obj/cadastro.o obj/jogos.o obj/damas.o obj/lig4.o obj/reversi.o obj/main.o
 # Objetos para os testes
 TEST_OBJECTS = obj/teste_cadastro.o obj/teste_jogador.o obj/teste_lig4.o obj/teste_reversi.o obj/teste_tabuleiro.o obj/teste_main.o
 
@@ -29,6 +29,9 @@ obj/cadastro.o: src/cadastro.cpp include/cadastro.hpp include/jogador.hpp
 
 obj/jogos.o: src/jogos.cpp include/jogos.hpp include/tabuleiro.hpp include/cadastro.hpp
 	$(CXX) $(CXXFLAGS) -c src/jogos.cpp -o obj/jogos.o
+
+obj/damas.o: src/damas.cpp include/damas.hpp include/jogos.hpp
+	$(CXX) $(CXXFLAGS) -c src/damas.cpp -o obj/damas.o
 
 obj/lig4.o: src/lig4.cpp include/lig4.hpp include/jogos.hpp
 	$(CXX) $(CXXFLAGS) -c src/lig4.cpp -o obj/lig4.o
